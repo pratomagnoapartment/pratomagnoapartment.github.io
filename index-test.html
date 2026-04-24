@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pratomagno Apartment — Castagneto-Cetica · Alto Casentino · Toscana</title>
+<meta name="description" content="Appartamento eco-sostenibile nel borgo medievale di Castagneto-Cetica, Pratomagno, Alto Casentino. Starlink +250 Mbps, sentieri CAI diretti. CIN IT051010C2QLKDO7XC">
+<style>
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Georgia, serif; background: #faf6ee; color: #2a2318; line-height: 1.6; overflow-x: hidden; }
+
+/* ── LANGUAGE TOGGLE ── */
+html[lang="en"] .it { display: none !important; }
+html[lang="en"] .en { display: block !important; }
+html[lang="it"] .it { display: block !important; }
+html[lang="it"] .en { display: none !important; }
+span.en, span.it { display: inline !important; }
+html[lang="en"] span.it { display: none !important; }
+html[lang="it"] span.en { display: none !important; }
+
+a { color: #2c4a3e; }
+a:hover { text-decoration: underline; }
+
+/* ── LAYOUT ── */
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 1.25rem; }
+section { padding: 3.5rem 0; border-top: 1px solid #d8c9a8; }
+
+h1 { font-size: clamp(2rem, 7vw, 4rem); font-weight: normal; line-height: 1.1; margin-bottom: 1rem; }
+h2 { font-size: clamp(1.4rem, 4vw, 2.2rem); font-weight: normal; margin-bottom: 1rem; }
+h3 { font-size: 1.05rem; font-weight: bold; margin-bottom: .6rem; }
+p  { margin-bottom: .85rem; font-size: 15px; color: #3e3020; }
+em { color: #2c4a3e; font-style: italic; }
+ul, ol { padding-left: 1.25rem; }
+
+.eyebrow {
+  font-family: Arial, sans-serif; font-size: 11px; font-weight: bold;
+  letter-spacing: .18em; text-transform: uppercase; color: #3d6b5a; margin-bottom: .5rem;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(44,74,62,.97);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .7rem 1.25rem; gap: .5rem;
+}
+.nav-logo { font-size: 1.05rem; color: #fff; text-decoration: none; font-family: Georgia, serif; white-space: nowrap; }
+.nav-logo em { color: #dde8e2; }
+.nav-links { display: flex; flex-wrap: wrap; gap: 2px; list-style: none; }
+.nav-links a {
+  font-family: Arial, sans-serif; font-size: 10px; letter-spacing: .07em;
+  text-transform: uppercase; font-weight: bold; color: rgba(255,255,255,.75);
+  text-decoration: none; padding: .3rem .45rem;
+  border-bottom: 2px solid transparent;
+}
+.nav-links a:hover { color: #fff; border-bottom-color: #dde8e2; }
+.nav-right { display: flex; align-items: center; gap: .5rem; flex-shrink: 0; }
+.lang-btn {
+  font-family: Arial, sans-serif; font-size: 11px; font-weight: bold;
+  padding: 3px 9px; border-radius: 12px; border: 1px solid rgba(255,255,255,.3);
+  background: transparent; color: rgba(255,255,255,.65); cursor: pointer; text-decoration: none;
+}
+.lang-btn:hover, .lang-btn.active { background: #fff; color: #2c4a3e; }
+.nav-cta {
+  font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;
+  padding: 6px 14px; background: #b87333; color: #fff; border-radius: 6px; text-decoration: none;
+}
+.nav-cta:hover { opacity: .88; text-decoration: none; }
+.ham { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #fff; }
+
+/* ── MOBILE DRAWER ── */
+#drawer { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,.4); }
+#drawer.open { display: block; }
+.drawer-panel {
+  position: absolute; top: 0; right: 0; bottom: 0; width: 70vw; max-width: 260px;
+  background: #faf6ee; padding: 4rem 0 2rem; overflow-y: auto;
+}
+.drawer-link {
+  display: block; padding: .6rem 1.5rem;
+  font-family: Arial, sans-serif; font-size: 13px; font-weight: bold;
+  text-decoration: none; color: #3e3020; border-left: 3px solid transparent;
+}
+.drawer-link:hover { color: #2c4a3e; border-left-color: #2c4a3e; background: #f0f5f2; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  background: url('img/photo01.jpg') center center / cover no-repeat;
+  display: flex; align-items: flex-end; justify-content: center;
+  text-align: center; padding: 6rem 1.5rem 4rem;
+}
+.hero-inner { max-width: 700px; }
+.hero h1 { color: #fff; text-shadow: 2px 2px 8px rgba(0,0,0,.85); }
+.hero h1 em { color: #dde8e2; }
+.hero p { color: rgba(255,255,255,.92); font-size: 16px; max-width: 520px; margin: 0 auto 1.5rem; text-shadow: 1px 1px 5px rgba(0,0,0,.85); }
+.hero-btns { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+
+.btn-primary {
+  font-family: Arial, sans-serif; font-size: 13px; font-weight: bold;
+  padding: 12px 24px; background: #b87333; color: #fff; border-radius: 6px;
+  border: none; cursor: pointer; text-decoration: none;
+}
+.btn-primary:hover { opacity: .88; text-decoration: none; }
+.btn-ghost {
+  font-family: Arial, sans-serif; font-size: 13px; font-weight: bold;
+  padding: 12px 24px; background: transparent; color: #fff;
+  border: 2px solid rgba(255,255,255,.4); border-radius: 6px; cursor: pointer; text-decoration: none;
+}
+.btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.1); text-decoration: none; }
+
+/* ── BADGES BAR ── */
+.badges {
+  background: #3d6b5a; padding: .75rem 1.25rem;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem;
+}
+.badge {
+  font-family: Arial, sans-serif; font-size: 11px; font-weight: bold;
+  padding: 4px 12px; border-radius: 20px;
+  background: rgba(255,255,255,.15); color: #dde8e2; border: 1px solid rgba(255,255,255,.2);
+}
+
+/* ── TWO-COL ── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+
+/* ── FOR-WHOM ── */
+.for-whom { list-style: none; padding: 0; }
+.for-whom li { display: flex; gap: .85rem; padding: .7rem .4rem; align-items: flex-start; }
+.for-whom li:hover { background: #f0f5f2; border-radius: 6px; }
+.fw-icon { font-size: 1.3rem; flex-shrink: 0; }
+.fw-label { font-weight: bold; font-size: 14px; margin-bottom: 2px; }
+.fw-sub { font-size: 12px; color: #6b5c42; }
+
+/* ── BLOCKQUOTE ── */
+blockquote {
+  border-left: 3px solid #7a9e8e; background: #f0f5f2;
+  padding: 1rem 1.25rem; border-radius: 0 6px 6px 0;
+  font-style: italic; font-size: 1.05rem; color: #2c4a3e; margin: 1.25rem 0;
+}
+
+/* ── ECO GRID ── */
+.eco-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+.eco-card { text-align: center; padding: 1.5rem 1rem; background: #f2faec; border-radius: 8px; border: 1px solid rgba(90,158,66,.2); }
+.eco-icon { font-size: 2rem; display: block; margin-bottom: .6rem; }
+.eco-title { font-weight: bold; color: #2c4a3e; margin-bottom: .35rem; }
+
+/* ── CER CARD ── */
+.cer-card {
+  margin-top: 1.5rem; padding: 1.5rem 1.75rem;
+  background: linear-gradient(135deg, #eaf7e0, #e2f5f0);
+  border: 2px solid rgba(44,100,60,.2); border-radius: 12px;
+  border-top: 4px solid #5a9e42;
+}
+.cer-badge {
+  display: inline-block; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: #2c4a3e; background: rgba(44,74,62,.10); padding: 3px 10px; border-radius: 20px; margin-bottom: .55rem;
+}
+.cer-title { font-size: 1.05rem; color: #1e3a30; margin-bottom: .5rem; }
+.cer-title strong { color: #2c4a3e; }
+.cer-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
+.cer-tag {
+  font-family: Arial, sans-serif; font-size: 11px; font-weight: bold;
+  padding: 4px 12px; border-radius: 20px;
+  background: rgba(44,74,62,.08); color: #2c4a3e; border: 1px solid rgba(44,74,62,.15);
+}
+
+/* ── STATS BOX ── */
+.stats-box { background: #2c4a3e; border-radius: 8px; padding: 2rem 1.5rem; color: #fff; }
+.stats-box h3 { color: #e2f0d4; text-transform: uppercase; font-size: .85rem; letter-spacing: .1em; }
+.stat-row { display: flex; justify-content: space-between; align-items: baseline; padding: .6rem 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+.stat-row:last-child { border-bottom: none; }
+.stat-lbl { font-size: 13px; color: rgba(255,255,255,.65); font-family: Arial, sans-serif; }
+.stat-val { font-size: 1.4rem; }
+.cin { margin-top: 1rem; padding: .4rem .75rem; background: rgba(255,255,255,.08); border-radius: 4px; font-size: 11px; color: rgba(255,255,255,.5); text-align: center; font-family: Arial, sans-serif; letter-spacing: .08em; }
+
+/* ── FEATURE LIST ── */
+.feat-list { list-style: none; padding: 0; }
+.feat-item { display: flex; gap: .75rem; padding: .75rem 0; border-bottom: 1px solid #e8dcca; align-items: flex-start; }
+.feat-item:last-child { border-bottom: none; }
+.feat-icon { width: 32px; height: 32px; background: #e2f0d4; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+.feat-title { font-weight: bold; font-size: 14px; margin-bottom: 2px; }
+.feat-desc { font-size: 12px; color: #6b5c42; }
+
+/* ── DIGITAL NOMADS ── */
+.nom-grid { display: grid; grid-template-columns: 1fr 300px; background: #f2ead8; border-radius: 8px; overflow: hidden; }
+.nom-l { padding: 2.5rem 2rem; }
+.nom-r { background: #2c4a3e; padding: 2.5rem 2rem; color: #fff; }
+.spd-big { font-size: 3.5rem; font-weight: 300; line-height: 1; color: #fff; }
+.spd-unit { font-size: .85rem; opacity: .6; }
+.spd-label { font-family: Arial, sans-serif; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #b8dea0; margin-bottom: 1.25rem; }
+.sf { display: flex; gap: .6rem; padding: .6rem 0; border-top: 1px solid rgba(255,255,255,.12); align-items: flex-start; }
+.sf-i { font-size: .9rem; flex-shrink: 0; padding-top: .1rem; }
+.sf-title { font-weight: bold; font-size: .82rem; color: #fff; margin-bottom: 2px; }
+.sf-desc { font-size: .73rem; color: rgba(255,255,255,.55); }
+.rate-hl { display: inline-flex; align-items: center; gap: .4rem; background: #dde8e2; color: #2c4a3e; font-size: .8rem; font-weight: bold; padding: .4rem .9rem; border-radius: 6px; margin-top: .75rem; font-family: Arial, sans-serif; }
+
+/* ── TRAILS ── */
+.trail-list { margin-top: 1.25rem; border-radius: 8px; overflow: hidden; border: 1px solid #e8dcca; }
+.trail-row { background: #fff; display: grid; grid-template-columns: 36px 1fr auto; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid #e8dcca; align-items: start; }
+.trail-row:last-child { border-bottom: none; }
+.trail-row:hover { background: #f2faec; }
+.tr-num { font-size: 1.4rem; color: #d8c9a8; font-family: Georgia, serif; }
+.tr-title { font-weight: bold; font-size: 1rem; margin-bottom: .25rem; }
+.tr-stats { font-family: Arial, sans-serif; font-size: 12px; color: #6b5c42; margin-bottom: .25rem; }
+.tr-desc { font-size: 13px; color: #3e3020; }
+.cai-badge { background: #2c4a3e; color: #fff; font-size: 10px; font-weight: bold; padding: 1px 5px; border-radius: 3px; margin-left: .3rem; font-family: Arial, sans-serif; }
+.diff { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; padding: .2rem .55rem; border-radius: 20px; white-space: nowrap; align-self: start; }
+.d-e { background: #ddf0cc; color: #2d6020; }
+.d-m { background: #f5e8c0; color: #7a4f10; }
+.d-h { background: #f5ddd0; color: #8b2800; }
+
+/* ── TERRITORY MOSAIC ── */
+.mosaic { display: grid; grid-template-columns: repeat(2, 1fr); gap: .85rem; margin-top: 1.25rem; }
+.mosaic-card { background: #fff; border: 1px solid #d8c9a8; border-radius: 8px; padding: 1.25rem 1rem; }
+.mosaic-card.forest { background: #EAF3DE; border-color: rgba(59,109,17,.15); }
+.mosaic-card.castle { background: #FAECE7; border-color: rgba(216,90,48,.15); }
+.mosaic-card.church { background: #FAEEDA; border-color: rgba(186,117,23,.15); }
+.mosaic-card.museum { background: #F7F0F5; border-color: rgba(117,70,145,.15); }
+.mc-header { display: flex; align-items: center; gap: 10px; padding-bottom: .75rem; margin-bottom: .9rem; border-bottom: 1px solid rgba(0,0,0,.08); }
+.mc-icon { font-size: 1.25rem; flex-shrink: 0; }
+.mc-cat { font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; letter-spacing: .13em; text-transform: uppercase; }
+.forest .mc-cat { color: #3B6D11; }
+.castle .mc-cat { color: #993C1D; }
+.church .mc-cat { color: #854F0B; }
+.museum .mc-cat { color: #75469A; }
+.mc-group-title { font-weight: bold; font-size: .95rem; margin-top: 1px; }
+.forest .mc-group-title { color: #27500A; }
+.castle .mc-group-title { color: #712B13; }
+.church .mc-group-title { color: #633806; }
+.museum .mc-group-title { color: #552E6E; }
+.mc-places { display: flex; flex-direction: column; gap: 9px; }
+.mc-place { padding-bottom: 9px; border-bottom: 1px solid rgba(0,0,0,.07); }
+.mc-place:last-child { border-bottom: none; padding-bottom: 0; }
+.m-title { font-weight: bold; font-size: .85rem; margin-bottom: 2px; }
+.forest .m-title { color: #27500A; }
+.castle .m-title { color: #712B13; }
+.church .m-title { color: #633806; }
+.museum .m-title { color: #552E6E; }
+.m-text { font-size: 12px; color: #3e3020; line-height: 1.55; margin-bottom: 3px; }
+.m-dist { font-size: 10px; font-weight: bold; font-family: Arial, sans-serif; }
+.forest .m-dist { color: #639922; }
+.castle .m-dist { color: #D85A30; }
+.church .m-dist { color: #BA7517; }
+.museum .m-dist { color: #75469A; }
+
+/* ── GALLERY ── */
+.gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 1.5rem; }
+.gal-link { display: block; text-decoration: none; border-radius: 6px; overflow: hidden; }
+.gal-link:hover { transform: scale(1.01); box-shadow: 0 4px 12px rgba(0,0,0,.12); }
+.gal-link img { width: 100%; height: 200px; object-fit: cover; display: block; }
+
+/* ── LIGHTBOX ── */
+.lb { position: fixed; inset: 0; background: rgba(10,8,4,.95); z-index: 500; display: none; align-items: center; justify-content: center; }
+.lb:target { display: flex; }
+.lb img { max-width: 90vw; max-height: 80vh; object-fit: contain; border-radius: 6px; }
+.lb-close { position: absolute; top: 1rem; right: 1.25rem; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); color: #fff; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+.lb-prev, .lb-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 1.4rem; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+.lb-prev { left: 1.25rem; } .lb-next { right: 1.25rem; }
+
+/* ── CALENDAR ── */
+.cal-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+.cal-box { background: #fff; border: 1px solid #e8dcca; border-radius: 8px; padding: 1.5rem; }
+.cal-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.cal-title { font-family: Georgia, serif; font-size: 1.1rem; }
+.cal-arrow { background: none; border: 1px solid #d8c9a8; border-radius: 5px; cursor: pointer; width: 28px; height: 28px; font-size: 1rem; color: #6b5c42; }
+.cal-arrow:hover { background: #e3d5b8; }
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; text-align: center; }
+.cal-dh { font-family: Arial, sans-serif; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: #6b5c42; font-weight: bold; padding: .3rem 0; }
+.cal-day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 5px; font-family: Arial, sans-serif; font-size: 13px; }
+.cal-day.avail { background: #e2f0d4; cursor: pointer; }
+.cal-day.avail:hover { background: #cce8b0; }
+.cal-day.booked { background: #f5ddd0; color: #c0a898; text-decoration: line-through; }
+.cal-day.today { border: 2px solid #2c4a3e; font-weight: bold; }
+.cal-day.past { color: #d8c9a8; }
+.cal-legend { display: flex; gap: 1rem; margin-top: .75rem; flex-wrap: wrap; }
+.leg-i { display: flex; align-items: center; gap: .35rem; font-family: Arial, sans-serif; font-size: 11px; color: #6b5c42; }
+.leg-dot { width: 10px; height: 10px; border-radius: 3px; }
+.cal-note { margin-top: .75rem; padding: .75rem 1rem; background: #f2faec; border-radius: 6px; font-size: 13px; color: #3e3020; border: 1px solid rgba(90,158,66,.15); }
+.cal-info { display: flex; flex-direction: column; gap: 1rem; }
+.info-card { background: #fff; border: 1px solid #e8dcca; border-radius: 8px; padding: 1.25rem; }
+.times-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin-top: .75rem; }
+.time-box { background: #faf6ee; border-radius: 6px; padding: .6rem; text-align: center; border: 1px solid #e8dcca; }
+.t-lbl { font-family: Arial, sans-serif; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: #6b5c42; font-weight: bold; margin-bottom: .2rem; }
+.t-val { font-family: Georgia, serif; font-size: 1.4rem; }
+.t-note { font-family: Arial, sans-serif; font-size: 11px; color: #6b5c42; margin-top: .1rem; }
+.rules { display: flex; flex-direction: column; gap: .4rem; }
+.rule { display: flex; gap: .55rem; font-size: 13px; color: #3e3020; line-height: 1.5; }
+
+/* ── ADMIN PANEL ── */
+.admin-toggle-wrap { margin-top: .75rem; text-align: right; }
+.admin-toggle-btn { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; background: none; border: 1px solid #d8c9a8; border-radius: 5px; color: #6b5c42; padding: 4px 10px; cursor: pointer; }
+.admin-toggle-btn:hover { background: #f0ead8; }
+.admin-panel { display: none; margin-top: .75rem; background: #fff; border: 1px solid #d8c9a8; border-radius: 8px; padding: 1.25rem; }
+.admin-panel.open { display: block; }
+.admin-pw-wrap { display: flex; gap: .5rem; align-items: center; margin-bottom: 1rem; }
+.admin-pw-wrap input { flex: 1; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8c9a8; border-radius: 5px; padding: 5px 9px; }
+.admin-pw-wrap button { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; background: #2c4a3e; color: #fff; border: none; border-radius: 5px; padding: 6px 14px; cursor: pointer; }
+.admin-content { display: none; }
+.admin-content.unlocked { display: block; }
+.admin-section-title { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; letter-spacing: .1em; text-transform: uppercase; color: #3d6b5a; margin-bottom: .6rem; margin-top: 1rem; }
+.admin-add-row { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin-bottom: .75rem; }
+.admin-add-row input[type="date"], .admin-add-row select { font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8c9a8; border-radius: 5px; padding: 5px 8px; color: #2a2318; background: #faf6ee; }
+.btn-add-booking { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; background: #b87333; color: #fff; border: none; border-radius: 5px; padding: 6px 14px; cursor: pointer; }
+.booking-list { display: flex; flex-direction: column; gap: .4rem; max-height: 200px; overflow-y: auto; }
+.booking-item { display: flex; align-items: center; justify-content: space-between; background: #faf6ee; border: 1px solid #e8dcca; border-radius: 5px; padding: .45rem .75rem; font-family: Arial, sans-serif; font-size: 12px; }
+.booking-item-info { display: flex; gap: .6rem; align-items: center; }
+.booking-source { font-size: 10px; font-weight: bold; letter-spacing: .06em; text-transform: uppercase; padding: 1px 6px; border-radius: 10px; }
+.src-airbnb { background: #ffe0d6; color: #c9472a; }
+.src-booking { background: #d6e8ff; color: #1a4fa3; }
+.src-manual { background: #e2f0d4; color: #2c6020; }
+.btn-del-booking { background: none; border: none; color: #c0a898; cursor: pointer; font-size: 1rem; padding: 0 4px; }
+.btn-del-booking:hover { color: #b84040; }
+.admin-msg { font-family: Arial, sans-serif; font-size: 12px; color: #6b5c42; font-style: italic; margin-top: .5rem; }
+.admin-msg.err { color: #b84040; }
+
+/* ── PRICING ── */
+.price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: #d8c9a8; border-radius: 8px; overflow: hidden; margin-bottom: 1rem; }
+.price-col { background: #fff; padding: 1.25rem 1rem; text-align: center; }
+.price-col:hover { background: #faf6ee; }
+.price-col.feat { background: #b87333; }
+.p-season { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; letter-spacing: .08em; text-transform: uppercase; color: #6b5c42; margin-bottom: .35rem; }
+.price-col.feat .p-season { color: #fff; }
+.p-period { font-size: 12px; color: #6b5c42; font-style: italic; margin-bottom: .6rem; }
+.price-col.feat .p-period { color: rgba(255,255,255,.65); }
+.p-num { font-family: Georgia, serif; font-size: 2.2rem; color: #2a2318; line-height: 1; }
+.price-col.feat .p-num { color: #fff; }
+.p-unit { font-family: Arial, sans-serif; font-size: 12px; color: #6b5c42; margin-top: 3px; }
+.price-col.feat .p-unit { color: rgba(255,255,255,.6); }
+.p-badge { display: inline-block; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; padding: 2px 8px; border-radius: 10px; background: #dde8e2; color: #2c4a3e; margin-top: .4rem; }
+.price-col.feat .p-badge { background: rgba(255,255,255,.15); color: #fff; }
+.extras { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #d8c9a8; border-radius: 8px; overflow: hidden; }
+.extra { background: #f2faec; padding: .9rem 1rem; }
+.e-lbl { font-family: Arial, sans-serif; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #6b5c42; font-weight: bold; margin-bottom: .2rem; }
+.e-val { font-family: Georgia, serif; font-size: 1.05rem; }
+.e-val small { font-family: Arial, sans-serif; font-size: 11px; color: #6b5c42; }
+
+/* ── REVIEWS ── */
+.rating-summary { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; background: #fff; border: 1px solid #e8dcca; border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; }
+.rating-big { font-family: Georgia, serif; font-size: 3.5rem; line-height: 1; color: #2a2318; }
+.rating-stars { font-size: 1.2rem; color: #f59e0b; letter-spacing: .1em; }
+.rating-count { font-family: Arial, sans-serif; font-size: 12px; color: #6b5c42; margin-top: .3rem; }
+.rating-bars { flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: .5rem; }
+.rbar { display: flex; align-items: center; gap: .6rem; }
+.rbar-lbl { font-family: Arial, sans-serif; font-size: 12px; color: #6b5c42; width: 80px; flex-shrink: 0; }
+.rbar-track { flex: 1; height: 6px; background: #e8dcca; border-radius: 3px; overflow: hidden; }
+.rbar-fill { height: 100%; background: #2c4a3e; border-radius: 3px; }
+.rbar-val { font-family: Arial, sans-serif; font-size: 12px; color: #2a2318; font-weight: bold; width: 30px; text-align: right; }
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+.rev-card { background: #fff; border: 1px solid #e8dcca; border-radius: 8px; padding: 1.25rem; }
+.rev-stars { color: #f59e0b; font-size: 1rem; margin-bottom: .5rem; }
+.rev-text { font-size: 13.5px; color: #3e3020; font-style: italic; margin-bottom: 1rem; }
+.rev-author { display: flex; align-items: center; gap: .75rem; }
+.rev-avatar { width: 36px; height: 36px; background: #dde8e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; color: #2c4a3e; flex-shrink: 0; }
+.rev-name { font-weight: bold; font-size: 14px; }
+.rev-meta { font-family: Arial, sans-serif; font-size: 11px; color: #6b5c42; }
+.reviews-note { font-family: Arial, sans-serif; font-size: 12px; color: #6b5c42; margin-top: 1rem; }
+
+/* ── PAGE CARDS ── */
+.page-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.page-card { background: #fff; border: 1px solid #d8c9a8; border-radius: 8px; padding: 1.25rem 1rem; cursor: pointer; }
+.page-card:hover { box-shadow: 0 4px 16px rgba(42,35,24,.12); }
+.pc-icon { font-size: 1.75rem; display: block; margin-bottom: .5rem; }
+.pc-title { font-weight: bold; font-size: .95rem; margin-bottom: .3rem; }
+.pc-desc { font-size: 13px; color: #6b5c42; margin-bottom: .6rem; }
+.pc-arrow { font-family: Arial, sans-serif; font-size: 12px; color: #2c4a3e; text-decoration: none; font-weight: bold; }
+
+/* ── ACTIVITIES TABLE ── */
+.act-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.act-block { background: #fff; border: 1px solid #e8dcca; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem; }
+.act-block-title { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; letter-spacing: .1em; text-transform: uppercase; color: #3d6b5a; padding-bottom: .75rem; border-bottom: 1px solid #e8dcca; margin-bottom: .75rem; }
+.act-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.act-table tr:hover td { background: #f2faec; }
+.act-table td { padding: .45rem .4rem; vertical-align: top; color: #3e3020; }
+.act-icon-td { width: 28px; font-size: 1rem; }
+.act-name-td { font-weight: bold; }
+.act-name-td small { display: block; font-weight: normal; color: #6b5c42; font-size: 11px; }
+.act-link-td a { font-family: Arial, sans-serif; font-size: 11px; }
+
+/* ── CTA SECTION ── */
+.cta-section { text-align: center; padding: 4rem 1.5rem; background: #2c4a3e; }
+.cta-section .eyebrow { color: #a8c4b4; }
+.cta-section h2 { color: #fff; }
+.cta-section h2 em { color: #dde8e2; }
+.cta-section p { color: rgba(255,255,255,.85); max-width: 500px; margin: 0 auto .85rem; }
+.cta-contact { margin-top: 1.5rem; font-family: Arial, sans-serif; font-size: 12px; color: rgba(255,255,255,.65); line-height: 2; }
+.cta-contact a { color: rgba(255,255,255,.8); }
+
+/* ── FOOTER ── */
+footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
+.footer-logo { font-family: Georgia, serif; font-size: 1.1rem; color: #dde8e2; margin-bottom: .6rem; }
+.footer-logo em { color: #a8c4b4; }
+.footer-info { font-family: Arial, sans-serif; font-size: 12px; color: rgba(255,255,255,.5); line-height: 2; }
+.footer-info a { color: rgba(255,255,255,.6); }
+
+/* ── FLOAT PHONE BTN ── */
+.float-tel { position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 90; font-size: 1.5rem; background: #2c4a3e; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
+.float-tel:hover { background: #3d6b5a; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  nav { padding: .6rem 1rem; }
+  .nav-links { display: none; }
+  .ham { display: block; }
+  .two-col, .cal-layout, .nom-grid, .act-grid { grid-template-columns: 1fr; }
+  .mosaic { grid-template-columns: 1fr; }
+  .gal-grid { grid-template-columns: repeat(2, 1fr); }
+  .nom-r { padding: 1.5rem; }
+  h1 { font-size: 2.2rem; }
+}
+@media (max-width: 480px) {
+  .gal-grid { grid-template-columns: 1fr; }
+  .price-grid { grid-template-columns: repeat(2, 1fr); }
+  .extras { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">⛰ Pratomagno <em>Apartment</em></a>
+  <ul class="nav-links">
+    <li><a href="#appartamento"><span class="it">Appartamento</span><span class="en">Apartment</span></a></li>
+    <li><a href="#nomadi"><span class="it">Nomadi Digitali</span><span class="en">Digital Nomads</span></a></li>
+    <li><a href="#sentieri"><span class="it">Sentieri CAI</span><span class="en">CAI Trails</span></a></li>
+    <li><a href="#territorio"><span class="it">Territorio</span><span class="en">Area</span></a></li>
+    <li><a href="#foto"><span class="it">Foto</span><span class="en">Photos</span></a></li>
+    <li><a href="#disponibilita"><span class="it">Disponibilità</span><span class="en">Availability</span></a></li>
+    <li><a href="#prezzi"><span class="it">Tariffe</span><span class="en">Rates</span></a></li>
+    <li><a href="#attivita"><span class="it">Sport &amp; Link</span><span class="en">Sport &amp; Links</span></a></li>
+    <li><a href="#recensioni"><span class="it">Recensioni</span><span class="en">Reviews</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-btn" id="btn-it" onclick="setLang('it')">IT</button>
+    <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    <a href="mailto:pratomgnoapartament@gmail.com" class="nav-cta it">Prenota ora</a>
+    <a href="mailto:pratomgnoapartament@gmail.com" class="nav-cta en">Book now</a>
+    <button class="ham" onclick="document.getElementById('drawer').classList.toggle('open')">&#9776;</button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div id="drawer">
+  <div class="drawer-panel">
+    <a href="#" class="drawer-link" onclick="closeDrawer()">🏡 Home</a>
+    <a href="#appartamento" class="drawer-link" onclick="closeDrawer()">🛏 <span class="it">Appartamento</span><span class="en">Apartment</span></a>
+    <a href="#eco" class="drawer-link" onclick="closeDrawer()">☀ Eco</a>
+    <a href="#nomadi" class="drawer-link" onclick="closeDrawer()">🛰 <span class="it">Nomadi Digitali</span><span class="en">Digital Nomads</span></a>
+    <a href="#sentieri" class="drawer-link" onclick="closeDrawer()">🥾 <span class="it">Sentieri CAI</span><span class="en">CAI Trails</span></a>
+    <a href="#territorio" class="drawer-link" onclick="closeDrawer()">🌲 <span class="it">Territorio</span><span class="en">Area</span></a>
+    <a href="#foto" class="drawer-link" onclick="closeDrawer()">📷 <span class="it">Foto</span><span class="en">Photos</span></a>
+    <a href="#disponibilita" class="drawer-link" onclick="closeDrawer()">📅 <span class="it">Disponibilità</span><span class="en">Availability</span></a>
+    <a href="#prezzi" class="drawer-link" onclick="closeDrawer()">€ <span class="it">Tariffe</span><span class="en">Rates</span></a>
+    <a href="#recensioni" class="drawer-link" onclick="closeDrawer()">⭐ <span class="it">Recensioni</span><span class="en">Reviews</span></a>
+    <a href="#attivita" class="drawer-link" onclick="closeDrawer()">🏃 <span class="it">Sport &amp; Link</span><span class="en">Sport &amp; Links</span></a>
+    <a href="mailto:pratomgnoapartament@gmail.com" class="drawer-link">✉ <span class="it">Prenota</span><span class="en">Book</span></a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <div class="hero-inner">
+    <h1 class="it">Dove la Toscana<br>è ancora <em>selvaggia</em></h1>
+    <h1 class="en">Where Tuscany<br>is still <em>wild</em></h1>
+    <p class="it">Immerso nel borgo medievale di Castagneto-Cetica, sulle pendici del Pratomagno in Alto Casentino. Toscana. Sentieri CAI diretti, Parco Nazionale delle Foreste Casentinesi, Starlink +250 Mbps incluso.</p>
+    <p class="en">Nestled in the medieval hamlet of Castagneto-Cetica, on the slopes of Pratomagno in the Alto Casentino. Tuscany. Direct CAI trails, Casentino National Forest Park, Starlink +250 Mbps included.</p>
+    <div class="hero-btns">
+      <a href="#disponibilita" class="btn-primary it">📅 Verifica disponibilità</a>
+      <a href="#disponibilita" class="btn-primary en">📅 Check availability</a>
+      <a href="#prezzi" class="btn-ghost it">Tariffe 2026</a>
+      <a href="#prezzi" class="btn-ghost en">2026 Rates</a>
+    </div>
+  </div>
+</div>
+
+<!-- BADGES -->
+<div class="badges">
+  <span class="badge">⚡ Fonte rinnovabile</span>
+  <span class="badge">☀ Acqua calda solare</span>
+  <span class="badge">🛰 Starlink +250 Mbps</span>
+  <span class="badge">♻ Zero waste</span>
+  <span class="badge it">🥾 Sentieri CAI diretti</span><span class="badge en">🥾 Direct CAI trails</span>
+  <span class="badge">CIN IT051010C2QLKDO7XC</span>
+</div>
+
+<main>
+
+<!-- INTRO -->
+<section id="intro">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <p class="eyebrow it">Castel San Niccolò · Arezzo · Italia</p>
+        <p class="eyebrow en">Castel San Niccolò · Arezzo · Italy</p>
+        <h2 class="it">Non parliamo di ambiente.<br><em>Lo viviamo.</em></h2>
+        <h2 class="en">We don't just talk about<br>the environment. <em>We live it.</em></h2>
+        <p class="it">Pratomagno Apartment sorge nel cuore del borgo medievale di Castagneto-Cetica, sulle pendici orientali del Pratomagno, a 600 m s.l.m. Il bosco comincia dove finisce il lastricato del borgo — i sentieri CAI partono letteralmente dalla porta.</p>
+        <p class="en">Pratomagno Apartment is nestled in the heart of the medieval hamlet of Castagneto-Cetica, on the eastern slopes of Pratomagno, at 600 m altitude. The forest begins where the cobblestones end — CAI trails start literally from the door.</p>
+        <blockquote>
+          <span class="it">«Sperimenta l'incredibile atmosfera che questo posto autentico offre.»</span>
+          <span class="en">«Experience the stunning atmosphere this genuine place offers.»</span>
+        </blockquote>
+      </div>
+      <div>
+        <p class="eyebrow it">Questo è il tuo posto se sei…</p>
+        <p class="eyebrow en">This is your place if you are…</p>
+        <ul class="for-whom">
+          <li><span class="fw-icon">💻</span><div><div class="fw-label it">Smart-worker o nomade digitale</div><div class="fw-label en">Remote worker or digital nomad</div><div class="fw-sub it">Starlink +250 Mbps incluso, silenzio totale, −10% per ≥7 notti</div><div class="fw-sub en">Starlink +250 Mbps included, total silence, −10% for ≥7 nights</div></div></li>
+          <li><span class="fw-icon">🥾</span><div><div class="fw-label it">Escursionista o trail runner</div><div class="fw-label en">Hiker or trail runner</div><div class="fw-sub it">Crinale del Pratomagno 1592 m — partenza diretta dall'appartamento</div><div class="fw-sub en">Pratomagno ridge 1,592 m — direct start from the apartment</div></div></li>
+          <li><span class="fw-icon">🚵</span><div><div class="fw-label it">Ciclista in cerca di avventura</div><div class="fw-label en">Cyclist looking for adventure</div><div class="fw-sub it">MTB e cicloturismo su percorsi panoramici dell'Appennino</div><div class="fw-sub en">MTB and cycle touring on panoramic Apennine routes</div></div></li>
+          <li><span class="fw-icon">👨‍👩‍👧</span><div><div class="fw-label it">Famiglia o coppia</div><div class="fw-label en">Family or couple</div><div class="fw-sub it">Giardino privato recintato, parcheggio gratuito, bambini &lt;4 anni gratuiti</div><div class="fw-sub en">Enclosed garden, free parking, children under 4 free</div></div></li>
+          <li><span class="fw-icon">🌲</span><div><div class="fw-label it">Chi ha semplicemente bisogno di staccare</div><div class="fw-label en">Someone who simply needs to disconnect</div><div class="fw-sub it">Silenzio, boschi, cielo stellato, aria pulita di montagna</div><div class="fw-sub en">Silence, woodland, starry skies, clean mountain air</div></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECO -->
+<section id="eco">
+  <div class="wrap">
+    <p class="eyebrow it">Eco-sostenibilità</p>
+    <p class="eyebrow en">Eco-sustainability</p>
+    <h2 class="it">Un soggiorno <em>a impatto zero</em></h2>
+    <h2 class="en">A <em>zero-impact</em> stay</h2>
+    <p class="it">Energia rinnovabile, acqua calda solare, zero rifiuti e pellet in inverno. Il rispetto per l'ambiente non è marketing — è proprio come funziona la casa.</p>
+    <p class="en">Renewable energy, solar hot water, zero waste and pellet in winter. Environmental care isn't marketing — it's just how the house works.</p>
+    <div class="eco-grid">
+      <div class="eco-card"><span class="eco-icon" style="color:#f59e0b">☀</span><div class="eco-title it">Solare Termico</div><div class="eco-title en">Solar Thermal</div><p class="it">100% acqua calda senza gas né emissioni.</p><p class="en">100% hot water without gas or emissions.</p></div>
+      <div class="eco-card"><span class="eco-icon">⚡</span><div class="eco-title it">Fotovoltaico</div><div class="eco-title en">Photovoltaic</div><p class="it">~100% elettricità da fonte rinnovabile.</p><p class="en">~100% electricity from renewable source.</p></div>
+      <div class="eco-card"><span class="eco-icon" style="color:#22c55e">♻</span><div class="eco-title it">Zero Rifiuti</div><div class="eco-title en">Zero Waste</div><p class="it">Dispenser ricaricabili, raccolta differenziata, acqua di sorgente al rubinetto.</p><p class="en">Refillable dispensers, waste sorting, spring tap water.</p></div>
+      <div class="eco-card"><span class="eco-icon">🔥</span><div class="eco-title it">Pellet (inverno)</div><div class="eco-title en">Pellet (winter)</div><p class="it">Stufa a pellet nov–mar a basse emissioni certificate.</p><p class="en">Pellet stove Nov–Mar. Certified low-emission combustion.</p></div>
+    </div>
+    <div class="cer-card">
+      <div class="cer-badge it">Comunità Energetica Rinnovabile</div>
+      <div class="cer-badge en">Renewable Energy Community</div>
+      <div class="cer-title it">Membro della <strong>CER Casentino</strong></div>
+      <div class="cer-title en">Member of <strong>CER Casentino</strong></div>
+      <p class="it">Questa struttura è parte della <strong>Comunità Energetica Rinnovabile del Casentino</strong> — sede di Castel San Niccolò. L'energia prodotta localmente da fonti rinnovabili viene condivisa tra i membri, riducendo le emissioni e sostenendo l'economia del territorio.</p>
+      <p class="en">This structure is a member of the <strong>Renewable Energy Community of Casentino</strong> (CER Casentino) — based in Castel San Niccolò. Locally generated renewable energy is shared among members, reducing emissions and supporting the local economy.</p>
+      <div class="cer-tags">
+        <span class="cer-tag it">⚡ Energia condivisa localmente</span><span class="cer-tag en">⚡ Locally shared energy</span>
+        <span class="cer-tag it">🌿 Filiera corta verde</span><span class="cer-tag en">🌿 Short green supply chain</span>
+        <span class="cer-tag it">🏘 Comunità del territorio</span><span class="cer-tag en">🏘 Local community network</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPARTAMENTO -->
+<section id="appartamento">
+  <div class="wrap">
+    <p class="eyebrow it">L'appartamento</p>
+    <p class="eyebrow en">The apartment</p>
+    <h2 class="it">Spazi pensati per il <em>benessere</em></h2>
+    <h2 class="en">Spaces designed for <em>wellbeing</em></h2>
+    <div class="two-col">
+      <div>
+        <p class="it">Appartamento indipendente per max 4 ospiti nel borgo medievale di Castagneto-Cetica. Viste sui boschi del Pratomagno e Appennino Tosco-Romagnolo a 600 m s.l.m.</p>
+        <p class="en">Independent apartment for max 4 guests in the medieval hamlet of Castagneto-Cetica. Views over the Pratomagno woodland and Tuscan-Romagnol Apennines, at 600 m altitude.</p>
+        <ul class="feat-list">
+          <li class="feat-item"><div class="feat-icon">🛏</div><div><div class="feat-title it">2 Camere da letto</div><div class="feat-title en">2 Bedrooms</div><div class="feat-desc it">Matrimoniale e singola/doppia. Biancheria inclusa.</div><div class="feat-desc en">Double and twin/single. Bed linen included.</div></div></li>
+          <li class="feat-item"><div class="feat-icon">🛋</div><div><div class="feat-title it">Luminoso soggiorno con TV satellitare</div><div class="feat-title en">Bright living room with satellite TV</div><div class="feat-desc it">Divano, tavolo da pranzo, TV satellitare, zona lettura con vista bosco.</div><div class="feat-desc en">Sofa, dining table, satellite TV, reading corner with woodland views.</div></div></li>
+          <li class="feat-item"><div class="feat-icon">🍳</div><div><div class="feat-title it">Cucina attrezzata</div><div class="feat-title en">Fully-equipped kitchen</div><div class="feat-desc it">Piano a induzione, forno, frigo, freezer, macchina del caffè, moka, bollitore.</div><div class="feat-desc en">Induction hob, oven, fridge, freezer, coffee machine, moka, kettle.</div></div></li>
+          <li class="feat-item"><div class="feat-icon">⛰️</div><div><div class="feat-title it">Terrazzo — vista Appennino Tosco-Romagnolo</div><div class="feat-title en">Terrace — Tuscan-Romagnol Apennines views</div><div class="feat-desc it">Tavolo e panchina in legno per pasti all'aperto.</div><div class="feat-desc en">Wooden table and bench for outdoor meals.</div></div></li>
+          <li class="feat-item"><div class="feat-icon">🌸</div><div><div class="feat-title it">Ampio giardino privato recintato</div><div class="feat-title en">Large private enclosed garden</div><div class="feat-desc it">Aree relax, panchine in pietra serena, area pic-nic, arredamento esterno.</div><div class="feat-desc en">Relaxation areas, pietra serena benches, picnic area, outdoor furniture.</div></div></li>
+          <li class="feat-item"><div class="feat-icon">🚗</div><div><div class="feat-title it">Parcheggio gratuito</div><div class="feat-title en">Free parking</div><div class="feat-desc it">In strada o area privata a 100 m dall'appartamento.</div><div class="feat-desc en">On the street or private spot 100 m from the apartment.</div></div></li>
+        </ul>
+      </div>
+      <div class="stats-box">
+        <h3 class="it">In sintesi</h3><h3 class="en">At a glance</h3>
+        <div class="stat-row"><span class="stat-lbl it">Camere</span><span class="stat-lbl en">Bedrooms</span><span class="stat-val">2</span></div>
+        <div class="stat-row"><span class="stat-lbl it">Bagni</span><span class="stat-lbl en">Bathrooms</span><span class="stat-val">1</span></div>
+        <div class="stat-row"><span class="stat-lbl it">Quota</span><span class="stat-lbl en">Altitude</span><span class="stat-val">600 m</span></div>
+        <div class="stat-row"><span class="stat-lbl">Starlink</span><span class="stat-val">+250 Mbps</span></div>
+        <div class="stat-row"><span class="stat-lbl it">Energia</span><span class="stat-lbl en">Energy</span><span class="stat-val">~100% ☀</span></div>
+        <div class="stat-row"><span class="stat-lbl it">Parcheggio</span><span class="stat-lbl en">Parking</span><span class="stat-val it">Gratuito</span><span class="stat-val en">Free</span></div>
+        <div class="stat-row"><span class="stat-lbl it">Da Firenze</span><span class="stat-lbl en">From Florence</span><span class="stat-val">~1h 10′</span></div>
+        <div class="stat-row"><span class="stat-lbl it">Da Arezzo</span><span class="stat-lbl en">From Arezzo</span><span class="stat-val">~45 min</span></div>
+        <div class="cin">CIN: IT051010C2QLKDO7XC</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOMADI DIGITALI -->
+<section id="nomadi">
+  <div class="wrap">
+    <div class="nom-grid">
+      <div class="nom-l">
+        <p class="eyebrow"><span class="it">Nomadi Digitali · Smart Working</span><span class="en">Digital Nomads · Remote Working</span></p>
+        <h2 class="it">Lavora <em>dal bosco</em>,<br>connesso come in città</h2>
+        <h2 class="en">Work <em>from the forest</em>,<br>connected like in the city</h2>
+        <p class="it">Silenzio totale, aria pulita, borgo medievale. Con Starlink +250 Mbps incluso nel prezzo — produttività massima, pausa pranzo sui sentieri CAI.</p>
+        <p class="en">Total silence, clean air, medieval hamlet. Starlink +250 Mbps included in the price — maximum productivity, lunch break on CAI trails.</p>
+        <div class="rate-hl"><span class="it">Smart-work −10% per soggiorni ≥7 notti · da <strong>€99/notte</strong></span><span class="en">Smart-work −10% for stays ≥7 nights · from <strong>€99/night</strong></span></div>
+        <div style="margin-top:1rem;display:flex;gap:.65rem;flex-wrap:wrap">
+          <a href="#disponibilita" class="btn-primary it">📅 Verifica date</a>
+          <a href="#disponibilita" class="btn-primary en">📅 Check dates</a>
+          <a href="#prezzi" class="btn-ghost it" style="color:#2a2318;border-color:#d8c9a8">Tariffa smart-work</a>
+          <a href="#prezzi" class="btn-ghost en" style="color:#2a2318;border-color:#d8c9a8">Smart-work rate</a>
+        </div>
+      </div>
+      <div class="nom-r">
+        <div style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.3rem">Starlink Satellite — incluso nel prezzo</div>
+        <div class="spd-big">+250<span class="spd-unit"> Mbps</span></div>
+        <div class="spd-label">Download · +250 Mbps</div>
+        <div class="sf"><span class="sf-i">🛰</span><div><div class="sf-title it">Internet illimitato incluso</div><div class="sf-title en">Unlimited internet included</div><div class="sf-desc it">Copertura totale indoor e outdoor.</div><div class="sf-desc en">Full indoor and outdoor coverage.</div></div></div>
+        <div class="sf"><span class="sf-i">🌲</span><div><div class="sf-title it">Silenzio totale · 600 m s.l.m.</div><div class="sf-title en">Total silence · 600 m altitude</div><div class="sf-desc it">6–8°C più fresco della città d'estate.</div><div class="sf-desc en">6–8°C cooler than the city in summer.</div></div></div>
+        <div class="sf"><span class="sf-i">🥾</span><div><div class="sf-title it">Pausa pranzo: sentieri CAI dal borgo</div><div class="sf-title en">Lunch break: CAI trails from the hamlet</div><div class="sf-desc it">Cima del Pratomagno a 1592 m raggiungibile in giornata.</div><div class="sf-desc en">Pratomagno summit at 1,592 m reachable in a day.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SENTIERI CAI -->
+<section id="sentieri">
+  <div class="wrap">
+    <p class="eyebrow it">🥾 Sentieri CAI — partenza dal borgo</p>
+    <p class="eyebrow en">🥾 CAI Trails — start from the hamlet</p>
+    <h2 class="it">Trekking in <em>Pratomagno e in Casentino</em></h2>
+    <h2 class="en">Hiking <em>Pratomagno and the Casentino</em></h2>
+    <p class="it">La rete CAI parte direttamente dal borgo medievale. Dal facile anello tra i borghi storici alla grande traversata del crinale appenninico — tutto senza auto.</p>
+    <p class="en">The CAI network starts directly from the medieval hamlet. From the easy village loop to the grand Apennine ridge traverse — all without a car.</p>
+    <div class="trail-list">
+      <div class="trail-row">
+        <div class="tr-num">01</div>
+        <div>
+          <div class="tr-title it">Cima del Pratomagno <span class="cai-badge">CAI</span></div>
+          <div class="tr-title en">Pratomagno Summit <span class="cai-badge">CAI</span></div>
+          <div class="tr-stats">📏 ~14 km A/R &nbsp; ⬆ 900 m D+ &nbsp; ⏱ 5–6 h</div>
+          <p class="tr-desc it">Dal borgo alla croce di vetta a 1592 m. Vista a 360° su Casentino, Valdarno e Appennino.</p>
+          <p class="tr-desc en">From the hamlet to the summit cross at 1,592 m. 360° views over Casentino, Valdarno and Apennines.</p>
+        </div>
+        <span class="diff d-m it">Medio</span><span class="diff d-m en">Medium</span>
+      </div>
+      <div class="trail-row">
+        <div class="tr-num">02</div>
+        <div>
+          <div class="tr-title it">Traversata del crinale — Vallombrosa <span class="cai-badge">CAI</span></div>
+          <div class="tr-title en">Ridge traverse — Vallombrosa <span class="cai-badge">CAI</span></div>
+          <div class="tr-stats">📏 ~25 km &nbsp; ⬆ 1200 m D+ &nbsp; ⏱ 7–9 h</div>
+          <p class="tr-desc it">Crinale quasi interamente sopra i 1300 m. In due tappe con pernottamento a Pratomagno Apartment.</p>
+          <p class="tr-desc en">Ridge almost entirely above 1,300 m. Can be split with overnight at Pratomagno Apartment.</p>
+        </div>
+        <span class="diff d-h it">Impegnativo</span><span class="diff d-h en">Challenging</span>
+      </div>
+      <div class="trail-row">
+        <div class="tr-num">03</div>
+        <div>
+          <div class="tr-title it">Anello borghi medievali <span class="cai-badge">CAI</span></div>
+          <div class="tr-title en">Medieval villages loop <span class="cai-badge">CAI</span></div>
+          <div class="tr-stats">📏 ~8 km &nbsp; ⬆ 350 m D+ &nbsp; ⏱ 2,5–3 h</div>
+          <p class="tr-desc it">Castagneti storici, chiese romaniche, scorci sull'Appennino. Ottimo per famiglie.</p>
+          <p class="tr-desc en">Historic chestnut groves, Romanesque churches, Apennine views. Great for families.</p>
+        </div>
+        <span class="diff d-e it">Facile</span><span class="diff d-e en">Easy</span>
+      </div>
+      <div class="trail-row">
+        <div class="tr-num">04</div>
+        <div>
+          <div class="tr-title it">Anello di Camaldoli — Parco Nazionale <span class="cai-badge">CAI</span></div>
+          <div class="tr-title en">Camaldoli Loop — National Park <span class="cai-badge">CAI</span></div>
+          <div class="tr-stats">📏 ~12 km &nbsp; ⬆ 550 m D+ &nbsp; ⏱ 4–5 h</div>
+          <p class="tr-desc it">Eremo di Camaldoli (1111 m) e monastero. Foresta di abeti bianchi millenari. ~20 km dall'appartamento.</p>
+          <p class="tr-desc en">Camaldoli hermitage (1,111 m) and monastery. Ancient silver fir forest. ~20 km from apartment.</p>
+        </div>
+        <span class="diff d-m it">Medio</span><span class="diff d-m en">Medium</span>
+      </div>
+      <div class="trail-row">
+        <div class="tr-num">05</div>
+        <div>
+          <div class="tr-title it">Sasso Fratino — Parco Nazionale delle Foreste Casentinesi <span class="cai-badge">UNESCO</span></div>
+          <div class="tr-title en">Sasso Fratino — National Park of the Casentino Forests <span class="cai-badge">UNESCO</span></div>
+          <div class="tr-stats">📏 ~10 km &nbsp; ⬆ 500 m D+ &nbsp; ⏱ 3,5–5 h</div>
+          <p class="tr-desc it">Foresta primordiale Patrimonio UNESCO 2017. Accesso con guida autorizzata obbligatoria. ~35 km.</p>
+          <p class="tr-desc en">Primeval forest UNESCO World Heritage 2017. Authorised guide required. ~35 km.</p>
+        </div>
+        <span class="diff d-m it">Medio</span><span class="diff d-m en">Medium</span>
+      </div>
+    </div>
+    <p style="text-align:right;margin-top:.75rem">
+      <a href="pratomagno_trails_sport_art.html" class="it">→ Tutte le escursioni, sport &amp; arte del territorio</a>
+      <a href="pratomagno_trails_sport_art.html" class="en">→ All hikes, sport &amp; art in the area</a>
+    </p>
+  </div>
+</section>
+
+<!-- TERRITORY -->
+<section id="territorio" style="background:#e2f0d4">
+  <div class="wrap">
+    <p class="eyebrow it">Il territorio</p>
+    <p class="eyebrow en">The area</p>
+    <h2 class="it">Il Casentino <em>ai vostri piedi</em></h2>
+    <h2 class="en">The Casentino <em>on your doorstep</em></h2>
+    <p class="it">Boschi millenari, castelli medievali, abbazie romaniche, foreste primordiali UNESCO. Tutto raggiungibile in pochi chilometri.</p>
+    <p class="en">Ancient forests, medieval castles, Romanesque abbeys, UNESCO primeval forests. All reachable within a few kilometres.</p>
+    <div class="mosaic">
+
+      <!-- FORESTS -->
+      <div class="mosaic-card forest">
+        <div class="mc-header">
+          <span class="mc-icon">🌲</span>
+          <div>
+            <div class="mc-cat it">Natura · UNESCO</div><div class="mc-cat en">Nature · UNESCO</div>
+            <div class="mc-group-title it">Foreste &amp; Parchi</div><div class="mc-group-title en">Forests &amp; Parks</div>
+          </div>
+        </div>
+        <div class="mc-places">
+          <div class="mc-place">
+            <div class="m-title it">Parco Nazionale delle Foreste Casentinesi</div>
+            <div class="m-title en">National Park of the Casentino Forests</div>
+            <p class="m-text it">36.000 ha di foreste primordiali. Lupi, cervi, aquile reali. Sentieri CAI dall'appartamento. Patrimonio UNESCO.</p>
+            <p class="m-text en">36,000 ha of primeval forest. Wolves, deer, golden eagles. CAI trails from the apartment. UNESCO World Heritage.</p>
+            <div class="m-dist">📍 12 km</div>
+          </div>
+          <div class="mc-place">
+            <div class="m-title">Sasso Fratino — UNESCO</div>
+            <p class="m-text it">Foresta primordiale tra le più intatte d'Europa. Patrimonio UNESCO 2017.</p>
+            <p class="m-text en">Among Europe's most intact primeval forests. UNESCO World Heritage 2017.</p>
+            <div class="m-dist">📍 ~35 km</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASTLES -->
+      <div class="mosaic-card castle">
+        <div class="mc-header">
+          <span class="mc-icon">🏰</span>
+          <div>
+            <div class="mc-cat it">Medioevo</div><div class="mc-cat en">Medieval</div>
+            <div class="mc-group-title it">Castelli</div><div class="mc-group-title en">Castles</div>
+          </div>
+        </div>
+        <div class="mc-places">
+          <div class="mc-place">
+            <div class="m-title it">Castello di Romena</div><div class="m-title en">Romena Castle</div>
+            <p class="m-text it">Fortezza medievale dei Conti Guidi (XI sec.). Citata da Dante nella Commedia.</p>
+            <p class="m-text en">Medieval fortress of the Guidi Counts (11th c.). Cited by Dante in the Commedia.</p>
+            <div class="m-dist">📍 8 km</div>
+          </div>
+          <div class="mc-place">
+            <div class="m-title it">Castello di Poppi</div><div class="m-title en">Poppi Castle</div>
+            <p class="m-text it">Uno dei borghi medievali più belli d'Italia. Castello dei Conti Guidi (XIV sec.).</p>
+            <p class="m-text en">One of Italy's most beautiful medieval villages. 14th-century Guidi Castle.</p>
+            <div class="m-dist">📍 10 km</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MUSEUMS -->
+      <div class="mosaic-card museum">
+        <div class="mc-header">
+          <span class="mc-icon">🏛️</span>
+          <div>
+            <div class="mc-cat it">Cultura</div><div class="mc-cat en">Culture</div>
+            <div class="mc-group-title it">Musei</div><div class="mc-group-title en">Museums</div>
+          </div>
+        </div>
+        <div class="mc-places">
+          <div class="mc-place">
+            <div class="m-title it">Museo del Carbonaio di Cetica</div><div class="m-title en">Cetica Charcoal Maker Museum</div>
+            <p class="m-text it">Storie e strumenti del carbone vivo in Casentino.</p>
+            <p class="m-text en">Stories and tools of charcoal making in the Casentino.</p>
+            <div class="m-dist">📍 0.5 km</div>
+          </div>
+          <div class="mc-place">
+            <div class="m-title it">Museo della Bilancia</div><div class="m-title en">Scale Museum</div>
+            <p class="m-text it">Collezione storica di bilance e strumenti di misura.</p>
+            <p class="m-text en">Historic collection of scales and measuring instruments.</p>
+            <div class="m-dist">📍 11 km</div>
+          </div>
+          <div class="mc-place">
+            <div class="m-title it">Museo Archeologico del Casentino</div><div class="m-title en">Casentino Archaeological Museum</div>
+            <p class="m-text it">Reperti antichi dal territorio, dai villaggi etruschi ai ritrovamenti romani.</p>
+            <p class="m-text en">Ancient finds from the area, from Etruscan villages to Roman discoveries.</p>
+            <div class="m-dist">📍 12 km</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHURCHES -->
+      <div class="mosaic-card church">
+        <div class="mc-header">
+          <span class="mc-icon">⛪</span>
+          <div>
+            <div class="mc-cat it">Spiritualità</div><div class="mc-cat en">Spirituality</div>
+            <div class="mc-group-title it">Abbazie &amp; Chiese</div><div class="mc-group-title en">Abbeys &amp; Churches</div>
+          </div>
+        </div>
+        <div class="mc-places">
+          <div class="mc-place">
+            <div class="m-title it">Eremo e Monastero di Camaldoli</div><div class="m-title en">Camaldoli Hermitage &amp; Monastery</div>
+            <p class="m-text it">Fondato nel 1012 a 1111 m s.l.m. Farmacia erboristica fondata nel 1048.</p>
+            <p class="m-text en">Founded in 1012 at 1,111 m altitude. Herbal pharmacy founded in 1048.</p>
+            <div class="m-dist">📍 ~20 km</div>
+          </div>
+          <div class="mc-place">
+            <div class="m-title it">Abbazia di Vallombrosa</div><div class="m-title en">Vallombrosa Abbey</div>
+            <p class="m-text it">Abbazia benedettina benedettina benedettina benedettina (XI sec.) nel cuore della foresta.</p>
+            <p class="m-text en">Benedictine abbey (11th c.) in the heart of the forest.</p>
+            <div class="m-dist">📍 ~22 km</div>
+          </div>
+          <div class="mc-place">
+            <div class="m-title it">Santuario della Verna</div><div class="m-title en">La Verna Sanctuary</div>
+            <p class="m-text it">Dove San Francesco ricevette le Stimmate (1224). Punto di pellegrinaggio.</p>
+            <p class="m-text en">Where St Francis received the Stigmata (1224). Major pilgrimage site.</p>
+            <div class="m-dist">📍 ~28 km</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY (LIGHTBOXES) -->
+<div class="lb" id="lb1"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb9">‹</a><img src="img/photo01.jpg" alt="Pratomagno Apartment"><a class="lb-next" href="#lb2">›</a></div>
+<div class="lb" id="lb2"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb1">‹</a><img src="img/photo02.jpg" alt="Vista bosco"><a class="lb-next" href="#lb3">›</a></div>
+<div class="lb" id="lb3"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb2">‹</a><img src="img/photo03.jpg" alt="Soggiorno"><a class="lb-next" href="#lb4">›</a></div>
+<div class="lb" id="lb4"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb3">‹</a><img src="img/photo04.jpg" alt="Cucina"><a class="lb-next" href="#lb5">›</a></div>
+<div class="lb" id="lb5"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb4">‹</a><img src="img/photo05.jpg" alt="Camera matrimoniale"><a class="lb-next" href="#lb6">›</a></div>
+<div class="lb" id="lb6"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb5">‹</a><img src="img/photo06.jpg" alt="Giardino"><a class="lb-next" href="#lb7">›</a></div>
+<div class="lb" id="lb7"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb6">‹</a><img src="img/photo07.jpg" alt="Terrazzo"><a class="lb-next" href="#lb8">›</a></div>
+<div class="lb" id="lb8"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb7">‹</a><img src="img/photo08.jpg" alt="Bagno"><a class="lb-next" href="#lb9">›</a></div>
+<div class="lb" id="lb9"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb8">‹</a><img src="img/photo09.jpg" alt="Vista panoramica"><a class="lb-next" href="#lb1">›</a></div>
+
+<section id="foto">
+  <div class="wrap">
+    <p class="eyebrow it">Galleria fotografica</p>
+    <p class="eyebrow en">Photo gallery</p>
+    <h2 class="it">Guarda l'<em>appartamento</em></h2>
+    <h2 class="en">See the <em>apartment</em></h2>
+    <div class="gal-grid">
+      <a href="#lb1" class="gal-link"><img src="img/photo01.jpg" alt="Pratomagno Apartment"></a>
+      <a href="#lb2" class="gal-link"><img src="img/photo02.jpg" alt="Vista bosco"></a>
+      <a href="#lb3" class="gal-link"><img src="img/photo03.jpg" alt="Soggiorno"></a>
+      <a href="#lb4" class="gal-link"><img src="img/photo04.jpg" alt="Cucina"></a>
+      <a href="#lb5" class="gal-link"><img src="img/photo05.jpg" alt="Camera matrimoniale"></a>
+      <a href="#lb6" class="gal-link"><img src="img/photo06.jpg" alt="Giardino"></a>
+      <a href="#lb7" class="gal-link"><img src="img/photo07.jpg" alt="Terrazzo"></a>
+      <a href="#lb8" class="gal-link"><img src="img/photo08.jpg" alt="Bagno"></a>
+      <a href="#lb9" class="gal-link"><img src="img/photo09.jpg" alt="Vista panoramica"></a>
+    </div>
+  </div>
+</section>
+
+<!-- AVAILABILITY -->
+<section id="disponibilita">
+  <div class="wrap">
+    <p class="eyebrow it">📅 Disponibilità</p>
+    <p class="eyebrow en">📅 Availability</p>
+    <h2 class="it">Calendario <em>disponibilità</em></h2>
+    <h2 class="en"><em>Availability</em> calendar</h2>
+    <div class="cal-layout">
+      <div>
+        <div class="cal-box">
+          <div class="cal-nav">
+            <button class="cal-arrow" onclick="calPrev()">‹</button>
+            <div class="cal-title" id="calTitle"></div>
+            <button class="cal-arrow" onclick="calNext()">›</button>
+          </div>
+          <div class="cal-grid" id="calGrid"></div>
+          <div class="cal-legend">
+            <div class="leg-i"><div class="leg-dot" style="background:#e2f0d4"></div><span class="it">Disponibile</span><span class="en">Available</span></div>
+            <div class="leg-i"><div class="leg-dot" style="background:#f5ddd0"></div><span class="it">Occupato</span><span class="en">Booked</span></div>
+          </div>
+          <div class="cal-note it">📞 Per prenotare scrivici: <a href="mailto:pratomgnoapartament@gmail.com">pratomgnoapartament@gmail.com</a></div>
+          <div class="cal-note en">📞 To book: <a href="mailto:pratomgnoapartament@gmail.com">pratomgnoapartament@gmail.com</a></div>
+        </div>
+        <div class="admin-toggle-wrap">
+          <button class="admin-toggle-btn" onclick="toggleAdmin()">⚙ Admin</button>
+        </div>
+        <div class="admin-panel" id="adminPanel">
+          <div class="admin-pw-wrap">
+            <input type="password" id="adminPw" placeholder="Password">
+            <button onclick="checkPw()">Accedi</button>
+          </div>
+          <div class="admin-msg" id="adminMsg"></div>
+          <div class="admin-content" id="adminContent">
+            <div class="admin-section-title">Aggiungi prenotazione</div>
+            <div class="admin-add-row">
+              <input type="date" id="addFrom">
+              <span>→</span>
+              <input type="date" id="addTo">
+              <select id="addSource">
+                <option value="airbnb">Airbnb</option>
+                <option value="booking">Booking.com</option>
+                <option value="manual">Diretto</option>
+              </select>
+              <button class="btn-add-booking" onclick="addBooking()">Aggiungi</button>
+            </div>
+            <div class="admin-section-title">Prenotazioni attive</div>
+            <div class="booking-list" id="bookingList"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cal-info">
+        <div class="info-card">
+          <h3 class="it">Orari</h3><h3 class="en">Times</h3>
+          <div class="times-grid">
+            <div class="time-box"><div class="t-lbl">Check-in</div><div class="t-val">15:00</div><div class="t-note">Self check-in</div></div>
+            <div class="time-box"><div class="t-lbl">Check-out</div><div class="t-val">10:30</div><div class="t-note it">Casella chiavi</div><div class="t-note en">Key box</div></div>
+            <div class="time-box"><div class="t-lbl it">Silenzio</div><div class="t-lbl en">Quiet</div><div class="t-val">23:00</div></div>
+            <div class="time-box"><div class="t-lbl it">Max ospiti</div><div class="t-lbl en">Max guests</div><div class="t-val">4</div><div class="t-note it">persone</div><div class="t-note en">people</div></div>
+          </div>
+        </div>
+        <div class="info-card">
+          <h3 class="it">📋 Regole della casa</h3><h3 class="en">📋 House rules</h3>
+          <div class="rules">
+            <div class="rule"><span>-</span><span class="it">Smart working benvenuto · Starlink incluso · −10% per ≥7 notti</span><span class="en">Remote working welcome · Starlink included · −10% for ≥7 nights</span></div>
+            <div class="rule"><span>-</span><span class="it">Famiglie benvenute · Bambini &lt;4 anni gratuiti</span><span class="en">Families welcome · Children under 4 free</span></div>
+            <div class="rule"><span>-</span><span class="it">Vietato fumare in appartamento (area fumo terrazzo)</span><span class="en">No smoking indoors (permitted on terrace)</span></div>
+            <div class="rule"><span>-</span><span class="it">No feste · Silenzio 23:00–8:00</span><span class="en">No parties · Quiet hours 11 pm–8 am</span></div>
+            <div class="rule"><span>-</span><span class="it">Raccolta differenziata · cassonetti a 50 m</span><span class="en">Waste sorting required · bins 50 m away</span></div>
+            <div class="rule"><span>-</span><span class="it">Animali domestici non ammessi</span><span class="en">No pets allowed</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREZZI -->
+<section id="prezzi" style="background:#f2ead8">
+  <div class="wrap">
+    <p class="eyebrow it">Tariffe 2026</p>
+    <p class="eyebrow en">2026 Rates</p>
+    <h2 class="it">Prenotazione diretta — <em>tariffa più bassa</em></h2>
+    <h2 class="en">Direct booking — <em>lowest rate</em></h2>
+    <p class="it">Prenotando direttamente eviti le commissioni. Prezzi per 2 ospiti — variano per stagione e numero ospiti.</p>
+    <p class="en">Book directly and avoid OTA commissions. Prices for 2 guests — vary by season and guest count.</p>
+    <div class="price-grid">
+      <div class="price-col"><div class="p-season it">Bassa stagione</div><div class="p-season en">Low season</div><div class="p-period it">Novembre–Marzo</div><div class="p-period en">Nov–March</div><div class="p-num">€94</div><div class="p-unit it">notte · 2 ospiti</div><div class="p-unit en">night · 2 guests</div><span class="p-badge it">min 2 notti</span><span class="p-badge en">min 2 nights</span></div>
+      <div class="price-col"><div class="p-season it">Media stagione</div><div class="p-season en">Shoulder season</div><div class="p-period it">Apr–Giu · Sett–Ott</div><div class="p-period en">April–June · Sept–Oct</div><div class="p-num">€110</div><div class="p-unit it">notte · 2 ospiti</div><div class="p-unit en">night · 2 guests</div><span class="p-badge it">min 2 notti</span><span class="p-badge en">min 2 nights</span></div>
+      <div class="price-col"><div class="p-season it">Alta stagione</div><div class="p-season en">High season</div><div class="p-period it">Luglio–Agosto</div><div class="p-period en">July–Aug</div><div class="p-num">€124</div><div class="p-unit it">notte · 2 ospiti</div><div class="p-unit en">night · 2 guests</div><span class="p-badge it">min 2 notti</span><span class="p-badge en">min 2 nights</span></div>
+      <div class="price-col"><div class="p-season it">Picco</div><div class="p-season en">Peak</div><div class="p-period it">Natale · Pasqua · Ferragosto</div><div class="p-period en">Christmas · Easter · Mid-Aug</div><div class="p-num">€149</div><div class="p-unit it">notte · 2 ospiti</div><div class="p-unit en">night · 2 guests</div><span class="p-badge it">min 3 notti</span><span class="p-badge en">min 3 nights</span></div>
+      <div class="price-col feat"><div class="p-season">Smart-work</div><div class="p-period it">≥7 notti</div><div class="p-period en">≥7 nights</div><div class="p-num">€99</div><div class="p-unit it">notte · 2 ospiti</div><div class="p-unit en">night · 2 guests</div><span class="p-badge">−10%</span></div>
+    </div>
+    <div class="extras">
+      <div class="extra"><div class="e-lbl it">Tassa soggiorno</div><div class="e-lbl en">Tourist tax</div><div class="e-val">€2<small class="it"> /pers/notte (max 4gg) · all'arrivo</small><small class="en"> /pers/night (max 4) · on arrival</small></div></div>
+      <div class="extra"><div class="e-lbl it">Bambini &lt;4 anni</div><div class="e-lbl en">Children &lt;4 years</div><div class="e-val it">Gratuiti</div><div class="e-val en">Free</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RECENSIONI -->
+<section id="recensioni">
+  <div class="wrap">
+    <p class="eyebrow it">⭐ Recensioni degli ospiti</p>
+    <p class="eyebrow en">⭐ Guest reviews</p>
+    <h2 class="it">Cosa dicono i nostri <em>ospiti</em></h2>
+    <h2 class="en">What our <em>guests</em> say</h2>
+    <div class="rating-summary">
+      <div>
+        <div class="rating-big">4.94</div>
+        <div class="rating-stars">★★★★★</div>
+        <div class="rating-count it">Media su 28 recensioni</div>
+        <div class="rating-count en">Average of 28 reviews</div>
+      </div>
+      <div class="rating-bars">
+        <div class="rbar"><span class="rbar-lbl it">Pulizia</span><span class="rbar-lbl en">Cleanliness</span><div class="rbar-track"><div class="rbar-fill" style="width:100%"></div></div><span class="rbar-val">5.0</span></div>
+        <div class="rbar"><span class="rbar-lbl it">Posizione</span><span class="rbar-lbl en">Location</span><div class="rbar-track"><div class="rbar-fill" style="width:99%"></div></div><span class="rbar-val">4.9</span></div>
+        <div class="rbar"><span class="rbar-lbl it">Comfort</span><span class="rbar-lbl en">Comfort</span><div class="rbar-track"><div class="rbar-fill" style="width:98%"></div></div><span class="rbar-val">4.9</span></div>
+        <div class="rbar"><span class="rbar-lbl">Wi-Fi</span><div class="rbar-track"><div class="rbar-fill" style="width:100%"></div></div><span class="rbar-val">5.0</span></div>
+        <div class="rbar"><span class="rbar-lbl it">Natura</span><span class="rbar-lbl en">Nature</span><div class="rbar-track"><div class="rbar-fill" style="width:100%"></div></div><span class="rbar-val">5.0</span></div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text it">«Bellissima esperienza! L'host è davvero splendida: ottima accoglienza, belle chiacchierate. La casa bellissima, la location quello che desideravo: completamente immersa nella natura e comunque non lontana da centri. Esperienza da ripetere!»</p><p class="rev-text en">«A very beautiful experience! The host is really splendid: optimum welcome, beautiful chatting. The house is very beautiful, the location: what I wanted — completely immersed in nature but not far from shopping centres. Experience to repeat!»</p><div class="rev-author"><div class="rev-avatar">AC</div><div><div class="rev-name">Aurelia C.</div><div class="rev-meta it">Firenze · luglio 2025</div><div class="rev-meta en">Florence · July 2025</div></div></div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text it">«I had a wonderful stay. I was looking for a quiet place to go on a personal retreat — this flat was ideal. Beautiful location in the rolling hills of Toscana. At night, only pristine quiet. The host is lovely — warm, kind, excellent English. The flat itself is very cute. Modern kitchen, modern bathroom, tastefully decorated. The master bed was super comfortable.»</p><p class="rev-text en">«I had a wonderful stay. I was looking for a quiet place to go on a personal retreat — this flat was ideal. Beautiful location in the rolling hills of Toscana. At night, only pristine quiet. The host is lovely — warm, kind, excellent English. The flat itself is very cute. Modern kitchen, modern bathroom, tastefully decorated.»</p><div class="rev-author"><div class="rev-avatar">L.</div><div><div class="rev-name">Lisa</div><div class="rev-meta">USA · September 2023</div></div></div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text it">«La padrona di casa era molto gentile e disponibile. La casa è arredata con gusto. Il bagno è spazioso con una grande cabina doccia (con termostato!). C'è un parcheggio per la macchina.»</p><p class="rev-text en">«The host was very nice and helpful. The apartment is well equipped. The bathroom is very spacious with a large cabin shower (with thermostat!). There is a car park.»</p><div class="rev-author"><div class="rev-avatar">Jo</div><div><div class="rev-name">Joachim</div><div class="rev-meta it">Sicilia · Agosto 2023</div><div class="rev-meta en">Sicily · August 2023</div></div></div></div>
+    </div>
+    <p class="reviews-note it">* Recensioni reali ricevute su <a href="https://www.airbnb.it/rooms/28183170" target="_blank" rel="noopener">Airbnb</a>, <a href="https://www.booking.com/Share-8eE2Tub" target="_blank" rel="noopener">Booking.com</a> o <a href="https://share.google/xEanyWVrkQ0gw60ms" target="_blank" rel="noopener">Google</a>.</p>
+    <p class="reviews-note en">* Reviews received on <a href="https://www.airbnb.it/rooms/28183170" target="_blank" rel="noopener">Airbnb</a>, <a href="https://www.booking.com/Share-8eE2Tub" target="_blank" rel="noopener">Booking.com</a> or <a href="https://share.google/xEanyWVrkQ0gw60ms" target="_blank" rel="noopener">Google</a>.</p>
+  </div>
+</section>
+
+<!-- PAGE CARDS -->
+<section style="background:#f2ead8">
+  <div class="wrap">
+    <p class="eyebrow it">Esplora il sito</p>
+    <p class="eyebrow en">Explore the site</p>
+    <h2 class="it">Guide &amp; <em>informazioni</em></h2>
+    <h2 class="en">Guides &amp; <em>information</em></h2>
+    <div class="page-cards">
+      <div class="page-card" onclick="window.location='pratomagno_come_arrivare.html'"><span class="pc-icon">🗺</span><div class="pc-title it">Come arrivare</div><div class="pc-title en">How to get here</div><p class="pc-desc it">GPS, indicazioni da Firenze e Arezzo, treno ed autobus.</p><p class="pc-desc en">GPS, directions from Florence and Arezzo, train.</p><a class="pc-arrow" href="https://www.google.com/maps/dir/?api=1&destination=Loc.+Castagneto-Cetica+173,+52018+Castel+San+Niccol%C3%B2+AR,+Italia" target="_blank" rel="noopener" onclick="event.stopPropagation()">→ Google Maps</a></div>
+      <div class="page-card" onclick="window.location='info-utili.html'"><span class="pc-icon">📋</span><div class="pc-title it">Info utili</div><div class="pc-title en">Useful info</div><p class="pc-desc it">Ristoranti, bar, regole, cosa vedere nel Casentino.</p><p class="pc-desc en">Restaurants, bars, rules, what to see in the Casentino.</p><a class="pc-arrow" href="info-utili.html" onclick="event.stopPropagation()">→ Apri / Open</a></div>
+      <div class="page-card" onclick="window.location='raccolta-differenziata.html'"><span class="pc-icon">♻</span><div class="pc-title it">Raccolta differenziata</div><div class="pc-title en">Waste recycling</div><p class="pc-desc it">Guida ai bidoni, composter, posizione cassonetti.</p><p class="pc-desc en">Bin guide, composter, collection point location.</p><a class="pc-arrow" href="raccolta-differenziata.html" onclick="event.stopPropagation()">→ Apri / Open</a></div>
+      <div class="page-card" onclick="window.location='piano-induzione.html'"><span class="pc-icon">🍳</span><div class="pc-title it">Piano a induzione</div><div class="pc-title en">Induction hob</div><p class="pc-desc it">Come accendere, livelli di potenza, pulizia.</p><p class="pc-desc en">How to use, power levels, cleaning tips.</p><a class="pc-arrow" href="piano-induzione.html" onclick="event.stopPropagation()">→ Apri / Open</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ATTIVITA -->
+<section id="attivita">
+  <div class="wrap">
+    <p class="eyebrow it">Percorsi &amp; Attività</p>
+    <p class="eyebrow en">Routes &amp; Activities</p>
+    <h2 class="it">Natura, sport e <em>avventura</em></h2>
+    <h2 class="en">Nature, sport and <em>adventure</em></h2>
+
+    <div class="act-block">
+      <div class="act-block-title"><span class="it">Percorsi Tematici</span><span class="en">Thematic Routes</span></div>
+      <table class="act-table">
+        <tr><td class="act-name-td">Percorso Hinkler Ring<small class="en">Hinkler Ring Route</small></td><td><span class="it">Percorso storico sul crinale</span><span class="en">Historical ridge route</span></td></tr>
+        <tr><td class="act-name-td">Croce — Cippo Hinkler — Pozza Nera<small class="en">Cross — Hinkler Monument — Pozza Nera</small></td><td><span class="it">Pratomagno · trekking panoramico</span><span class="en">From Pratomagno · panoramic trek</span></td></tr>
+        <tr><td class="act-name-td">Relitto Aereo — Uomo di Sasso<small class="en">Aircraft Wreck — Stone Man Route</small></td><td><span class="it">Itinerario storico sul crinale</span><span class="en">Historical ridge itinerary</span></td></tr>
+        <tr><td class="act-name-td">Pescina Santa — Portacce<small class="en">Pescina Santa — Portacce Route</small></td><td><span class="it">Sorgenti e boschi del Pratomagno</span><span class="en">Springs and Pratomagno woodland</span></td></tr>
+        <tr><td class="act-name-td">Bagni di Cetica<small class="en">Cetica Thermal Springs</small></td><td><span class="it">Area termale · 1.150 m · 5 km dall'appartamento</span><span class="en">Thermal area · 1,150 m · 5 km from apartment</span></td></tr>
+        <tr><td class="act-name-td">Trek a Cetica<small class="en">Cetica Trek</small></td><td><span class="it">Pieve Romanica S.Michele Arcangelo · Museo del Carbonaio</span><span class="en">Romanesque Church S.Michele Arcangelo · Charcoal Maker Museum</span></td></tr>
+      </table>
+    </div>
+
+    <div class="act-grid">
+      <div class="act-block">
+        <div class="act-block-title"><span class="it">Attività Sportive</span><span class="en">Sports Activities</span></div>
+        <table class="act-table">
+          <tr><td class="act-icon-td">⛷️</td><td class="act-name-td">Sport Invernali<small class="en">Winter Sports</small></td><td class="act-link-td"><a href="https://www.parcoforestecasentinesi.it" target="_blank" rel="noopener">parcoforestecasentinesi.it</a></td></tr>
+          <tr><td class="act-icon-td">⛳</td><td class="act-name-td">Golf<small class="en">Golf Club</small></td><td class="act-link-td"><a href="https://www.golfclubcasentino.it" target="_blank" rel="noopener">golfclubcasentino.it</a></td></tr>
+          <tr><td class="act-icon-td">🎾</td><td class="act-name-td">Tennis</td><td class="act-link-td"><a href="https://www.casentino.it/attivit%C3%A0-sportive/235-tennis" target="_blank" rel="noopener">casentino.it</a></td></tr>
+          <tr><td class="act-icon-td">🚵</td><td class="act-name-td">Mountain Bike<small class="en">MTB / E-Bike</small></td><td class="act-link-td"><a href="https://www.casentinoebike.it" target="_blank" rel="noopener">casentinoebike.it</a></td></tr>
+          <tr><td class="act-icon-td">🚴</td><td class="act-name-td">Ciclopiste<small class="en">Cycle Paths</small></td><td class="act-link-td"><a href="https://www.paraclick.it" target="_blank" rel="noopener">paraclick.it</a></td></tr>
+          <tr><td class="act-icon-td">🐴</td><td class="act-name-td">Equitazione<small class="en">Horse Riding</small></td><td class="act-link-td"><a href="https://www.clubippicosandonato.it" target="_blank" rel="noopener">clubippicosandonato.it</a></td></tr>
+          <tr><td class="act-icon-td">🎣</td><td class="act-name-td">Pesca — Torrente Solano<small class="en">Trout Fishing — Solano River</small></td><td class="act-link-td"><a href="https://www.robertobarbaresi.it/articoli-itinerari/trote-in-casentino/" target="_blank" rel="noopener">robertobarbaresi.it</a></td></tr>
+          <tr><td class="act-icon-td">🏃</td><td class="act-name-td">Trail Running</td><td class="act-link-td"><a href="https://www.trailrunpro.it" target="_blank" rel="noopener">trailrunpro.it</a></td></tr>
+        </table>
+      </div>
+      <div class="act-block">
+        <div class="act-block-title">🔗 <span class="it">Link Utili</span><span class="en">Useful Links</span></div>
+        <table class="act-table">
+          <tr><td class="act-icon-td">🗺️</td><td class="act-name-td">Mappa &amp; Sentieri Pratomagno</td><td class="act-link-td"><a href="https://www.lamiabellatoscana.it/2016/07/la-mappa-ed-i-sentieri-del-pratomagno.html" target="_blank" rel="noopener">lamiabellatoscana.it</a></td></tr>
+          <tr><td class="act-icon-td">📍</td><td class="act-name-td">Wikiloc — Cetica–Bibbiena</td><td class="act-link-td"><a href="https://www.wikiloc.com/percorsi-escursionismo/cetica-bibbiena-4269558" target="_blank" rel="noopener">wikiloc.com</a></td></tr>
+          <tr><td class="act-icon-td">📓</td><td class="act-name-td">Cronache di Cammini</td><td class="act-link-td"><a href="https://www.cronachedicammini.com" target="_blank" rel="noopener">cronachedicammini.com</a></td></tr>
+          <tr><td class="act-icon-td">🌲</td><td class="act-name-td">Parco Foreste Casentinesi</td><td class="act-link-td"><a href="https://www.parcoforestecasentinesi.it" target="_blank" rel="noopener">parcoforestecasentinesi.it</a></td></tr>
+          <tr><td class="act-icon-td">🏔️</td><td class="act-name-td">Il Bel Casentino — Pratomagno</td><td class="act-link-td"><a href="https://www.ilbelcasentino.it/pratomagno.html" target="_blank" rel="noopener">ilbelcasentino.it</a></td></tr>
+          <tr><td class="act-icon-td">🗺️</td><td class="act-name-td">Pratomagno.it — Sentieri</td><td class="act-link-td"><a href="https://www.pratomagno.it/index.php/sentieri" target="_blank" rel="noopener">pratomagno.it</a></td></tr>
+          <tr><td class="act-icon-td">🏛️</td><td class="act-name-td">Ecomuseo del Casentino</td><td class="act-link-td"><a href="https://www.ecomuseo.casentino.toscana.it" target="_blank" rel="noopener">ecomuseo.casentino.toscana.it</a></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section class="cta-section" id="contatti">
+  <p class="eyebrow it">Prenota direttamente</p>
+  <p class="eyebrow en">Book directly</p>
+  <h2 class="it">Dove la Toscana è ancora <em>selvaggia</em></h2>
+  <h2 class="en">Begin your <em>adventure</em></h2>
+  <p class="it">Scrivici o chiamaci — risponderemo entro 24 ore. Nessun intermediario, tariffa più bassa garantita.</p>
+  <p class="en">Email or call us — we'll reply within 24 hours. No intermediaries, lowest rate guaranteed.</p>
+  <div class="hero-btns">
+    <a href="mailto:pratomgnoapartament@gmail.com" class="btn-primary it">✉ Invia email</a>
+    <a href="mailto:pratomgnoapartament@gmail.com" class="btn-primary en">✉ Send email</a>
+    <a href="tel:+390575555106" class="btn-ghost">📞 +39 0575 555106</a>
+  </div>
+  <div class="cta-contact">
+    Loc. Castagneto-Cetica 173, Castel San Niccolò (AR) 52018 · Tuscany<br>
+    <a href="mailto:pratomgnoapartament@gmail.com">pratomgnoapartament@gmail.com</a> · <a href="tel:+390575555106">+39 0575 555106</a><br>
+    <span style="opacity:.6">CIN: IT051010C2QLKDO7XC · ⚡ ~100% energia rinnovabile / renewable energy</span>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-logo">⛰ Pratomagno <em>Apartment</em></div>
+  <div class="footer-info">
+    Loc. Castagneto-Cetica 173 · Castel San Niccolò (AR) 52018 · Toscana, Italia<br>
+    <a href="mailto:pratomgnoapartament@gmail.com">pratomgnoapartament@gmail.com</a> · <a href="tel:+390575555106">+39 0575 555106</a><br>
+    CIN: IT051010C2QLKDO7XC · ⚡ ~100% energia rinnovabile / renewable energy
+  </div>
+</footer>
+
+<a href="tel:+390575555106" class="float-tel" title="+39 0575 555106">📞</a>
+
+<script>
+/* ── LANGUAGE ── */
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.getElementById('btn-it').classList.toggle('active', lang === 'it');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  renderCal();
+}
+setLang('it'); // default
+
+/* ── MOBILE DRAWER ── */
+function closeDrawer() {
+  document.getElementById('drawer').classList.remove('open');
+}
+document.getElementById('drawer').addEventListener('click', function(e) {
+  if (e.target === this) closeDrawer();
+});
+
+/* ── CALENDAR ── */
+var ADMIN_PASSWORD = 'pratomagno2026';
+var STORAGE_KEY = 'pratomagno_bookings';
+var DEFAULT_BOOKINGS = [
+  { from: '2026-04-10', to: '2026-04-16', source: 'airbnb' },
+  { from: '2026-04-18', to: '2026-04-21', source: 'booking' },
+  { from: '2026-05-01', to: '2026-05-04', source: 'airbnb' },
+  { from: '2026-06-15', to: '2026-06-30', source: 'airbnb' },
+  { from: '2026-07-01', to: '2026-07-14', source: 'booking' },
+  { from: '2026-08-01', to: '2026-08-31', source: 'airbnb' }
+];
+
+function loadBookings() {
+  try { var s = localStorage.getItem(STORAGE_KEY); return s ? JSON.parse(s) : DEFAULT_BOOKINGS.slice(); }
+  catch(e) { return DEFAULT_BOOKINGS.slice(); }
+}
+function saveBookings(list) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch(e) {}
+}
+
+var bookings = loadBookings();
+var calY = new Date().getFullYear(), calM = new Date().getMonth();
+
+function isBooked(y, m, d) {
+  var dt = new Date(y, m, d);
+  for (var i = 0; i < bookings.length; i++) {
+    if (dt >= new Date(bookings[i].from) && dt <= new Date(bookings[i].to)) return true;
+  }
+  return false;
+}
+
+function renderCal() {
+  var mIT = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+  var mEN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var dIT = ['Lun','Mar','Mer','Gio','Ven','Sab','Dom'];
+  var dEN = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  var lang = document.documentElement.lang === 'en' ? 'en' : 'it';
+  document.getElementById('calTitle').textContent = (lang === 'it' ? mIT : mEN)[calM] + ' ' + calY;
+  var grid = document.getElementById('calGrid');
+  grid.innerHTML = '';
+  var days = lang === 'it' ? dIT : dEN;
+  for (var i = 0; i < days.length; i++) {
+    var h = document.createElement('div');
+    h.className = 'cal-dh'; h.textContent = days[i]; grid.appendChild(h);
+  }
+  var today = new Date();
+  var daysInMonth = new Date(calY, calM + 1, 0).getDate();
+  var firstDay = new Date(calY, calM, 1).getDay();
+  var off = firstDay === 0 ? 6 : firstDay - 1;
+  for (var i = 0; i < off; i++) {
+    var e = document.createElement('div'); e.className = 'cal-day'; grid.appendChild(e);
+  }
+  for (var d = 1; d <= daysInMonth; d++) {
+    var cell = document.createElement('div');
+    var isT = (calY === today.getFullYear() && calM === today.getMonth() && d === today.getDate());
+    var isPast = new Date(calY, calM, d) < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    var bkd = isBooked(calY, calM, d);
+    var cls = 'cal-day';
+    if (isPast) cls += ' past';
+    else if (bkd) cls += ' booked';
+    else cls += ' avail';
+    if (isT) cls += ' today';
+    cell.className = cls;
+    cell.textContent = d;
+    grid.appendChild(cell);
+  }
+}
+
+function calPrev() { calM--; if (calM < 0) { calM = 11; calY--; } renderCal(); }
+function calNext() { calM++; if (calM > 11) { calM = 0; calY++; } renderCal(); }
+
+/* ── ADMIN ── */
+function toggleAdmin() {
+  document.getElementById('adminPanel').classList.toggle('open');
+}
+function checkPw() {
+  var pw = document.getElementById('adminPw').value;
+  var msg = document.getElementById('adminMsg');
+  if (pw === ADMIN_PASSWORD) {
+    document.getElementById('adminContent').classList.add('unlocked');
+    document.getElementById('adminPw').style.display = 'none';
+    renderBookingList();
+    msg.textContent = '';
+  } else {
+    msg.textContent = 'Password errata.';
+    msg.className = 'admin-msg err';
+  }
+}
+function fmtDate(str) { var p = str.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; }
+function renderBookingList() {
+  var list = document.getElementById('bookingList');
+  list.innerHTML = '';
+  if (!bookings.length) { list.innerHTML = '<div style="font-size:12px;color:#6b5c42;padding:.4rem 0">Nessuna prenotazione.</div>'; return; }
+  var sorted = bookings.slice().sort(function(a,b){ return a.from < b.from ? -1 : 1; });
+  sorted.forEach(function(b) {
+    var realIdx = bookings.indexOf(b);
+    var srcLabel = b.source==='airbnb'?'Airbnb':b.source==='booking'?'Booking':'Diretto';
+    var srcClass = 'src-'+b.source;
+    var item = document.createElement('div');
+    item.className = 'booking-item';
+    item.innerHTML = '<div class="booking-item-info"><span class="booking-source '+srcClass+'">'+srcLabel+'</span><span class="booking-dates">'+fmtDate(b.from)+' → '+fmtDate(b.to)+'</span></div><button class="btn-del-booking" onclick="deleteBooking('+realIdx+')">✕</button>';
+    list.appendChild(item);
+  });
+}
+function addBooking() {
+  var from = document.getElementById('addFrom').value;
+  var to   = document.getElementById('addTo').value;
+  var src  = document.getElementById('addSource').value;
+  var msg  = document.getElementById('adminMsg');
+  if (!from || !to) { msg.textContent='Inserisci le date.'; msg.className='admin-msg err'; return; }
+  if (from > to) { msg.textContent='Data arrivo deve essere prima della partenza.'; msg.className='admin-msg err'; return; }
+  bookings.push({ from:from, to:to, source:src });
+  saveBookings(bookings);
+  renderBookingList(); renderCal();
+  document.getElementById('addFrom').value='';
+  document.getElementById('addTo').value='';
+  msg.textContent='✓ Prenotazione aggiunta.'; msg.className='admin-msg';
+}
+function deleteBooking(idx) {
+  bookings.splice(idx,1);
+  saveBookings(bookings);
+  renderBookingList(); renderCal();
+  document.getElementById('adminMsg').textContent='✓ Eliminata.';
+  document.getElementById('adminMsg').className='admin-msg';
+}
+
+renderCal();
+</script>
+</body>
+</html>
