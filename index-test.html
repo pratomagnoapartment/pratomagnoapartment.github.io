@@ -5,150 +5,213 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pratomagno Apartment — Castagneto-Cetica · Alto Casentino · Toscana</title>
 <meta name="description" content="Appartamento eco-sostenibile nel borgo medievale di Castagneto-Cetica, Pratomagno, Alto Casentino. Starlink +250 Mbps, sentieri CAI diretti. CIN IT051010C2QLKDO7XC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-/* ── RESET ── */
+/* ═══════════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════════ */
+:root {
+  --ink:       #2a2318;
+  --ink-mid:   #3e3020;
+  --ink-soft:  #6b5c42;
+  --forest:    #2c4a3e;
+  --forest-lt: #3d6b5a;
+  --forest-xl: #dde8e2;
+  --copper:    #b87333;
+  --parchment: #faf6ee;
+  --cream:     #f2ead8;
+  --green-lt:  #e2f0d4;
+  --green-xl:  #f0f5f2;
+  --border:    #d8c9a8;
+  --border-lt: #e8dcca;
+  --serif:     'Cormorant Garamond', Georgia, serif;
+  --sans:      'Jost', Arial, sans-serif;
+  --r:         8px;
+}
+
+/* ═══════════════════════════════════════════
+   RESET
+═══════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: Georgia, serif; background: #faf6ee; color: #2a2318; line-height: 1.6; overflow-x: hidden; }
+body {
+  font-family: var(--serif);
+  background: var(--parchment);
+  color: var(--ink);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+a { color: var(--forest); }
+a:hover { text-decoration: underline; }
+ul, ol { padding-left: 1.25rem; }
 
-/* ── LANGUAGE TOGGLE ── */
+/* ═══════════════════════════════════════════
+   LANGUAGE TOGGLE
+═══════════════════════════════════════════ */
 html[lang="en"] .it { display: none !important; }
 html[lang="en"] .en { display: block !important; }
 html[lang="it"] .it { display: block !important; }
 html[lang="it"] .en { display: none !important; }
-span.en, span.it { display: inline !important; }
-html[lang="en"] span.it { display: none !important; }
-html[lang="it"] span.en { display: none !important; }
+span.en, span.it,
 small.en, small.it { display: inline !important; }
+html[lang="en"] span.it,
 html[lang="en"] small.it { display: none !important; }
+html[lang="it"] span.en,
 html[lang="it"] small.en { display: none !important; }
 
-a { color: #2c4a3e; }
-a:hover { text-decoration: underline; }
-
-/* ── LAYOUT ── */
-.wrap { max-width: 900px; margin: 0 auto; padding: 0 1.25rem; }
-section { padding: 3.5rem 0; border-top: 1px solid #d8c9a8; }
-
-h1 { font-size: clamp(2rem, 7vw, 4rem); font-weight: normal; line-height: 1.1; margin-bottom: 1rem; }
-h2 { font-size: clamp(1.4rem, 4vw, 2.2rem); font-weight: normal; margin-bottom: 1rem; }
-h3 { font-size: 1.05rem; font-weight: bold; margin-bottom: .6rem; }
-p  { margin-bottom: .85rem; font-size: 15px; color: #3e3020; }
-em { color: #2c4a3e; font-style: italic; }
-ul, ol { padding-left: 1.25rem; }
+/* ═══════════════════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════════════════ */
+h1 { font-family: var(--serif); font-size: clamp(2.1rem, 7vw, 4.2rem); font-weight: 400; line-height: 1.1; margin-bottom: 1rem; }
+h2 { font-family: var(--serif); font-size: clamp(1.5rem, 4vw, 2.4rem); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; }
+h3 { font-family: var(--sans); font-size: .95rem; font-weight: 700; margin-bottom: .6rem; letter-spacing: .02em; }
+p  { margin-bottom: .85rem; font-size: 15px; color: var(--ink-mid); }
+em { color: var(--forest); font-style: italic; }
 
 .eyebrow {
-  font-family: Arial, sans-serif; font-size: 11px; font-weight: bold;
-  letter-spacing: .18em; text-transform: uppercase; color: #3d6b5a; margin-bottom: .5rem;
+  font-family: var(--sans); font-size: 10px; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--forest-lt);
+  margin-bottom: .5rem;
 }
 
-/* ── NAV ── */
+blockquote {
+  border-left: 3px solid #7a9e8e; background: var(--green-xl);
+  padding: 1rem 1.25rem; border-radius: 0 var(--r) var(--r) 0;
+  font-style: italic; font-size: 1.05rem; color: var(--forest); margin: 1.25rem 0;
+}
+
+/* ═══════════════════════════════════════════
+   LAYOUT
+═══════════════════════════════════════════ */
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 1.25rem; }
+section { padding: 3.5rem 0; border-top: 1px solid var(--border); }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+
+/* ═══════════════════════════════════════════
+   BUTTONS
+═══════════════════════════════════════════ */
+.btn-primary {
+  display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700;
+  padding: 11px 22px; background: var(--copper); color: #fff; border-radius: 6px;
+  border: none; cursor: pointer; text-decoration: none; transition: opacity .15s;
+}
+.btn-primary:hover { opacity: .88; text-decoration: none; }
+
+.btn-ghost {
+  display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700;
+  padding: 11px 22px; background: transparent; color: #fff;
+  border: 2px solid rgba(255,255,255,.4); border-radius: 6px;
+  cursor: pointer; text-decoration: none; transition: border-color .15s, background .15s;
+}
+.btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.1); text-decoration: none; }
+
+/* ═══════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════ */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   background: rgba(44,74,62,.97);
   display: flex; align-items: center; justify-content: space-between;
   padding: .7rem 1.25rem; gap: .5rem;
 }
-.nav-logo { font-size: 1.05rem; color: #fff; text-decoration: none; font-family: Georgia, serif; white-space: nowrap; }
-.nav-logo em { color: #dde8e2; }
-.nav-links { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; }
-.nav-links a {
-  font-family: Arial, sans-serif; font-size: 10px; letter-spacing: .07em;
-  text-transform: uppercase; font-weight: bold; color: rgba(255,255,255,.75);
-  text-decoration: none; padding: .3rem .65rem;
-  border-bottom: 2px solid transparent;
+.nav-logo {
+  font-family: var(--serif); font-size: 1.1rem; color: #fff;
+  text-decoration: none; white-space: nowrap;
 }
-.nav-links a:hover { color: #fff; border-bottom-color: #dde8e2; }
+.nav-logo em { color: var(--forest-xl); }
+.nav-links { display: flex; flex-wrap: wrap; gap: 4px; list-style: none; }
+.nav-links a {
+  font-family: var(--sans); font-size: 10px; letter-spacing: .07em;
+  text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,.7);
+  text-decoration: none; padding: .3rem .6rem;
+  border-bottom: 2px solid transparent; transition: color .15s, border-color .15s;
+}
+.nav-links a:hover { color: #fff; border-bottom-color: var(--forest-xl); }
 .nav-right { display: flex; align-items: center; gap: .5rem; flex-shrink: 0; }
 .lang-btn {
-  font-family: Arial, sans-serif; font-size: 11px; font-weight: bold;
+  font-family: var(--sans); font-size: 11px; font-weight: 700;
   padding: 3px 9px; border-radius: 12px; border: 1px solid rgba(255,255,255,.3);
-  background: transparent; color: rgba(255,255,255,.65); cursor: pointer; text-decoration: none;
+  background: transparent; color: rgba(255,255,255,.65); cursor: pointer;
+  transition: background .15s, color .15s;
 }
-.lang-btn:hover, .lang-btn.active { background: #fff; color: #2c4a3e; }
+.lang-btn:hover, .lang-btn.active { background: #fff; color: var(--forest); }
 .nav-cta {
-  font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;
-  padding: 6px 14px; background: #b87333; color: #fff; border-radius: 6px; text-decoration: none;
+  font-family: var(--sans); font-size: 12px; font-weight: 700;
+  padding: 6px 14px; background: var(--copper); color: #fff; border-radius: 6px;
+  text-decoration: none; transition: opacity .15s;
 }
 .nav-cta:hover { opacity: .88; text-decoration: none; }
 .ham { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #fff; }
 
-/* ── MOBILE DRAWER ── */
+/* ═══════════════════════════════════════════
+   MOBILE DRAWER
+═══════════════════════════════════════════ */
 #drawer { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,.4); }
 #drawer.open { display: block; }
 .drawer-panel {
   position: absolute; top: 0; right: 0; bottom: 0; width: 70vw; max-width: 260px;
-  background: #faf6ee; padding: 4rem 0 2rem; overflow-y: auto;
+  background: var(--parchment); padding: 4rem 0 2rem; overflow-y: auto;
 }
 .drawer-link {
   display: block; padding: .6rem 1.5rem;
-  font-family: Arial, sans-serif; font-size: 13px; font-weight: bold;
-  text-decoration: none; color: #3e3020; border-left: 3px solid transparent;
+  font-family: var(--sans); font-size: 13px; font-weight: 600;
+  text-decoration: none; color: var(--ink); border-left: 3px solid transparent;
+  transition: color .15s, border-color .15s, background .15s;
 }
-.drawer-link:hover { color: #2c4a3e; border-left-color: #2c4a3e; background: #f0f5f2; }
+.drawer-link:hover { color: var(--forest); border-left-color: var(--forest); background: var(--green-xl); }
 
-/* ── HERO ── */
+/* ═══════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════ */
 .hero {
   min-height: 100vh;
-  background: url('img/photo01.jpg') center center / cover no-repeat;
+  background: url('./img/photo01.jpg') center center / cover no-repeat;
   display: flex; align-items: flex-end; justify-content: center;
   text-align: center; padding: 6rem 1.5rem 4rem;
 }
 .hero-inner { max-width: 700px; }
-.hero h1 { color: #fff; text-shadow: 2px 2px 8px rgba(0,0,0,.85); }
-.hero h1 em { color: #dde8e2; }
-.hero p { color: rgba(255,255,255,.92); font-size: 16px; max-width: 520px; margin: 0 auto 1.5rem; text-shadow: 1px 1px 5px rgba(0,0,0,.85); }
+.hero h1 { color: #fff; text-shadow: 2px 2px 10px rgba(0,0,0,.85); }
+.hero h1 em { color: var(--forest-xl); }
+.hero p { color: rgba(255,255,255,.92); font-size: 16px; max-width: 520px; margin: 0 auto 1.5rem; text-shadow: 1px 1px 6px rgba(0,0,0,.85); }
 .hero-btns { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
 
-.btn-primary {
-  font-family: Arial, sans-serif; font-size: 13px; font-weight: bold;
-  padding: 12px 24px; background: #b87333; color: #fff; border-radius: 6px;
-  border: none; cursor: pointer; text-decoration: none;
-}
-.btn-primary:hover { opacity: .88; text-decoration: none; }
-.btn-ghost {
-  font-family: Arial, sans-serif; font-size: 13px; font-weight: bold;
-  padding: 12px 24px; background: transparent; color: #fff;
-  border: 2px solid rgba(255,255,255,.4); border-radius: 6px; cursor: pointer; text-decoration: none;
-}
-.btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.1); text-decoration: none; }
-
-/* ── BADGES BAR ── */
+/* ═══════════════════════════════════════════
+   BADGES BAR
+═══════════════════════════════════════════ */
 .badges {
-  background: #3d6b5a; padding: .75rem 1.25rem;
+  background: var(--forest-lt); padding: .75rem 1.25rem;
   display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem;
 }
 .badge {
-  font-family: Arial, sans-serif; font-size: 11px; font-weight: bold;
+  font-family: var(--sans); font-size: 11px; font-weight: 700;
   padding: 4px 12px; border-radius: 20px;
-  background: rgba(255,255,255,.15); color: #dde8e2; border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.15); color: var(--forest-xl);
+  border: 1px solid rgba(255,255,255,.2);
 }
 
-/* ── TWO-COL ── */
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
-
-/* ── FOR-WHOM ── */
+/* ═══════════════════════════════════════════
+   FOR-WHOM
+═══════════════════════════════════════════ */
 .for-whom { list-style: none; padding: 0; }
-.for-whom li { display: flex; gap: .85rem; padding: .7rem .4rem; align-items: flex-start; }
-.for-whom li:hover { background: #f0f5f2; border-radius: 6px; }
+.for-whom li { display: flex; gap: .85rem; padding: .7rem .4rem; align-items: flex-start; border-radius: var(--r); transition: background .15s; }
+.for-whom li:hover { background: var(--green-xl); }
 .fw-icon { font-size: 1.3rem; flex-shrink: 0; }
-.fw-label { font-weight: bold; font-size: 14px; margin-bottom: 2px; }
-.fw-sub { font-size: 12px; color: #6b5c42; }
+.fw-label { font-family: var(--sans); font-weight: 700; font-size: 14px; margin-bottom: 2px; }
+.fw-sub { font-size: 12px; color: var(--ink-soft); }
 
-/* ── BLOCKQUOTE ── */
-blockquote {
-  border-left: 3px solid #7a9e8e; background: #f0f5f2;
-  padding: 1rem 1.25rem; border-radius: 0 6px 6px 0;
-  font-style: italic; font-size: 1.05rem; color: #2c4a3e; margin: 1.25rem 0;
-}
-
-/* ── ECO GRID ── */
+/* ═══════════════════════════════════════════
+   ECO GRID
+═══════════════════════════════════════════ */
 .eco-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
-.eco-card { text-align: center; padding: 1.5rem 1rem; background: #f2faec; border-radius: 8px; border: 1px solid rgba(90,158,66,.2); }
+.eco-card { text-align: center; padding: 1.5rem 1rem; background: #f2faec; border-radius: var(--r); border: 1px solid rgba(90,158,66,.2); }
 .eco-icon { font-size: 2rem; display: block; margin-bottom: .6rem; }
-.eco-title { font-weight: bold; color: #2c4a3e; margin-bottom: .35rem; }
+.eco-title { font-family: var(--sans); font-weight: 700; color: var(--forest); margin-bottom: .35rem; }
 
-/* ── CER CARD ── */
+/* ═══════════════════════════════════════════
+   CER CARD
+═══════════════════════════════════════════ */
 .cer-card {
   margin-top: 1.5rem; padding: 1.5rem 1.75rem;
   background: linear-gradient(135deg, #eaf7e0, #e2f5f0);
@@ -156,80 +219,90 @@ blockquote {
   border-top: 4px solid #5a9e42;
 }
 .cer-badge {
-  display: inline-block; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold;
+  display: inline-block; font-family: var(--sans); font-size: 10px; font-weight: 700;
   letter-spacing: .14em; text-transform: uppercase;
-  color: #2c4a3e; background: rgba(44,74,62,.10); padding: 3px 10px; border-radius: 20px; margin-bottom: .55rem;
+  color: var(--forest); background: rgba(44,74,62,.10);
+  padding: 3px 10px; border-radius: 20px; margin-bottom: .55rem;
 }
 .cer-title { font-size: 1.05rem; color: #1e3a30; margin-bottom: .5rem; }
-.cer-title strong { color: #2c4a3e; }
+.cer-title strong { color: var(--forest); }
 .cer-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
 .cer-tag {
-  font-family: Arial, sans-serif; font-size: 11px; font-weight: bold;
+  font-family: var(--sans); font-size: 11px; font-weight: 700;
   padding: 4px 12px; border-radius: 20px;
-  background: rgba(44,74,62,.08); color: #2c4a3e; border: 1px solid rgba(44,74,62,.15);
+  background: rgba(44,74,62,.08); color: var(--forest); border: 1px solid rgba(44,74,62,.15);
 }
 
-/* ── STATS BOX ── */
-.stats-box { background: #2c4a3e; border-radius: 8px; padding: 2rem 1.5rem; color: #fff; }
-.stats-box h3 { color: #e2f0d4; text-transform: uppercase; font-size: .85rem; letter-spacing: .1em; }
+/* ═══════════════════════════════════════════
+   STATS BOX
+═══════════════════════════════════════════ */
+.stats-box { background: var(--forest); border-radius: var(--r); padding: 2rem 1.5rem; color: #fff; }
+.stats-box h3 { color: #e2f0d4; text-transform: uppercase; font-size: .8rem; letter-spacing: .12em; margin-bottom: .5rem; }
 .stat-row { display: flex; justify-content: space-between; align-items: baseline; padding: .6rem 0; border-bottom: 1px solid rgba(255,255,255,.12); }
 .stat-row:last-child { border-bottom: none; }
-.stat-lbl { font-size: 13px; color: rgba(255,255,255,.65); font-family: Arial, sans-serif; }
-.stat-val { font-size: 1.4rem; }
-.cin { margin-top: 1rem; padding: .4rem .75rem; background: rgba(255,255,255,.08); border-radius: 4px; font-size: 11px; color: rgba(255,255,255,.5); text-align: center; font-family: Arial, sans-serif; letter-spacing: .08em; }
+.stat-lbl { font-family: var(--sans); font-size: 13px; color: rgba(255,255,255,.65); }
+.stat-val { font-family: var(--serif); font-size: 1.4rem; }
+.cin { margin-top: 1rem; padding: .4rem .75rem; background: rgba(255,255,255,.08); border-radius: 4px; font-family: var(--sans); font-size: 11px; color: rgba(255,255,255,.5); text-align: center; letter-spacing: .08em; }
 
-/* ── FEATURE LIST ── */
+/* ═══════════════════════════════════════════
+   FEATURE LIST
+═══════════════════════════════════════════ */
 .feat-list { list-style: none; padding: 0; }
-.feat-item { display: flex; gap: .75rem; padding: .75rem 0; border-bottom: 1px solid #e8dcca; align-items: flex-start; }
+.feat-item { display: flex; gap: .75rem; padding: .75rem 0; border-bottom: 1px solid var(--border-lt); align-items: flex-start; }
 .feat-item:last-child { border-bottom: none; }
-.feat-icon { width: 32px; height: 32px; background: #e2f0d4; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
-.feat-title { font-weight: bold; font-size: 14px; margin-bottom: 2px; }
-.feat-desc { font-size: 12px; color: #6b5c42; }
+.feat-icon { width: 32px; height: 32px; background: var(--green-lt); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+.feat-title { font-family: var(--sans); font-weight: 700; font-size: 14px; margin-bottom: 2px; }
+.feat-desc { font-size: 12px; color: var(--ink-soft); }
 
-/* ── DIGITAL NOMADS ── */
-.nom-grid { display: grid; grid-template-columns: 1fr 300px; background: #f2ead8; border-radius: 8px; overflow: hidden; }
+/* ═══════════════════════════════════════════
+   DIGITAL NOMADS
+═══════════════════════════════════════════ */
+.nom-grid { display: grid; grid-template-columns: 1fr 300px; background: var(--cream); border-radius: var(--r); overflow: hidden; }
 .nom-l { padding: 2.5rem 2rem; }
-.nom-r { background: #2c4a3e; padding: 2.5rem 2rem; color: #fff; }
-.spd-big { font-size: 3.5rem; font-weight: 300; line-height: 1; color: #fff; }
+.nom-r { background: var(--forest); padding: 2.5rem 2rem; color: #fff; }
+.spd-big { font-family: var(--serif); font-size: 3.5rem; font-weight: 300; line-height: 1; color: #fff; }
 .spd-unit { font-size: .85rem; opacity: .6; }
-.spd-label { font-family: Arial, sans-serif; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #b8dea0; margin-bottom: 1.25rem; }
+.spd-label { font-family: var(--sans); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #b8dea0; margin-bottom: 1.25rem; }
 .sf { display: flex; gap: .6rem; padding: .6rem 0; border-top: 1px solid rgba(255,255,255,.12); align-items: flex-start; }
-.sf-i { font-size: .9rem; flex-shrink: 0; padding-top: .1rem; }
-.sf-title { font-weight: bold; font-size: .82rem; color: #fff; margin-bottom: 2px; }
+.sf-title { font-family: var(--sans); font-weight: 700; font-size: .82rem; color: #fff; margin-bottom: 2px; }
 .sf-desc { font-size: .73rem; color: rgba(255,255,255,.55); }
-.rate-hl { display: inline-flex; align-items: center; gap: .4rem; background: #dde8e2; color: #2c4a3e; font-size: .8rem; font-weight: bold; padding: .4rem .9rem; border-radius: 6px; margin-top: .75rem; font-family: Arial, sans-serif; }
+.rate-hl { display: inline-flex; align-items: center; gap: .4rem; background: var(--forest-xl); color: var(--forest); font-family: var(--sans); font-size: .8rem; font-weight: 700; padding: .4rem .9rem; border-radius: 6px; margin-top: .75rem; }
 
-/* ── TRAILS ── */
-.trail-list { margin-top: 1.25rem; border-radius: 8px; overflow: hidden; border: 1px solid #e8dcca; }
-.trail-row { background: #fff; display: grid; grid-template-columns: 36px 1fr auto; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid #e8dcca; align-items: start; }
+/* ═══════════════════════════════════════════
+   TRAILS
+═══════════════════════════════════════════ */
+.trail-list { margin-top: 1.25rem; border-radius: var(--r); overflow: hidden; border: 1px solid var(--border-lt); }
+.trail-row { background: #fff; display: grid; grid-template-columns: 36px 1fr auto; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid var(--border-lt); align-items: start; transition: background .15s; }
 .trail-row:last-child { border-bottom: none; }
 .trail-row:hover { background: #f2faec; }
-.tr-num { font-size: 1.4rem; color: #d8c9a8; font-family: Georgia, serif; }
-.tr-title { font-weight: bold; font-size: 1rem; margin-bottom: .25rem; }
-.tr-stats { font-family: Arial, sans-serif; font-size: 12px; color: #6b5c42; margin-bottom: .25rem; }
-.tr-desc { font-size: 13px; color: #3e3020; }
-.cai-badge { background: #2c4a3e; color: #fff; font-size: 10px; font-weight: bold; padding: 1px 5px; border-radius: 3px; margin-left: .3rem; font-family: Arial, sans-serif; text-decoration: none; }
-.cai-badge:hover { background: #3d6b5a; color: #fff; text-decoration: none; }
-.diff { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; padding: .2rem .55rem; border-radius: 20px; white-space: nowrap; align-self: start; }
+.tr-num { font-family: var(--serif); font-size: 1.4rem; color: var(--border); }
+.tr-title { font-family: var(--sans); font-weight: 700; font-size: 1rem; margin-bottom: .25rem; }
+.tr-stats { font-family: var(--sans); font-size: 12px; color: var(--ink-soft); margin-bottom: .25rem; }
+.tr-desc { font-size: 13px; color: var(--ink-mid); }
+.cai-badge { background: var(--forest); color: #fff; font-family: var(--sans); font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 3px; margin-left: .3rem; text-decoration: none; }
+.cai-badge:hover { background: var(--forest-lt); color: #fff; text-decoration: none; }
+.diff { font-family: var(--sans); font-size: 11px; font-weight: 700; padding: .2rem .55rem; border-radius: 20px; white-space: nowrap; align-self: start; }
 .d-e { background: #ddf0cc; color: #2d6020; }
 .d-m { background: #f5e8c0; color: #7a4f10; }
 .d-h { background: #f5ddd0; color: #8b2800; }
 
-/* ── TERRITORY MOSAIC ── */
+/* ═══════════════════════════════════════════
+   TERRITORY MOSAIC
+═══════════════════════════════════════════ */
 .mosaic { display: grid; grid-template-columns: repeat(2, 1fr); gap: .85rem; margin-top: 1.25rem; }
-.mosaic-card { background: #fff; border: 1px solid #d8c9a8; border-radius: 8px; padding: 1.25rem 1rem; }
+.mosaic-card { background: #fff; border: 1px solid var(--border); border-radius: var(--r); padding: 1.25rem 1rem; }
 .mosaic-card.forest { background: #EAF3DE; border-color: rgba(59,109,17,.15); }
 .mosaic-card.castle { background: #FAECE7; border-color: rgba(216,90,48,.15); }
 .mosaic-card.church { background: #FAEEDA; border-color: rgba(186,117,23,.15); }
 .mosaic-card.museum { background: #F7F0F5; border-color: rgba(117,70,145,.15); }
 .mc-header { display: flex; align-items: center; gap: 10px; padding-bottom: .75rem; margin-bottom: .9rem; border-bottom: 1px solid rgba(0,0,0,.08); }
 .mc-icon { font-size: 1.25rem; flex-shrink: 0; }
-.mc-cat { font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; letter-spacing: .13em; text-transform: uppercase; }
+.mc-cat { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
 .forest .mc-cat { color: #3B6D11; }
 .castle .mc-cat { color: #993C1D; }
 .church .mc-cat { color: #854F0B; }
 .museum .mc-cat { color: #75469A; }
-.mc-group-title { font-weight: bold; font-size: .95rem; margin-top: 1px; }
+.mc-group-title { font-family: var(--sans); font-weight: 700; font-size: .95rem; margin-top: 1px; }
 .forest .mc-group-title { color: #27500A; }
 .castle .mc-group-title { color: #712B13; }
 .church .mc-group-title { color: #633806; }
@@ -237,172 +310,190 @@ blockquote {
 .mc-places { display: flex; flex-direction: column; gap: 9px; }
 .mc-place { padding-bottom: 9px; border-bottom: 1px solid rgba(0,0,0,.07); }
 .mc-place:last-child { border-bottom: none; padding-bottom: 0; }
-.m-title { font-weight: bold; font-size: .85rem; margin-bottom: 2px; }
+.m-title { font-family: var(--sans); font-weight: 700; font-size: .85rem; margin-bottom: 2px; }
 .forest .m-title { color: #27500A; }
 .castle .m-title { color: #712B13; }
 .church .m-title { color: #633806; }
 .museum .m-title { color: #552E6E; }
-.m-text { font-size: 12px; color: #3e3020; line-height: 1.55; margin-bottom: 3px; }
-.m-dist { font-size: 10px; font-weight: bold; font-family: Arial, sans-serif; }
+.m-text { font-size: 12px; color: var(--ink-mid); line-height: 1.55; margin-bottom: 3px; }
+.m-dist { font-family: var(--sans); font-size: 10px; font-weight: 700; }
+.mc-link { font-family: var(--sans); font-size: 11px; }
 .forest .m-dist { color: #639922; }
 .castle .m-dist { color: #D85A30; }
 .church .m-dist { color: #BA7517; }
 .museum .m-dist { color: #75469A; }
 
-/* ── GALLERY ── */
+/* ═══════════════════════════════════════════
+   GALLERY
+═══════════════════════════════════════════ */
 .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 1.5rem; }
-.gal-link { display: block; text-decoration: none; border-radius: 6px; overflow: hidden; }
+.gal-link { display: block; text-decoration: none; border-radius: 6px; overflow: hidden; transition: transform .2s, box-shadow .2s; }
 .gal-link:hover { transform: scale(1.01); box-shadow: 0 4px 12px rgba(0,0,0,.12); }
 .gal-link img { width: 100%; height: 200px; object-fit: cover; display: block; }
 
-/* ── LIGHTBOX ── */
+/* Lightbox */
 .lb { position: fixed; inset: 0; background: rgba(10,8,4,.95); z-index: 500; display: none; align-items: center; justify-content: center; }
 .lb:target { display: flex; }
 .lb img { max-width: 90vw; max-height: 80vh; object-fit: contain; border-radius: 6px; }
 .lb-close { position: absolute; top: 1rem; right: 1.25rem; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); color: #fff; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; text-decoration: none; }
 .lb-prev, .lb-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 1.4rem; display: flex; align-items: center; justify-content: center; text-decoration: none; }
-.lb-prev { left: 1.25rem; } .lb-next { right: 1.25rem; }
+.lb-prev { left: 1.25rem; }
+.lb-next { right: 1.25rem; }
 
-/* ── CALENDAR ── */
+/* ═══════════════════════════════════════════
+   CALENDAR
+═══════════════════════════════════════════ */
 .cal-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
-.cal-box { background: #fff; border: 1px solid #e8dcca; border-radius: 8px; padding: 1.5rem; }
+.cal-box { background: #fff; border: 1px solid var(--border-lt); border-radius: var(--r); padding: 1.5rem; }
 .cal-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-.cal-title { font-family: Georgia, serif; font-size: 1.1rem; }
-.cal-arrow { background: none; border: 1px solid #d8c9a8; border-radius: 5px; cursor: pointer; width: 28px; height: 28px; font-size: 1rem; color: #6b5c42; }
+.cal-title { font-family: var(--serif); font-size: 1.1rem; }
+.cal-arrow { background: none; border: 1px solid var(--border); border-radius: 5px; cursor: pointer; width: 28px; height: 28px; font-size: 1rem; color: var(--ink-soft); transition: background .15s; }
 .cal-arrow:hover { background: #e3d5b8; }
 .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; text-align: center; }
-.cal-dh { font-family: Arial, sans-serif; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: #6b5c42; font-weight: bold; padding: .3rem 0; }
-.cal-day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 5px; font-family: Arial, sans-serif; font-size: 13px; }
-.cal-day.avail { background: #e2f0d4; cursor: pointer; }
+.cal-dh { font-family: var(--sans); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); font-weight: 700; padding: .3rem 0; }
+.cal-day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 5px; font-family: var(--sans); font-size: 13px; }
+.cal-day.avail { background: var(--green-lt); cursor: pointer; }
 .cal-day.avail:hover { background: #cce8b0; }
 .cal-day.booked { background: #f5ddd0; color: #c0a898; text-decoration: line-through; }
-.cal-day.today { border: 2px solid #2c4a3e; font-weight: bold; }
-.cal-day.past { color: #d8c9a8; }
+.cal-day.today { border: 2px solid var(--forest); font-weight: 700; }
+.cal-day.past { color: var(--border); }
 .cal-legend { display: flex; gap: 1rem; margin-top: .75rem; flex-wrap: wrap; }
-.leg-i { display: flex; align-items: center; gap: .35rem; font-family: Arial, sans-serif; font-size: 11px; color: #6b5c42; }
+.leg-i { display: flex; align-items: center; gap: .35rem; font-family: var(--sans); font-size: 11px; color: var(--ink-soft); }
 .leg-dot { width: 10px; height: 10px; border-radius: 3px; }
-.cal-note { margin-top: .75rem; padding: .75rem 1rem; background: #f2faec; border-radius: 6px; font-size: 13px; color: #3e3020; border: 1px solid rgba(90,158,66,.15); }
+.cal-note { margin-top: .75rem; padding: .75rem 1rem; background: #f2faec; border-radius: 6px; font-size: 13px; color: var(--ink-mid); border: 1px solid rgba(90,158,66,.15); }
 .cal-info { display: flex; flex-direction: column; gap: 1rem; }
-.info-card { background: #fff; border: 1px solid #e8dcca; border-radius: 8px; padding: 1.25rem; }
+.info-card { background: #fff; border: 1px solid var(--border-lt); border-radius: var(--r); padding: 1.25rem; }
 .times-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin-top: .75rem; }
-.time-box { background: #faf6ee; border-radius: 6px; padding: .6rem; text-align: center; border: 1px solid #e8dcca; }
-.t-lbl { font-family: Arial, sans-serif; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: #6b5c42; font-weight: bold; margin-bottom: .2rem; }
-.t-val { font-family: Georgia, serif; font-size: 1.4rem; }
-.t-note { font-family: Arial, sans-serif; font-size: 11px; color: #6b5c42; margin-top: .1rem; }
+.time-box { background: var(--parchment); border-radius: 6px; padding: .6rem; text-align: center; border: 1px solid var(--border-lt); }
+.t-lbl { font-family: var(--sans); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); font-weight: 700; margin-bottom: .2rem; }
+.t-val { font-family: var(--serif); font-size: 1.4rem; }
+.t-note { font-family: var(--sans); font-size: 11px; color: var(--ink-soft); margin-top: .1rem; }
 .rules { display: flex; flex-direction: column; gap: .4rem; }
-.rule { display: flex; gap: .55rem; font-size: 13px; color: #3e3020; line-height: 1.5; }
+.rule { display: flex; gap: .55rem; font-size: 13px; color: var(--ink-mid); line-height: 1.5; }
 
-/* ── ADMIN PANEL ── */
+/* Admin panel */
 .admin-toggle-wrap { margin-top: .75rem; text-align: right; }
-.admin-toggle-btn { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; background: none; border: 1px solid #d8c9a8; border-radius: 5px; color: #6b5c42; padding: 4px 10px; cursor: pointer; }
+.admin-toggle-btn { font-family: var(--sans); font-size: 11px; font-weight: 700; background: none; border: 1px solid var(--border); border-radius: 5px; color: var(--ink-soft); padding: 4px 10px; cursor: pointer; }
 .admin-toggle-btn:hover { background: #f0ead8; }
-.admin-panel { display: none; margin-top: .75rem; background: #fff; border: 1px solid #d8c9a8; border-radius: 8px; padding: 1.25rem; }
+.admin-panel { display: none; margin-top: .75rem; background: #fff; border: 1px solid var(--border); border-radius: var(--r); padding: 1.25rem; }
 .admin-panel.open { display: block; }
 .admin-pw-wrap { display: flex; gap: .5rem; align-items: center; margin-bottom: 1rem; }
-.admin-pw-wrap input { flex: 1; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8c9a8; border-radius: 5px; padding: 5px 9px; }
-.admin-pw-wrap button { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; background: #2c4a3e; color: #fff; border: none; border-radius: 5px; padding: 6px 14px; cursor: pointer; }
+.admin-pw-wrap input { flex: 1; font-family: var(--sans); font-size: 13px; border: 1px solid var(--border); border-radius: 5px; padding: 5px 9px; }
+.admin-pw-wrap button { font-family: var(--sans); font-size: 12px; font-weight: 700; background: var(--forest); color: #fff; border: none; border-radius: 5px; padding: 6px 14px; cursor: pointer; }
 .admin-content { display: none; }
 .admin-content.unlocked { display: block; }
-.admin-section-title { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; letter-spacing: .1em; text-transform: uppercase; color: #3d6b5a; margin-bottom: .6rem; margin-top: 1rem; }
+.admin-section-title { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--forest-lt); margin-bottom: .6rem; margin-top: 1rem; }
 .admin-add-row { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin-bottom: .75rem; }
-.admin-add-row input[type="date"], .admin-add-row select { font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8c9a8; border-radius: 5px; padding: 5px 8px; color: #2a2318; background: #faf6ee; }
-.btn-add-booking { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; background: #b87333; color: #fff; border: none; border-radius: 5px; padding: 6px 14px; cursor: pointer; }
+.admin-add-row input[type="date"], .admin-add-row select { font-family: var(--sans); font-size: 13px; border: 1px solid var(--border); border-radius: 5px; padding: 5px 8px; color: var(--ink); background: var(--parchment); }
+.btn-add-booking { font-family: var(--sans); font-size: 12px; font-weight: 700; background: var(--copper); color: #fff; border: none; border-radius: 5px; padding: 6px 14px; cursor: pointer; }
 .booking-list { display: flex; flex-direction: column; gap: .4rem; max-height: 200px; overflow-y: auto; }
-.booking-item { display: flex; align-items: center; justify-content: space-between; background: #faf6ee; border: 1px solid #e8dcca; border-radius: 5px; padding: .45rem .75rem; font-family: Arial, sans-serif; font-size: 12px; }
+.booking-item { display: flex; align-items: center; justify-content: space-between; background: var(--parchment); border: 1px solid var(--border-lt); border-radius: 5px; padding: .45rem .75rem; font-family: var(--sans); font-size: 12px; }
 .booking-item-info { display: flex; gap: .6rem; align-items: center; }
-.booking-source { font-size: 10px; font-weight: bold; letter-spacing: .06em; text-transform: uppercase; padding: 1px 6px; border-radius: 10px; }
+.booking-source { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 1px 6px; border-radius: 10px; }
 .src-airbnb { background: #ffe0d6; color: #c9472a; }
 .src-booking { background: #d6e8ff; color: #1a4fa3; }
-.src-manual { background: #e2f0d4; color: #2c6020; }
+.src-manual { background: var(--green-lt); color: #2c6020; }
 .btn-del-booking { background: none; border: none; color: #c0a898; cursor: pointer; font-size: 1rem; padding: 0 4px; }
 .btn-del-booking:hover { color: #b84040; }
-.admin-msg { font-family: Arial, sans-serif; font-size: 12px; color: #6b5c42; font-style: italic; margin-top: .5rem; }
+.admin-msg { font-family: var(--sans); font-size: 12px; color: var(--ink-soft); font-style: italic; margin-top: .5rem; }
 .admin-msg.err { color: #b84040; }
 
-/* ── PRICING ── */
-.price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: #d8c9a8; border-radius: 8px; overflow: hidden; margin-bottom: 1rem; }
-.price-col { background: #fff; padding: 1.25rem 1rem; text-align: center; }
-.price-col:hover { background: #faf6ee; }
-.price-col.feat { background: #b87333; }
-.p-season { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; letter-spacing: .08em; text-transform: uppercase; color: #6b5c42; margin-bottom: .35rem; }
+/* ═══════════════════════════════════════════
+   PRICING
+═══════════════════════════════════════════ */
+.price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--border); border-radius: var(--r); overflow: hidden; margin-bottom: 1rem; }
+.price-col { background: #fff; padding: 1.25rem 1rem; text-align: center; transition: background .15s; }
+.price-col:hover { background: var(--parchment); }
+.price-col.feat { background: var(--copper); }
+.p-season { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: .35rem; }
 .price-col.feat .p-season { color: #fff; }
-.p-period { font-size: 12px; color: #6b5c42; font-style: italic; margin-bottom: .6rem; }
+.p-period { font-size: 12px; color: var(--ink-soft); font-style: italic; margin-bottom: .6rem; }
 .price-col.feat .p-period { color: rgba(255,255,255,.65); }
-.p-num { font-family: Georgia, serif; font-size: 2.2rem; color: #2a2318; line-height: 1; }
+.p-num { font-family: var(--serif); font-size: 2.4rem; color: var(--ink); line-height: 1; }
 .price-col.feat .p-num { color: #fff; }
-.p-unit { font-family: Arial, sans-serif; font-size: 12px; color: #6b5c42; margin-top: 3px; }
+.p-unit { font-family: var(--sans); font-size: 12px; color: var(--ink-soft); margin-top: 3px; }
 .price-col.feat .p-unit { color: rgba(255,255,255,.6); }
-.p-badge { display: inline-block; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; padding: 2px 8px; border-radius: 10px; background: #dde8e2; color: #2c4a3e; margin-top: .4rem; }
+.p-badge { display: inline-block; font-family: var(--sans); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; background: var(--forest-xl); color: var(--forest); margin-top: .4rem; }
 .price-col.feat .p-badge { background: rgba(255,255,255,.15); color: #fff; }
-.extras { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #d8c9a8; border-radius: 8px; overflow: hidden; }
+.extras { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border-radius: var(--r); overflow: hidden; }
 .extra { background: #f2faec; padding: .9rem 1rem; }
-.e-lbl { font-family: Arial, sans-serif; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #6b5c42; font-weight: bold; margin-bottom: .2rem; }
-.e-val { font-family: Georgia, serif; font-size: 1.05rem; }
-.e-val small { font-family: Arial, sans-serif; font-size: 11px; color: #6b5c42; }
+.e-lbl { font-family: var(--sans); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); font-weight: 700; margin-bottom: .2rem; }
+.e-val { font-family: var(--serif); font-size: 1.05rem; }
+.e-val small { font-family: var(--sans); font-size: 11px; color: var(--ink-soft); }
 
-/* ── REVIEWS ── */
-.rating-summary { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; background: #fff; border: 1px solid #e8dcca; border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; }
-.rating-big { font-family: Georgia, serif; font-size: 3.5rem; line-height: 1; color: #2a2318; }
+/* ═══════════════════════════════════════════
+   REVIEWS
+═══════════════════════════════════════════ */
+.rating-summary { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; background: #fff; border: 1px solid var(--border-lt); border-radius: var(--r); padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; }
+.rating-big { font-family: var(--serif); font-size: 3.5rem; line-height: 1; color: var(--ink); }
 .rating-stars { font-size: 1.2rem; color: #f59e0b; letter-spacing: .1em; }
-.rating-count { font-family: Arial, sans-serif; font-size: 12px; color: #6b5c42; margin-top: .3rem; }
+.rating-count { font-family: var(--sans); font-size: 12px; color: var(--ink-soft); margin-top: .3rem; }
 .rating-bars { flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: .5rem; }
 .rbar { display: flex; align-items: center; gap: .6rem; }
-.rbar-lbl { font-family: Arial, sans-serif; font-size: 12px; color: #6b5c42; width: 80px; flex-shrink: 0; }
-.rbar-track { flex: 1; height: 6px; background: #e8dcca; border-radius: 3px; overflow: hidden; }
-.rbar-fill { height: 100%; background: #2c4a3e; border-radius: 3px; }
-.rbar-val { font-family: Arial, sans-serif; font-size: 12px; color: #2a2318; font-weight: bold; width: 30px; text-align: right; }
+.rbar-lbl { font-family: var(--sans); font-size: 12px; color: var(--ink-soft); width: 80px; flex-shrink: 0; }
+.rbar-track { flex: 1; height: 6px; background: var(--border-lt); border-radius: 3px; overflow: hidden; }
+.rbar-fill { height: 100%; background: var(--forest); border-radius: 3px; }
+.rbar-val { font-family: var(--sans); font-size: 12px; color: var(--ink); font-weight: 700; width: 30px; text-align: right; }
 .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
-.rev-card { background: #fff; border: 1px solid #e8dcca; border-radius: 8px; padding: 1.25rem; }
+.rev-card { background: #fff; border: 1px solid var(--border-lt); border-radius: var(--r); padding: 1.25rem; }
 .rev-stars { color: #f59e0b; font-size: 1rem; margin-bottom: .5rem; }
-.rev-text { font-size: 13.5px; color: #3e3020; font-style: italic; margin-bottom: 1rem; }
+.rev-text { font-size: 13.5px; color: var(--ink-mid); font-style: italic; margin-bottom: 1rem; }
 .rev-author { display: flex; align-items: center; gap: .75rem; }
-.rev-avatar { width: 36px; height: 36px; background: #dde8e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; color: #2c4a3e; flex-shrink: 0; }
-.rev-name { font-weight: bold; font-size: 14px; }
-.rev-meta { font-family: Arial, sans-serif; font-size: 11px; color: #6b5c42; }
-.reviews-note { font-family: Arial, sans-serif; font-size: 12px; color: #6b5c42; margin-top: 1rem; }
+.rev-avatar { width: 36px; height: 36px; background: var(--forest-xl); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 12px; font-weight: 700; color: var(--forest); flex-shrink: 0; }
+.rev-name { font-family: var(--sans); font-weight: 700; font-size: 14px; }
+.rev-meta { font-family: var(--sans); font-size: 11px; color: var(--ink-soft); }
+.reviews-note { font-family: var(--sans); font-size: 12px; color: var(--ink-soft); margin-top: 1rem; }
 
-/* ── PAGE CARDS ── */
+/* ═══════════════════════════════════════════
+   PAGE CARDS
+═══════════════════════════════════════════ */
 .page-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; margin-top: 1rem; }
-.page-card { background: #fff; border: 1px solid #d8c9a8; border-radius: 8px; padding: 1.25rem 1rem; cursor: pointer; }
+.page-card { background: #fff; border: 1px solid var(--border); border-radius: var(--r); padding: 1.25rem 1rem; cursor: pointer; transition: box-shadow .2s; }
 .page-card:hover { box-shadow: 0 4px 16px rgba(42,35,24,.12); }
 .pc-icon { font-size: 1.75rem; display: block; margin-bottom: .5rem; }
-.pc-title { font-weight: bold; font-size: .95rem; margin-bottom: .3rem; }
-.pc-desc { font-size: 13px; color: #6b5c42; margin-bottom: .6rem; }
-.pc-arrow { font-family: Arial, sans-serif; font-size: 12px; color: #2c4a3e; text-decoration: none; font-weight: bold; }
+.pc-title { font-family: var(--sans); font-weight: 700; font-size: .95rem; margin-bottom: .3rem; }
+.pc-desc { font-size: 13px; color: var(--ink-soft); margin-bottom: .6rem; }
+.pc-arrow { font-family: var(--sans); font-size: 12px; color: var(--forest); text-decoration: none; font-weight: 700; }
 
-/* ── ACTIVITIES TABLE ── */
-.act-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-.act-block { background: #fff; border: 1px solid #e8dcca; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem; }
-.act-block-title { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; letter-spacing: .1em; text-transform: uppercase; color: #3d6b5a; padding-bottom: .75rem; border-bottom: 1px solid #e8dcca; margin-bottom: .75rem; }
+/* ═══════════════════════════════════════════
+   ACTIVITIES TABLE
+═══════════════════════════════════════════ */
+.act-block { background: #fff; border: 1px solid var(--border-lt); border-radius: var(--r); padding: 1.25rem; margin-bottom: 1.5rem; }
+.act-block-title { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--forest-lt); padding-bottom: .75rem; border-bottom: 1px solid var(--border-lt); margin-bottom: .75rem; }
 .act-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .act-table tr:hover td { background: #f2faec; }
-.act-table td { padding: .45rem .4rem; vertical-align: top; color: #3e3020; }
+.act-table td { padding: .45rem .4rem; vertical-align: top; color: var(--ink-mid); }
 .act-icon-td { width: 28px; font-size: 1rem; }
-.act-name-td { font-weight: bold; }
-.act-name-td small { display: block; font-weight: normal; color: #6b5c42; font-size: 11px; }
-.act-link-td a { font-family: Arial, sans-serif; font-size: 11px; }
+.act-name-td { font-family: var(--sans); font-weight: 700; }
+.act-name-td small { display: block; font-weight: 400; color: var(--ink-soft); font-size: 11px; }
+.act-link-td a { font-family: var(--sans); font-size: 11px; }
 
-/* ── CTA SECTION ── */
-.cta-section { text-align: center; padding: 4rem 1.5rem; background: #2c4a3e; }
+/* ═══════════════════════════════════════════
+   CTA & FOOTER
+═══════════════════════════════════════════ */
+.cta-section { text-align: center; padding: 4rem 1.5rem; background: var(--forest); }
 .cta-section .eyebrow { color: #a8c4b4; }
 .cta-section h2 { color: #fff; }
-.cta-section h2 em { color: #dde8e2; }
+.cta-section h2 em { color: var(--forest-xl); }
 .cta-section p { color: rgba(255,255,255,.85); max-width: 500px; margin: 0 auto .85rem; }
-.cta-contact { margin-top: 1.5rem; font-family: Arial, sans-serif; font-size: 12px; color: rgba(255,255,255,.65); line-height: 2; }
-.cta-contact a { color: rgba(255,255,255,.8); }
 
-/* ── FOOTER ── */
 footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
-.footer-logo { font-family: Georgia, serif; font-size: 1.1rem; color: #dde8e2; margin-bottom: .6rem; }
+.footer-logo { font-family: var(--serif); font-size: 1.1rem; color: var(--forest-xl); margin-bottom: .6rem; }
 .footer-logo em { color: #a8c4b4; }
-.footer-info { font-family: Arial, sans-serif; font-size: 12px; color: rgba(255,255,255,.5); line-height: 2; }
+.footer-info { font-family: var(--sans); font-size: 12px; color: rgba(255,255,255,.5); line-height: 2; }
 .footer-info a { color: rgba(255,255,255,.6); }
 
-/* ── FLOAT PHONE BTN ── */
-.float-tel { position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 90; font-size: 1.5rem; background: #2c4a3e; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
-.float-tel:hover { background: #3d6b5a; }
+.float-tel {
+  position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 90; font-size: 1.5rem;
+  background: var(--forest); width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,.3); transition: background .15s;
+}
+.float-tel:hover { background: var(--forest-lt); }
 
-/* ── RESPONSIVE ── */
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
 @media (max-width: 700px) {
   nav { padding: .6rem 1rem; }
   .nav-links { display: none; }
@@ -466,10 +557,10 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
 <!-- HERO -->
 <div class="hero" id="hero">
   <div class="hero-inner">
-    <h1 class="it">Dove la Toscana<br>è ancora <em>selvaggia</em></h1>
+    <h1 class="it">Dove la <a href="https://www.visittuscany.com/it/esplora" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:4px;">Toscana</a><br>è ancora <em>selvaggia</em></h1>
     <h1 class="en">Where Tuscany<br>is still <em>wild</em></h1>
-    <p class="it">Immerso nel borgo medievale di Castagneto-Cetica, sulle pendici del Pratomagno in Alto Casentino. Toscana. Sentieri CAI diretti, Parco Nazionale delle Foreste Casentinesi, Starlink +250 Mbps incluso.</p>
-    <p class="en">Nestled in the medieval hamlet of Castagneto-Cetica, on the slopes of Pratomagno in the Alto Casentino. Tuscany. Direct CAI trails, Casentino National Forest Park, Starlink +250 Mbps included.</p>
+    <p class="it">Immerso nel borgo medievale di Castagneto-Cetica, sulle pendici del Pratomagno in Alto Casentino. Sentieri CAI diretti, Parco Nazionale delle Foreste Casentinesi, Starlink +250 Mbps incluso.</p>
+    <p class="en">Nestled in the medieval hamlet of Castagneto-Cetica, on the slopes of Pratomagno in the Alto Casentino. Direct CAI trails, Casentino National Forest Park, Starlink +250 Mbps included.</p>
     <div class="hero-btns">
       <a href="#disponibilita" class="btn-primary it">📅 Verifica disponibilità</a>
       <a href="#disponibilita" class="btn-primary en">📅 Check availability</a>
@@ -531,8 +622,10 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
     <h2 class="en">A <em>zero-impact</em> stay</h2>
     <p class="it">Energia rinnovabile, acqua calda solare, zero rifiuti e pellet in inverno.</p>
     <p class="en">Renewable energy, solar hot water, zero waste and pellet in winter.</p>
-    <p class="it" style="font-family:Georgia,serif;font-size:1.05rem;color:#2c4a3e;font-style:italic;border-left:3px solid #7a9e8e;padding:.6rem 1rem;background:#f0f5f2;border-radius:0 6px 6px 0;margin-bottom:.85rem;">Il rispetto per l&rsquo;ambiente non &egrave; marketing &mdash; &egrave; proprio come funziona la casa.</p>
-    <p class="en" style="font-family:Georgia,serif;font-size:1.05rem;color:#2c4a3e;font-style:italic;border-left:3px solid #7a9e8e;padding:.6rem 1rem;background:#f0f5f2;border-radius:0 6px 6px 0;margin-bottom:.85rem;">Environmental care isn&rsquo;t marketing &mdash; it&rsquo;s just how the house works.</p>
+    <blockquote>
+      <span class="it">Il rispetto per l&rsquo;ambiente non &egrave; marketing &mdash; &egrave; proprio come funziona la casa.</span>
+      <span class="en">Environmental care isn&rsquo;t marketing &mdash; it&rsquo;s just how the house works.</span>
+    </blockquote>
     <div class="eco-grid">
       <div class="eco-card"><span class="eco-icon" style="color:#f59e0b">☀</span><div class="eco-title it">Solare Termico</div><div class="eco-title en">Solar Thermal</div><p class="it">100% acqua calda senza gas né emissioni.</p><p class="en">100% hot water without gas or emissions.</p></div>
       <div class="eco-card"><span class="eco-icon">⚡</span><div class="eco-title it">Fotovoltaico</div><div class="eco-title en">Photovoltaic</div><p class="it">Principalmente elettricità da fonte rinnovabile.</p><p class="en">Mainly electricity from renewable source.</p></div>
@@ -605,12 +698,12 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
         <div style="margin-top:1rem;display:flex;gap:.65rem;flex-wrap:wrap">
           <a href="#disponibilita" class="btn-primary it">📅 Verifica date</a>
           <a href="#disponibilita" class="btn-primary en">📅 Check dates</a>
-          <a href="#prezzi" class="btn-ghost it" style="color:#2a2318;border-color:#d8c9a8">Tariffa smart-work</a>
-          <a href="#prezzi" class="btn-ghost en" style="color:#2a2318;border-color:#d8c9a8">Smart-work rate</a>
+          <a href="#prezzi" class="btn-ghost it" style="color:var(--ink);border-color:var(--border)">Tariffa smart-work</a>
+          <a href="#prezzi" class="btn-ghost en" style="color:var(--ink);border-color:var(--border)">Smart-work rate</a>
         </div>
       </div>
       <div class="nom-r">
-        <div style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.3rem">Starlink Satellite — incluso nel prezzo</div>
+        <div style="font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.3rem">Starlink Satellite — incluso nel prezzo</div>
         <div class="spd-big">+250<span class="spd-unit"> Mbps</span></div>
         <div class="spd-label">Download · +250 Mbps</div>
         <div class="sf"><div><div class="sf-title it">Internet illimitato incluso</div><div class="sf-title en">Unlimited internet included</div><div class="sf-desc it">Copertura totale indoor e outdoor.</div><div class="sf-desc en">Full indoor and outdoor coverage.</div></div></div>
@@ -624,8 +717,8 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
 <!-- SENTIERI CAI -->
 <section id="sentieri">
   <div class="wrap">
-    <p class="eyebrow it">🥾 Sentieri CAI — partenza dal borgo</p>
-    <p class="eyebrow en">🥾 CAI Trails — start from the hamlet</p>
+    <p class="eyebrow it">Sentieri CAI — partenza dal borgo</p>
+    <p class="eyebrow en">CAI Trails — start from the hamlet</p>
     <h2 class="it">Trekking in <em>Pratomagno e in Casentino</em></h2>
     <h2 class="en">Hiking <em>Pratomagno and the Casentino</em></h2>
     <p class="it">La rete CAI parte direttamente dal borgo medievale. Dal facile anello tra i borghi storici alla grande traversata del crinale appenninico — tutto senza auto.</p>
@@ -688,30 +781,28 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
       </div>
     </div>
     <p style="text-align:right;margin-top:.75rem">
-      <a href="#attivita" class="it" style="color:#3d6b5a">🔗 Link utili CAI &amp; sentieri</a>
-      <a href="#attivita" class="en" style="color:#3d6b5a">🔗 Useful links CAI &amp; trails</a>
+      <a href="#attivita" class="it" style="color:var(--forest-lt)">🔗 Link utili CAI &amp; sentieri</a>
+      <a href="#attivita" class="en" style="color:var(--forest-lt)">🔗 Useful links CAI &amp; trails</a>
     </p>
   </div>
 </section>
 
 <!-- TERRITORY -->
-<section id="territorio" style="background:#e2f0d4">
+<section id="territorio" style="background:var(--green-lt)">
   <div class="wrap">
     <p class="eyebrow it">Il territorio</p>
     <p class="eyebrow en">The area</p>
-    <h2 class="it">Il Casentino <em>ai vostri piedi</em></h2>
-    <h2 class="en">The Casentino <em>on your doorstep</em></h2>
+    <h2 class="it">Il Casentino <a href="https://www.ilbelcasentino.it/index.php" target="_blank" rel="noopener noreferrer"><em>ai vostri piedi</em></a></h2>
+    <h2 class="en">The Casentino <a href="https://www.ilbelcasentino.it/index.php" target="_blank" rel="noopener noreferrer"><em>on your doorstep</em></a></h2>
     <p class="it">Boschi millenari, castelli medievali, abbazie romaniche, foreste primordiali UNESCO. Tutto raggiungibile in pochi chilometri.</p>
     <p class="en">Ancient forests, medieval castles, Romanesque abbeys, UNESCO primeval forests. All reachable within a few kilometres.</p>
     <div class="mosaic">
-
-      <!-- FORESTS -->
       <div class="mosaic-card forest">
         <div class="mc-header">
           <span class="mc-icon">🌲</span>
           <div>
             <div class="mc-cat it">Natura · UNESCO</div><div class="mc-cat en">Nature · UNESCO</div>
-            <div class="mc-group-title it">Foreste &amp; Parchi</div><div class="mc-group-title en">Forests &amp; Parks</div>
+            <div class="mc-group-title it">Foreste &amp; Parchi</div><div class="mc-group-title en">Forests &amp; Parks</div> <a href="https://www.parcoforestecasentinesi.it" target="_blank" rel="noopener" class="mc-link">parcoforestecasentinesi.it</a>
           </div>
         </div>
         <div class="mc-places">
@@ -730,8 +821,6 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
           </div>
         </div>
       </div>
-
-      <!-- CASTLES -->
       <div class="mosaic-card castle">
         <div class="mc-header">
           <span class="mc-icon">🏰</span>
@@ -755,39 +844,6 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
           </div>
         </div>
       </div>
-
-      <!-- MUSEUMS -->
-      <div class="mosaic-card museum">
-        <div class="mc-header">
-          <span class="mc-icon">🏛️</span>
-          <div>
-            <div class="mc-cat it">Cultura</div><div class="mc-cat en">Culture</div>
-            <div class="mc-group-title it">Musei</div><div class="mc-group-title en">Museums</div>
-          </div>
-        </div>
-        <div class="mc-places">
-          <div class="mc-place">
-            <div class="m-title it">Museo del Carbonaio di Cetica</div><div class="m-title en">Cetica Charcoal Maker Museum</div>
-            <p class="m-text it">Storie e strumenti del carbone vivo in Casentino.</p>
-            <p class="m-text en">Stories and tools of charcoal making in the Casentino.</p>
-            <div class="m-dist">📍 0.5 km</div>
-          </div>
-          <div class="mc-place">
-            <div class="m-title it">Museo della Bilancia</div><div class="m-title en">Scale Museum</div>
-            <p class="m-text it">Collezione storica di bilance e strumenti di misura.</p>
-            <p class="m-text en">Historic collection of scales and measuring instruments.</p>
-            <div class="m-dist">📍 11 km</div>
-          </div>
-          <div class="mc-place">
-            <div class="m-title it">Museo Archeologico del Casentino</div><div class="m-title en">Casentino Archaeological Museum</div>
-            <p class="m-text it">Reperti antichi dal territorio, dai villaggi etruschi ai ritrovamenti romani.</p>
-            <p class="m-text en">Ancient finds from the area, from Etruscan villages to Roman discoveries.</p>
-            <div class="m-dist">📍 12 km</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CHURCHES -->
       <div class="mosaic-card church">
         <div class="mc-header">
           <span class="mc-icon">⛪</span>
@@ -798,91 +854,101 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
         </div>
         <div class="mc-places">
           <div class="mc-place">
-            <div class="m-title it">Eremo e Monastero di Camaldoli</div><div class="m-title en">Camaldoli Hermitage &amp; Monastery</div>
-            <p class="m-text it">Fondato nel 1012 a 1111 m s.l.m. Farmacia erboristica fondata nel 1048.</p>
-            <p class="m-text en">Founded in 1012 at 1,111 m altitude. Herbal pharmacy founded in 1048.</p>
-            <div class="m-dist">📍 ~20 km</div>
-          </div>
-          <div class="mc-place">
-            <div class="m-title it">Abbazia di Vallombrosa</div><div class="m-title en">Vallombrosa Abbey</div>
-            <p class="m-text it">Abbazia benedettina (XI sec.) nel cuore della foresta.</p>
-            <p class="m-text en">Benedictine abbey (11th c.) in the heart of the forest.</p>
-            <div class="m-dist">📍 ~22 km</div>
+            <div class="m-title it">Eremo e Monastero di Camaldoli</div><div class="m-title en">Hermitage &amp; Monastery of Camaldoli</div>
+            <p class="m-text it">Fondato nel 1012 da San Romualdo. Farmacia erboristeria storica aperta al pubblico.</p>
+            <p class="m-text en">Founded in 1012 by Saint Romuald. Historic herbal pharmacy open to the public.</p>
+            <div class="m-dist">📍 20 km</div>
           </div>
           <div class="mc-place">
             <div class="m-title it">Santuario della Verna</div><div class="m-title en">La Verna Sanctuary</div>
-            <p class="m-text it">Dove San Francesco ricevette le Stimmate (1224). Punto di pellegrinaggio.</p>
-            <p class="m-text en">Where St Francis received the Stigmata (1224). Major pilgrimage site.</p>
-            <div class="m-dist">📍 ~28 km</div>
+            <p class="m-text it">Luogo delle stimmate di San Francesco (1224). Foresta sacra e chiese medievali.</p>
+            <p class="m-text en">Site of the stigmata of St Francis (1224). Sacred forest and medieval churches.</p>
+            <div class="m-dist">📍 28 km</div>
           </div>
         </div>
       </div>
-
+      <div class="mosaic-card museum">
+        <div class="mc-header">
+          <span class="mc-icon">🏛️</span>
+          <div>
+            <div class="mc-cat it">Cultura</div><div class="mc-cat en">Culture</div>
+            <div class="mc-group-title it">Musei &amp; Arte</div><div class="mc-group-title en">Museums &amp; Art</div> <a href="https://www.ecomuseo.casentino.toscana.it" target="_blank" rel="noopener" class="mc-link">ecomuseo.casentino.toscana.it</a>
+          </div>
+        </div>
+        <div class="mc-places">
+          <div class="mc-place">
+            <div class="m-title it">Museo del Carbonaio — Cetica</div><div class="m-title en">Charcoal Maker Museum — Cetica</div>
+            <p class="m-text it">Tradizioni della vita contadina e forestale del Casentino. A 5 km dall'appartamento.</p>
+            <p class="m-text en">Traditions of rural and forest life in the Casentino. 5 km from the apartment.</p>
+            <div class="m-dist">📍 5 km</div>
+          </div>
+          <div class="mc-place">
+            <div class="m-title it">Ecomuseo del Casentino</div><div class="m-title en">Ecomuseum of the Casentino</div>
+            <p class="m-text it">Rete di luoghi della memoria e della tradizione casentinese.</p>
+            <p class="m-text en">Network of memory and tradition sites throughout the Casentino.</p>
+            <div class="m-dist">📍 Rete / Network</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY (LIGHTBOXES) -->
-<div class="lb" id="lb1"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb9">‹</a><img src="img/photo01.jpg" alt="Pratomagno Apartment"><a class="lb-next" href="#lb2">›</a></div>
-<div class="lb" id="lb2"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb1">‹</a><img src="img/photo02.jpg" alt="Vista bosco"><a class="lb-next" href="#lb3">›</a></div>
-<div class="lb" id="lb3"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb2">‹</a><img src="img/photo03.jpg" alt="Soggiorno"><a class="lb-next" href="#lb4">›</a></div>
-<div class="lb" id="lb4"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb3">‹</a><img src="img/photo04.jpg" alt="Cucina"><a class="lb-next" href="#lb5">›</a></div>
-<div class="lb" id="lb5"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb4">‹</a><img src="img/photo05.jpg" alt="Camera matrimoniale"><a class="lb-next" href="#lb6">›</a></div>
-<div class="lb" id="lb6"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb5">‹</a><img src="img/photo06.jpg" alt="Giardino"><a class="lb-next" href="#lb7">›</a></div>
-<div class="lb" id="lb7"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb6">‹</a><img src="img/photo07.jpg" alt="Terrazzo"><a class="lb-next" href="#lb8">›</a></div>
-<div class="lb" id="lb8"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb7">‹</a><img src="img/photo08.jpg" alt="Bagno"><a class="lb-next" href="#lb9">›</a></div>
-<div class="lb" id="lb9"><a class="lb-close" href="#">✕</a><a class="lb-prev" href="#lb8">‹</a><img src="img/photo09.jpg" alt="Vista panoramica"><a class="lb-next" href="#lb1">›</a></div>
-
+<!-- FOTO -->
 <section id="foto">
   <div class="wrap">
     <p class="eyebrow it">Galleria fotografica</p>
     <p class="eyebrow en">Photo gallery</p>
-    <h2 class="it">Guarda l'<em>appartamento</em></h2>
-    <h2 class="en">See the <em>apartment</em></h2>
+    <h2 class="it">Il borgo e <em>l'appartamento</em></h2>
+    <h2 class="en">The hamlet and <em>the apartment</em></h2>
     <div class="gal-grid">
-      <a href="#lb1" class="gal-link"><img src="img/photo01.jpg" alt="Pratomagno Apartment"></a>
-      <a href="#lb2" class="gal-link"><img src="img/photo02.jpg" alt="Vista bosco"></a>
-      <a href="#lb3" class="gal-link"><img src="img/photo03.jpg" alt="Soggiorno"></a>
-      <a href="#lb4" class="gal-link"><img src="img/photo04.jpg" alt="Cucina"></a>
-      <a href="#lb5" class="gal-link"><img src="img/photo05.jpg" alt="Camera matrimoniale"></a>
-      <a href="#lb6" class="gal-link"><img src="img/photo06.jpg" alt="Giardino"></a>
-      <a href="#lb7" class="gal-link"><img src="img/photo07.jpg" alt="Terrazzo"></a>
-      <a href="#lb8" class="gal-link"><img src="img/photo08.jpg" alt="Bagno"></a>
-      <a href="#lb9" class="gal-link"><img src="img/photo09.jpg" alt="Vista panoramica"></a>
+      <a href="#lb1" class="gal-link"><img src="./img/photo01.jpg" alt="Vista esterna"></a>
+      <a href="#lb2" class="gal-link"><img src="./img/photo02.jpg" alt="Soggiorno"></a>
+      <a href="#lb3" class="gal-link"><img src="./img/photo03.jpg" alt="Cucina"></a>
+      <a href="#lb4" class="gal-link"><img src="./img/photo04.jpg" alt="Camera da letto"></a>
+      <a href="#lb5" class="gal-link"><img src="./img/photo05.jpg" alt="Terrazzo"></a>
+      <a href="#lb6" class="gal-link"><img src="./img/photo06.jpg" alt="Giardino"></a>
     </div>
   </div>
 </section>
+<div id="lb1" class="lb"><a href="#foto" class="lb-close">✕</a><a href="#lb6" class="lb-prev">‹</a><img src="./img/photo01.jpg" alt=""><a href="#lb2" class="lb-next">›</a></div>
+<div id="lb2" class="lb"><a href="#foto" class="lb-close">✕</a><a href="#lb1" class="lb-prev">‹</a><img src="./img/photo02.jpg" alt=""><a href="#lb3" class="lb-next">›</a></div>
+<div id="lb3" class="lb"><a href="#foto" class="lb-close">✕</a><a href="#lb2" class="lb-prev">‹</a><img src="./img/photo03.jpg" alt=""><a href="#lb4" class="lb-next">›</a></div>
+<div id="lb4" class="lb"><a href="#foto" class="lb-close">✕</a><a href="#lb3" class="lb-prev">‹</a><img src="./img/photo04.jpg" alt=""><a href="#lb5" class="lb-next">›</a></div>
+<div id="lb5" class="lb"><a href="#foto" class="lb-close">✕</a><a href="#lb4" class="lb-prev">‹</a><img src="./img/photo05.jpg" alt=""><a href="#lb6" class="lb-next">›</a></div>
+<div id="lb6" class="lb"><a href="#foto" class="lb-close">✕</a><a href="#lb5" class="lb-prev">‹</a><img src="./img/photo06.jpg" alt=""><a href="#lb1" class="lb-next">›</a></div>
 
-<!-- AVAILABILITY -->
+<!-- DISPONIBILITÀ -->
 <section id="disponibilita">
   <div class="wrap">
     <p class="eyebrow it">📅 Disponibilità</p>
     <p class="eyebrow en">📅 Availability</p>
-    <h2 class="it">Calendario <em>disponibilità</em></h2>
-    <h2 class="en"><em>Availability</em> calendar</h2>
+    <h2 class="it">Quando sei <em>libero</em>?</h2>
+    <h2 class="en">When are <em>you free</em>?</h2>
     <div class="cal-layout">
       <div>
         <div class="cal-box">
           <div class="cal-nav">
             <button class="cal-arrow" onclick="calPrev()">‹</button>
-            <div class="cal-title" id="calTitle"></div>
+            <span class="cal-title" id="calTitle"></span>
             <button class="cal-arrow" onclick="calNext()">›</button>
           </div>
           <div class="cal-grid" id="calGrid"></div>
           <div class="cal-legend">
-            <div class="leg-i"><div class="leg-dot" style="background:#e2f0d4"></div><span class="it">Disponibile</span><span class="en">Available</span></div>
-            <div class="leg-i"><div class="leg-dot" style="background:#f5ddd0"></div><span class="it">Occupato</span><span class="en">Booked</span></div>
+            <span class="leg-i"><span class="leg-dot" style="background:var(--green-lt)"></span><span class="it">Disponibile</span><span class="en">Available</span></span>
+            <span class="leg-i"><span class="leg-dot" style="background:#f5ddd0"></span><span class="it">Occupato</span><span class="en">Booked</span></span>
+            <span class="leg-i"><span class="leg-dot" style="background:#fff;border:2px solid var(--forest)"></span><span class="it">Oggi</span><span class="en">Today</span></span>
           </div>
-          <div class="cal-note it">📞 Per prenotare scrivici: <a href="mailto:pratomgnoapartament@gmail.com">pratomgnoapartament@gmail.com</a></div>
-          <div class="cal-note en">📞 To book: <a href="mailto:pratomgnoapartament@gmail.com">pratomgnoapartament@gmail.com</a></div>
+          <div class="cal-note it">📅 Per prenotare contattaci direttamente — risposta entro 24h, tariffa più bassa garantita.</div>
+          <div class="cal-note en">📅 To book, contact us directly — reply within 24h, lowest rate guaranteed.</div>
         </div>
         <div class="admin-toggle-wrap">
-          <button class="admin-toggle-btn" onclick="toggleAdmin()">⚙ Admin</button>
+          <button class="admin-toggle-btn" onclick="toggleAdmin()">🔐 Admin</button>
         </div>
         <div class="admin-panel" id="adminPanel">
           <div class="admin-pw-wrap">
-            <input type="password" id="adminPw" placeholder="Password">
-            <button onclick="checkPw()">Accedi</button>
+            <input type="password" id="adminPw" placeholder="Password…">
+            <button onclick="checkPw()"><span class="it">Accedi</span><span class="en">Login</span></button>
           </div>
           <div class="admin-msg" id="adminMsg"></div>
           <div class="admin-content" id="adminContent">
@@ -916,12 +982,12 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
         <div class="info-card">
           <h3 class="it">📋 Regole della casa</h3><h3 class="en">📋 House rules</h3>
           <div class="rules">
-            <div class="rule"><span>-</span><span class="it">Smart working benvenuto · Starlink incluso · −10% per ≥7 notti</span><span class="en">Remote working welcome · Starlink included · −10% for ≥7 nights</span></div>
-            <div class="rule"><span>-</span><span class="it">Famiglie benvenute · Bambini &lt;4 anni gratuiti</span><span class="en">Families welcome · Children under 4 free</span></div>
-            <div class="rule"><span>-</span><span class="it">Vietato fumare in appartamento (area fumo terrazzo)</span><span class="en">No smoking indoors (permitted on terrace)</span></div>
-            <div class="rule"><span>-</span><span class="it">No feste · Silenzio 23:00–8:00</span><span class="en">No parties · Quiet hours 23:00–8:00</span></div>
-            <div class="rule"><span>-</span><span class="it">Raccolta differenziata · cassonetti a 50 m</span><span class="en">Waste sorting required · bins 50 m away</span></div>
-            <div class="rule"><span>-</span><span class="it">Animali domestici non ammessi</span><span class="en">No pets allowed</span></div>
+            <div class="rule"><span>—</span><span class="it">Smart working benvenuto · Starlink incluso · −10% per ≥7 notti</span><span class="en">Remote working welcome · Starlink included · −10% for ≥7 nights</span></div>
+            <div class="rule"><span>—</span><span class="it">Famiglie benvenute · Bambini &lt;4 anni gratuiti</span><span class="en">Families welcome · Children under 4 free</span></div>
+            <div class="rule"><span>—</span><span class="it">Vietato fumare in appartamento (area fumo terrazzo)</span><span class="en">No smoking indoors (permitted on terrace)</span></div>
+            <div class="rule"><span>—</span><span class="it">No feste · Silenzio 23:00–8:00</span><span class="en">No parties · Quiet hours 23:00–8:00</span></div>
+            <div class="rule"><span>—</span><span class="it">Raccolta differenziata · cassonetti a 50 m</span><span class="en">Waste sorting required · bins 50 m away</span></div>
+            <div class="rule"><span>—</span><span class="it">Animali domestici non ammessi</span><span class="en">No pets allowed</span></div>
           </div>
         </div>
       </div>
@@ -930,7 +996,7 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
 </section>
 
 <!-- PREZZI -->
-<section id="prezzi" style="background:#f2ead8">
+<section id="prezzi" style="background:var(--cream)">
   <div class="wrap">
     <p class="eyebrow it">Tariffe 2026</p>
     <p class="eyebrow en">2026 Rates</p>
@@ -946,7 +1012,7 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
       <div class="price-col feat"><div class="p-season">Smart-work</div><div class="p-period it">≥7 notti</div><div class="p-period en">≥7 nights</div><div class="p-num">€99</div><div class="p-unit it">notte · 2 ospiti</div><div class="p-unit en">night · 2 guests</div><span class="p-badge">−10%</span></div>
     </div>
     <div class="extras">
-      <div class="extra"><div class="e-lbl it">Tassa soggiorno</div><div class="e-lbl en">Tourist tax</div><div class="e-val">€2<small class="it"> /pers/notte (max 4gg) · all'arrivo</small><small class="en"> /pers/night (max 4) · on arrival</small></div></div>
+      <div class="extra"><div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:.4rem"><span class="e-lbl it">Tassa soggiorno &nbsp;<a href="https://www.comune.castelsanniccolo.ar.it/servizi/tassa-di-soggiorno" target="_blank" rel="noopener" style="font-family:var(--sans);font-size:10px;font-weight:400;text-transform:none;letter-spacing:0">comune.castelsanniccolo.ar.it</a></span><span class="e-lbl en">Tourist tax &nbsp;<a href="https://www.comune.castelsanniccolo.ar.it/servizi/tassa-di-soggiorno" target="_blank" rel="noopener" style="font-family:var(--sans);font-size:10px;font-weight:400;text-transform:none;letter-spacing:0">comune.castelsanniccolo.ar.it</a></span><span class="e-val">€2 <span class="it" style="font-family:var(--sans);font-size:11px;font-weight:400;">/pers/notte (max 4gg) · all&rsquo;arrivo</span><span class="en" style="font-family:var(--sans);font-size:11px;font-weight:400;">/pers/night (max 4) · on arrival</span></span></div></div>
       <div class="extra"><div class="e-lbl it">Bambini &lt;4 anni</div><div class="e-lbl en">Children &lt;4 years</div><div class="e-val it">Gratuiti</div><div class="e-val en">Free</div></div>
     </div>
   </div>
@@ -975,8 +1041,8 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
       </div>
     </div>
     <div class="reviews-grid">
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text it">«Bellissima esperienza! L'host è davvero splendida: ottima accoglienza, belle chiacchierate. La casa bellissima, la location quello che desideravo: completamente immersa nella natura e comunque non lontana da centri. Esperienza da ripetere!»</p><p class="rev-text en">«A very beautiful experience! The host is really splendid: optimum welcome, beautiful chatting. The house is very beautiful, the location: what I wanted — completely immersed in nature but not far from shopping centres. Experience to repeat!»</p><div class="rev-author"><div class="rev-avatar">AC</div><div><div class="rev-name">Aurelia C.</div><div class="rev-meta it">Firenze · luglio 2025</div><div class="rev-meta en">Florence · July 2025</div></div></div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text it">«I had a wonderful stay. I was looking for a quiet place to go on a personal retreat — this flat was ideal. Beautiful location in the rolling hills of Toscana. At night, only pristine quiet. The host is lovely — warm, kind, excellent English. The flat itself is very cute. Modern kitchen, modern bathroom, tastefully decorated. The master bed was super comfortable.»</p><p class="rev-text en">«I had a wonderful stay. I was looking for a quiet place to go on a personal retreat — this flat was ideal. Beautiful location in the rolling hills of Toscana. At night, only pristine quiet. The host is lovely — warm, kind, excellent English. The flat itself is very cute. Modern kitchen, modern bathroom, tastefully decorated.»</p><div class="rev-author"><div class="rev-avatar">L.</div><div><div class="rev-name">Lisa</div><div class="rev-meta">USA · September 2023</div></div></div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text it">«Bellissima esperienza! L'host è davvero splendida: ottima accoglienza, belle chiacchierate. La casa bellissima, la location quello che desideravo: completamente immersa nella natura e comunque non lontana da centri. Esperienza da ripetere!»</p><p class="rev-text en">«A very beautiful experience! The host is really splendid: optimum welcome, beautiful chatting. The house is very beautiful — completely immersed in nature but not far from shopping centres. Experience to repeat!»</p><div class="rev-author"><div class="rev-avatar">AC</div><div><div class="rev-name">Aurelia C.</div><div class="rev-meta it">Firenze · luglio 2025</div><div class="rev-meta en">Florence · July 2025</div></div></div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">«I had a wonderful stay. I was looking for a quiet place to go on a personal retreat — this flat was ideal. Beautiful location in the rolling hills of Toscana. At night, only pristine quiet. The host is lovely — warm, kind, excellent English. Modern kitchen, modern bathroom, tastefully decorated. The master bed was super comfortable.»</p><div class="rev-author"><div class="rev-avatar">L.</div><div><div class="rev-name">Lisa</div><div class="rev-meta">USA · September 2023</div></div></div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text it">«La padrona di casa era molto gentile e disponibile. La casa è arredata con gusto. Il bagno è spazioso con una grande cabina doccia (con termostato!). C'è un parcheggio per la macchina.»</p><p class="rev-text en">«The host was very nice and helpful. The apartment is well equipped. The bathroom is very spacious with a large cabin shower (with thermostat!). There is a car park.»</p><div class="rev-author"><div class="rev-avatar">Jo</div><div><div class="rev-name">Joachim</div><div class="rev-meta it">Sicilia · Agosto 2023</div><div class="rev-meta en">Sicily · August 2023</div></div></div></div>
     </div>
     <p class="reviews-note it">* Recensioni reali ricevute su <a href="https://www.airbnb.it/rooms/28183170" target="_blank" rel="noopener">Airbnb</a>, <a href="https://www.booking.com/Share-8eE2Tub" target="_blank" rel="noopener">Booking.com</a> o <a href="https://share.google/xEanyWVrkQ0gw60ms" target="_blank" rel="noopener">Google</a>.</p>
@@ -985,7 +1051,7 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
 </section>
 
 <!-- PAGE CARDS -->
-<section style="background:#f2ead8">
+<section style="background:var(--cream)">
   <div class="wrap">
     <p class="eyebrow it">Esplora il sito</p>
     <p class="eyebrow en">Explore the site</p>
@@ -1007,23 +1073,22 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
     <p class="eyebrow en">Routes &amp; Activities</p>
     <h2 class="it">Natura, sport e <em>avventura</em></h2>
     <h2 class="en">Nature, sport and <em>adventure</em></h2>
-
     <div class="act-block">
-      <div class="act-block-title"><span class="it">Percorsi Tematici</span><span class="en">Thematic Routes</span></div>
+      <div class="act-block-title"><span class="it">Percorsi Tematici — <a href="https://www.lamiabellatoscana.it/2016/07/la-mappa-ed-i-sentieri-del-pratomagno.html" target="_blank" rel="noopener">Mappe e Sentieri del Pratomagno</a></span><span class="en">Thematic Routes</span></div>
       <table class="act-table">
         <tr><td class="act-name-td"><span class="it">Percorso Hinkler Ring</span><span class="en">Hinkler Ring Route</span></td><td><span class="it">Percorso storico sul crinale</span><span class="en">Historical ridge route</span></td></tr>
         <tr><td class="act-name-td"><span class="it">Croce — Cippo Hinkler — Pozza Nera</span><span class="en">Cross — Hinkler Monument — Pozza Nera</span></td><td><span class="it">Pratomagno · trekking panoramico</span><span class="en">From Pratomagno · panoramic trek</span></td></tr>
         <tr><td class="act-name-td"><span class="it">Relitto Aereo — Uomo di Sasso</span><span class="en">Aircraft Wreck — Stone Man Route</span></td><td><span class="it">Itinerario storico sul crinale</span><span class="en">Historical ridge itinerary</span></td></tr>
         <tr><td class="act-name-td"><span class="it">Pescina Santa — Portacce</span><span class="en">Pescina Santa — Portacce Route</span></td><td><span class="it">Sorgenti e boschi del Pratomagno</span><span class="en">Springs and Pratomagno woodland</span></td></tr>
         <tr><td class="act-name-td"><span class="it">Bagni di Cetica</span><span class="en">Cetica Thermal Springs</span></td><td><span class="it">Area termale · 1.150 m · 5 km dall'appartamento</span><span class="en">Thermal area · 1,150 m · 5 km from apartment</span></td></tr>
-        <tr><td class="act-name-td"><span class="it">Trek a Cetica</span><span class="en">Cetica Trek</span></td><td><span class="it">Pieve Romanica S.Michele Arcangelo · Museo del Carbonaio</span><span class="en">Romanesque Church S.Michele Arcangelo · Charcoal Maker Museum</span></td></tr>
+        <tr><td class="act-name-td"><span class="it">Trek a Cetica</span><span class="en">Cetica Trek</span></td><td><span class="it">Pieve Romanica S.Michele Arcangelo · Museo del Carbonaio</span><span class="en">Romanesque Church S.Michele Arcangelo · Charcoal Maker Museum</span></td><td class="act-link-td"><a href="https://www.wikiloc.com/percorsi-escursionismo/cetica-bibbiena-4269558" target="_blank" rel="noopener">wikiloc.com</a></td></tr>
       </table>
     </div>
-
-    <div class="act-grid">
+    <div>
       <div class="act-block">
         <div class="act-block-title"><span class="it">Attività Sportive</span><span class="en">Sports Activities</span></div>
         <table class="act-table">
+          <tr><td class="act-icon-td">🥾</td><td class="act-name-td">CAI — Club Alpino Italiano<small class="it">Sentieri ufficiali · sezione Arezzo</small><small class="en">Official trails · Arezzo section</small></td><td class="act-link-td"><a href="https://www.cai.it" target="_blank" rel="noopener">cai.it</a></td></tr>
           <tr><td class="act-icon-td">⛷️</td><td class="act-name-td"><span class="it">Sport Invernali</span><span class="en">Winter Sports</span></td><td class="act-link-td"><a href="https://www.parcoforestecasentinesi.it" target="_blank" rel="noopener">parcoforestecasentinesi.it</a></td></tr>
           <tr><td class="act-icon-td">⛳</td><td class="act-name-td">Golf</td><td class="act-link-td"><a href="https://www.golfclubcasentino.it" target="_blank" rel="noopener">golfclubcasentino.it</a></td></tr>
           <tr><td class="act-icon-td">🎾</td><td class="act-name-td">Tennis</td><td class="act-link-td"><a href="https://www.casentino.it/attivit%C3%A0-sportive/235-tennis" target="_blank" rel="noopener">casentino.it</a></td></tr>
@@ -1034,35 +1099,24 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
           <tr><td class="act-icon-td">🏃</td><td class="act-name-td">Trail Running</td><td class="act-link-td"><a href="https://www.trailrunpro.it" target="_blank" rel="noopener">trailrunpro.it</a></td></tr>
         </table>
       </div>
-      <div class="act-block">
-        <div class="act-block-title">🔗 <span class="it">Link Utili</span><span class="en">Useful Links</span></div>
-        <table class="act-table">
-          <tr><td class="act-icon-td">🥾</td><td class="act-name-td">CAI — Club Alpino Italiano<small class="it">Sentieri ufficiali · sezione Arezzo</small><small class="en">Official trails · Arezzo section</small></td><td class="act-link-td"><a href="https://www.cai.it" target="_blank" rel="noopener">cai.it</a></td></tr>
-          <tr><td class="act-icon-td">🗺️</td><td class="act-name-td">Mappa &amp; Sentieri Pratomagno</td><td class="act-link-td"><a href="https://www.lamiabellatoscana.it/2016/07/la-mappa-ed-i-sentieri-del-pratomagno.html" target="_blank" rel="noopener">lamiabellatoscana.it</a></td></tr>
-          <tr><td class="act-icon-td">📍</td><td class="act-name-td">Wikiloc — Cetica–Bibbiena</td><td class="act-link-td"><a href="https://www.wikiloc.com/percorsi-escursionismo/cetica-bibbiena-4269558" target="_blank" rel="noopener">wikiloc.com</a></td></tr>
-          <tr><td class="act-icon-td">📓</td><td class="act-name-td">Cronache di Cammini</td><td class="act-link-td"><a href="https://www.cronachedicammini.com" target="_blank" rel="noopener">cronachedicammini.com</a></td></tr>
-          <tr><td class="act-icon-td">🌲</td><td class="act-name-td">Parco Foreste Casentinesi</td><td class="act-link-td"><a href="https://www.parcoforestecasentinesi.it" target="_blank" rel="noopener">parcoforestecasentinesi.it</a></td></tr>
-          <tr><td class="act-icon-td">🏔️</td><td class="act-name-td">Il Bel Casentino — Pratomagno</td><td class="act-link-td"><a href="https://www.ilbelcasentino.it/pratomagno.html" target="_blank" rel="noopener">ilbelcasentino.it</a></td></tr>
-          <tr><td class="act-icon-td">🗺️</td><td class="act-name-td">Pratomagno.it — Sentieri</td><td class="act-link-td"><a href="https://www.pratomagno.it/index.php/sentieri" target="_blank" rel="noopener">pratomagno.it</a></td></tr>
-          <tr><td class="act-icon-td">🏛️</td><td class="act-name-td">Ecomuseo del Casentino</td><td class="act-link-td"><a href="https://www.ecomuseo.casentino.toscana.it" target="_blank" rel="noopener">ecomuseo.casentino.toscana.it</a></td></tr>
-        </table>
-      </div>
     </div>
   </div>
 </section>
 
 <!-- CTA / CONTACT -->
 <section class="cta-section" id="contatti">
-  <p class="eyebrow it">Prenota direttamente</p>
-  <p class="eyebrow en">Book directly</p>
-  <h2 class="it">Dove la Toscana è ancora <em>selvaggia</em></h2>
-  <h2 class="en">Begin your <em>adventure</em></h2>
-  <p class="it">Scrivici o chiamaci — risponderemo entro 24 ore. Nessun intermediario, tariffa più bassa garantita.</p>
-  <p class="en">Email or call us — we'll reply within 24 hours. No intermediaries, lowest rate guaranteed.</p>
-  <div class="hero-btns">
-    <a href="mailto:pratomgnoapartament@gmail.com" class="btn-primary it">✉ Invia email</a>
-    <a href="mailto:pratomgnoapartament@gmail.com" class="btn-primary en">✉ Send email</a>
-    <a href="tel:+390575555106" class="btn-ghost">📞 +39 0575 555106</a>
+  <div class="wrap">
+    <p class="eyebrow it">Prenota direttamente</p>
+    <p class="eyebrow en">Book directly</p>
+    <h2 class="it">Dove la Toscana è ancora <em>selvaggia</em></h2>
+    <h2 class="en">Begin your <em>adventure</em></h2>
+    <p class="it">Scrivici o chiamaci — risponderemo entro 24 ore. Nessun intermediario, tariffa più bassa garantita.</p>
+    <p class="en">Email or call us — we'll reply within 24 hours. No intermediaries, lowest rate guaranteed.</p>
+    <div class="hero-btns">
+      <a href="mailto:pratomgnoapartament@gmail.com" class="btn-primary it">✉ Invia email</a>
+      <a href="mailto:pratomgnoapartament@gmail.com" class="btn-primary en">✉ Send email</a>
+      <a href="tel:+390575555106" class="btn-ghost">📞 +39 0575 555106</a>
+    </div>
   </div>
 </section>
 
@@ -1087,7 +1141,7 @@ function setLang(lang) {
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
   renderCal();
 }
-setLang('it'); // default
+setLang('it');
 
 /* ── MOBILE DRAWER ── */
 function closeDrawer() {
@@ -1189,7 +1243,7 @@ function fmtDate(str) { var p = str.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; }
 function renderBookingList() {
   var list = document.getElementById('bookingList');
   list.innerHTML = '';
-  if (!bookings.length) { list.innerHTML = '<div style="font-size:12px;color:#6b5c42;padding:.4rem 0">Nessuna prenotazione.</div>'; return; }
+  if (!bookings.length) { list.innerHTML = '<div style="font-size:12px;color:var(--ink-soft);padding:.4rem 0">Nessuna prenotazione.</div>'; return; }
   var sorted = bookings.slice().sort(function(a,b){ return a.from < b.from ? -1 : 1; });
   sorted.forEach(function(b) {
     var realIdx = bookings.indexOf(b);
@@ -1197,7 +1251,7 @@ function renderBookingList() {
     var srcClass = 'src-'+b.source;
     var item = document.createElement('div');
     item.className = 'booking-item';
-    item.innerHTML = '<div class="booking-item-info"><span class="booking-source '+srcClass+'">'+srcLabel+'</span><span class="booking-dates">'+fmtDate(b.from)+' → '+fmtDate(b.to)+'</span></div><button class="btn-del-booking" onclick="deleteBooking('+realIdx+')">✕</button>';
+    item.innerHTML = '<div class="booking-item-info"><span class="booking-source '+srcClass+'">'+srcLabel+'</span><span style="font-size:12px">'+fmtDate(b.from)+' → '+fmtDate(b.to)+'</span></div><button class="btn-del-booking" onclick="deleteBooking('+realIdx+')">✕</button>';
     list.appendChild(item);
   });
 }
