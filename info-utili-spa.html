@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pratomagno Apartment — Guest Info</title>
+<meta name="description" content="Useful information for guests of Pratomagno Apartment, Castagneto-Cetica, Alto Casentino.">
+
+<!-- GitHub Pages SPA redirect receiver -->
+<script>
+(function(){
+  var r = sessionStorage.getItem('spa-redirect');
+  if (r) { sessionStorage.removeItem('spa-redirect'); history.replaceState(null,null,r); }
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --forest:   #1e3a2f;
+  --moss:     #2e5943;
+  --sage:     #5a8a6a;
+  --mist:     #e8f0ea;
+  --cream:    #faf7f2;
+  --warm:     #f3ede3;
+  --gold:     #b8874a;
+  --ink:      #1a1a1a;
+  --ink-soft: #555;
+  --border:   #d5e0d8;
+  --r:        10px;
+  --serif:    'Playfair Display', Georgia, serif;
+  --sans:     'DM Sans', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  background: var(--forest);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+header::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 60% 40%, rgba(90,138,106,.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+.header-eyebrow {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: rgba(255,255,255,.5); margin-bottom: .75rem;
+}
+header h1 {
+  font-family: var(--serif); font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 400; line-height: 1.15; color: #fff; margin-bottom: .4rem;
+}
+header h1 em { color: #a8d4b4; font-style: italic; }
+.header-sub { font-size: 13px; color: rgba(255,255,255,.55); letter-spacing: .04em; }
+
+/* NAV TABS */
+nav {
+  background: var(--forest);
+  border-top: 1px solid rgba(255,255,255,.08);
+  display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; position: sticky; top: 0; z-index: 50;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+nav::-webkit-scrollbar { display: none; }
+.tab {
+  flex-shrink: 0;
+  font-family: var(--sans); font-size: 11px; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: rgba(255,255,255,.5); padding: .85rem 1.1rem;
+  cursor: pointer; border: none; border-bottom: 2px solid transparent;
+  background: none; white-space: nowrap;
+  transition: color .2s, border-color .2s;
+}
+.tab:hover { color: rgba(255,255,255,.85); }
+.tab.active { color: #fff; border-bottom-color: #a8d4b4; }
+
+/* MAIN */
+main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+.panel { display: none; animation: fadeUp .3s ease; }
+.panel.active { display: block; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+
+.section-title {
+  font-family: var(--serif); font-size: clamp(1.3rem, 4vw, 1.9rem);
+  font-weight: 400; color: var(--forest); margin-bottom: 1.5rem;
+  padding-bottom: .65rem; border-bottom: 1px solid var(--border);
+}
+.section-title + .section-title { margin-top: 2rem; }
+
+/* CARDS */
+.card {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--r); padding: 1.1rem 1.3rem; margin-bottom: .85rem;
+}
+.card-zone {
+  font-size: 10px; font-weight: 500; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--sage); margin-bottom: .45rem;
+}
+.card h3 {
+  font-family: var(--serif); font-size: 1.05rem; font-weight: 600;
+  color: var(--forest); margin-bottom: .3rem;
+}
+.card .meta { font-size: 13px; color: var(--ink-soft); display: flex; gap: .4rem; flex-wrap: wrap; align-items: center; }
+.card .meta a { color: var(--gold); text-decoration: none; }
+.card .meta a:hover { text-decoration: underline; }
+.tag {
+  font-size: 10px; font-weight: 500; padding: 2px 8px;
+  border-radius: 20px; border: 1px solid var(--border);
+  color: var(--ink-soft); background: var(--mist); display: inline-block;
+}
+
+/* EMERGENCY */
+.emerg-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: .85rem; margin-bottom: 1.5rem;
+}
+.emerg-card {
+  background: var(--forest); color: #fff;
+  border-radius: var(--r); padding: 1.2rem 1rem; text-align: center;
+}
+.emerg-card .num {
+  font-family: var(--serif); font-size: 1.9rem; font-weight: 600;
+  display: block; margin-bottom: .2rem; color: #a8d4b4;
+}
+.emerg-card .lbl { font-size: 10px; letter-spacing: .07em; text-transform: uppercase; color: rgba(255,255,255,.6); }
+
+/* WIFI */
+.wifi-card {
+  background: var(--warm); border: 1px solid #ddd0b8;
+  border-radius: var(--r); padding: 1.4rem; margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 1.25rem;
+}
+.wifi-icon { font-size: 2.4rem; flex-shrink: 0; }
+.wifi-info h3 { font-family: var(--serif); font-size: 1.05rem; color: var(--forest); margin-bottom: .35rem; }
+.wifi-cred {
+  font-family: monospace; font-size: 14px; background: #fff;
+  border: 1px solid var(--border); border-radius: 5px;
+  padding: .1rem .5rem; display: inline-block; color: var(--moss); margin: .1rem 0;
+}
+
+/* CONTACTS */
+.contacts-box {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--r); padding: 1.1rem 1.3rem; margin-bottom: 1.5rem;
+}
+.contact-row {
+  display: flex; align-items: center; gap: .85rem;
+  padding: .8rem 0; border-bottom: 1px solid var(--mist);
+}
+.contact-row:last-child { border-bottom: none; }
+.contact-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--mist); display: flex; align-items: center;
+  justify-content: center; font-size: 1.2rem; flex-shrink: 0;
+}
+.contact-name { font-weight: 500; font-size: 14px; color: var(--forest); }
+.contact-num { font-size: 13px; color: var(--ink-soft); }
+.contact-num a { color: var(--gold); text-decoration: none; }
+.contact-num a:hover { text-decoration: underline; }
+
+/* SERVICES */
+.service-group { margin-bottom: 1.5rem; }
+.service-group-title {
+  font-size: 10px; font-weight: 600; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--sage);
+  padding: .35rem 0; border-bottom: 1px solid var(--border); margin-bottom: .65rem;
+}
+.service-item {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: .4rem 0; font-size: 14px; border-bottom: 1px solid var(--mist);
+}
+.service-item:last-child { border-bottom: none; }
+.service-detail { font-size: 12px; color: var(--ink-soft); text-align: right; }
+.service-detail a { color: var(--gold); text-decoration: none; }
+.service-detail a:hover { text-decoration: underline; }
+
+footer {
+  text-align: center; padding: 2rem 1.5rem;
+  font-size: 12px; color: var(--ink-soft);
+  border-top: 1px solid var(--border);
+}
+footer a { color: var(--sage); }
+
+@media (max-width: 480px) {
+  .wifi-card { flex-direction: column; text-align: center; }
+  .emerg-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <p class="header-eyebrow">Castagneto-Cetica · Alto Casentino · Toscana</p>
+  <h1>Pratomagno <em>Apartment</em></h1>
+  <p class="header-sub">Guest Information Guide</p>
+</header>
+
+<nav>
+  <button class="tab active" data-panel="restaurants">🍽 Food &amp; Drink</button>
+  <button class="tab" data-panel="shops">🛒 Shops</button>
+  <button class="tab" data-panel="services">🚗 Services</button>
+  <button class="tab" data-panel="emergency">🚨 Emergency</button>
+  <button class="tab" data-panel="contacts">📞 Contacts</button>
+</nav>
+
+<main>
+
+  <!-- RESTAURANTS -->
+  <section id="restaurants" class="panel active">
+    <h2 class="section-title">Restaurants &amp; Pizzerias</h2>
+
+    <div class="card">
+      <p class="card-zone">Cetica — 700 m</p>
+      <h3>Trattoria La Piazza</h3>
+      <p class="meta"><span class="tag">Trattoria</span><a href="tel:+393714921369">371 492 1369</a></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Pagliericcio — 3 km</p>
+      <h3>La Tana del Paglione</h3>
+      <p class="meta"><span class="tag">Pizzeria · Restaurant</span><a href="tel:+393888177999">+39 388 817 7999</a><span>· Closed Monday</span></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Strada in Casentino — 6 km</p>
+      <h3>Street Saloon</h3>
+      <p class="meta"><span class="tag">Pub · Pizzeria</span><a href="tel:0575572782">0575 572782</a><span>· Closed Monday</span></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Strada in Casentino — 6 km</p>
+      <h3>I Vecchi Telai</h3>
+      <p class="meta"><span class="tag">Pizzeria · Restaurant</span><a href="tel:0575570327">0575 570327</a><span>· Closed Monday</span></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Porrena — 10 km</p>
+      <h3>Atlantic Oil</h3>
+      <p class="meta"><span class="tag">Restaurant · Pub</span><a href="tel:0575550513">0575 550513</a><span>· Closed Monday</span></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Porrena — 10 km</p>
+      <h3>Locanda Il Cocodè</h3>
+      <p class="meta"><span class="tag">Restaurant</span><a href="tel:057550018">0575 50018</a><span>· Closed Monday</span></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Poppi — 12 km</p>
+      <h3>RossoBirra</h3>
+      <p class="meta"><span class="tag">Pub · Pizzeria</span><a href="tel:0575527534">0575 527534</a><span>· Closed Monday</span></p>
+    </div>
+
+    <h2 class="section-title">Bakeries &amp; Cafés</h2>
+
+    <div class="card">
+      <p class="card-zone">Cetica — 700 m</p>
+      <h3>Bar Ristoro La Piazza</h3>
+      <p class="meta"><span class="tag">Bar · Café</span><a href="tel:+393714921369">371 492 1369</a></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Pagliericcio — 3 km</p>
+      <h3>Bar La Tana del Paglione</h3>
+      <p class="meta"><span class="tag">Bar</span><a href="tel:+393888177999">+39 388 817 7999</a><span>· Closed Monday</span></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Poppi — 12 km</p>
+      <h3>Forno Bar Pietrini</h3>
+      <p class="meta"><span class="tag">Bakery · Bar</span><a href="tel:0575529177">0575 529177</a></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Poppi — 12 km</p>
+      <h3>Edy – Bar Pasticceria</h3>
+      <p class="meta"><span class="tag">Café · Pastry</span><a href="tel:0575529238">0575 529238</a></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Poppi — 12 km</p>
+      <h3>Forno Pasticceria Anima di Pane</h3>
+      <p class="meta"><span class="tag">Bakery</span><a href="tel:0575500291">0575 500291</a></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Bibbiena — 19 km</p>
+      <h3>Forno Pasticceria Grassi</h3>
+      <p class="meta"><span class="tag">Bakery · Pastry</span><a href="tel:0575536536">0575 536536</a></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Bibbiena — 19 km</p>
+      <h3>Forno Bar Menchetti</h3>
+      <p class="meta"><span class="tag">Bakery · Bar</span><a href="tel:0575955364">0575 955364</a></p>
+    </div>
+  </section>
+
+  <!-- SHOPS -->
+  <section id="shops" class="panel">
+    <h2 class="section-title">Minimarkets &amp; Supermarkets</h2>
+
+    <div class="card">
+      <p class="card-zone">Cetica — 700 m</p>
+      <h3>Osteria Alimentari Fabbrini</h3>
+      <p class="meta"><span class="tag">Grocery</span><a href="tel:0575555051">0575 555051</a></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Poppi — 12 km</p>
+      <h3>CRAI</h3>
+      <p class="meta"><span class="tag">Supermarket</span><a href="tel:0575520345">0575 520345</a></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Poppi — 12 km</p>
+      <h3>Di Più</h3>
+      <p class="meta"><span class="tag">Supermarket</span><a href="tel:0575080273">0575 080273</a></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Bibbiena — 19 km</p>
+      <h3>COOP</h3>
+      <p class="meta"><span class="tag">Supermarket</span><a href="tel:0575595395">0575 595395</a></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Bibbiena — 19 km</p>
+      <h3>Eurospin</h3>
+      <p class="meta"><span class="tag">Discount</span><a href="tel:800595595">800 595 595</a></p>
+    </div>
+    <div class="card">
+      <p class="card-zone">Bibbiena — 19 km</p>
+      <h3>LDL</h3>
+      <p class="meta"><span class="tag">Discount</span><a href="tel:800480048">800 480 048</a></p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="panel">
+    <h2 class="section-title">Other Services</h2>
+
+    <div class="wifi-card">
+      <div class="wifi-icon">📡</div>
+      <div class="wifi-info">
+        <h3>Satellite WiFi — Starlink</h3>
+        <div>Network: <span class="wifi-cred">Pratomagno</span></div>
+        <div>Password: <span class="wifi-cred">prato173</span></div>
+      </div>
+    </div>
+
+    <div class="service-group">
+      <p class="service-group-title">Pharmacy</p>
+      <div class="service-item">
+        <span>Farmacia Simone</span>
+        <span class="service-detail"><a href="tel:0575555051">0575 555051</a> · Via Roma 16, Strada</span>
+      </div>
+      <div class="service-item">
+        <span>Farmacia Veltroni</span>
+        <span class="service-detail"><a href="tel:0575550410">0575 550410</a> · Via Roma, Ponte a Poppi</span>
+      </div>
+    </div>
+
+    <div class="service-group">
+      <p class="service-group-title">Laundry</p>
+      <div class="service-item">
+        <span>L'Angolo del Pulito</span>
+        <span class="service-detail">Via Pegomas 11-13-15, Strada</span>
+      </div>
+      <div class="service-item">
+        <span>Lavanderia Bellugi</span>
+        <span class="service-detail"><a href="tel:0575520506">0575 520506</a> · Via Roma, Ponte a Poppi</span>
+      </div>
+    </div>
+
+    <div class="service-group">
+      <p class="service-group-title">Gas Station</p>
+      <div class="service-item">
+        <span>ESSO</span>
+        <span class="service-detail"><a href="tel:0575572968">0575 572968</a> · Via Palmiro Togliatti 16, Strada</span>
+      </div>
+    </div>
+
+    <div class="service-group">
+      <p class="service-group-title">Transport</p>
+      <div class="service-item">
+        <span>Train — TFT</span>
+        <span class="service-detail"><a href="https://www.trasportoferroviariotoscano.it" target="_blank" rel="noopener">trasportoferroviariotoscano.it</a></span>
+      </div>
+      <div class="service-item">
+        <span>Bus — Etruria Mobilità</span>
+        <span class="service-detail"><a href="https://www.etruriamobilita.it" target="_blank" rel="noopener">etruriamobilita.it</a></span>
+      </div>
+      <div class="service-item">
+        <span>Taxi — Simonetti &amp; De Marzi</span>
+        <span class="service-detail"><a href="tel:3405791033">340 579 1033</a></span>
+      </div>
+      <div class="service-item">
+        <span>Transfer Casentino</span>
+        <span class="service-detail"><a href="tel:3387689130">338 768 9130</a></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMERGENCY -->
+  <section id="emergency" class="panel">
+    <h2 class="section-title">Emergency Numbers</h2>
+
+    <div class="emerg-grid">
+      <div class="emerg-card"><span class="num">112</span><span class="lbl">General Emergency</span></div>
+      <div class="emerg-card"><span class="num">118</span><span class="lbl">First Aid</span></div>
+      <div class="emerg-card"><span class="num">113</span><span class="lbl">Police</span></div>
+      <div class="emerg-card"><span class="num">115</span><span class="lbl">Fire Dept.</span></div>
+      <div class="emerg-card"><span class="num">116117</span><span class="lbl">Medical Guard 20:00–8:00</span></div>
+    </div>
+
+    <div class="card">
+      <p class="card-zone">Hospital — Bibbiena</p>
+      <h3>Ospedale del Casentino</h3>
+      <p class="meta"><a href="tel:05755681">0575 5681</a><span>· Via Filippo Turati 55, Bibbiena</span></p>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts" class="panel">
+    <h2 class="section-title">Host Contacts</h2>
+    <div class="contacts-box">
+      <div class="contact-row">
+        <div class="contact-avatar">👩</div>
+        <div>
+          <div class="contact-name">Vanna</div>
+          <div class="contact-num"><a href="tel:+393347295372">+39 334 729 5372</a></div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-avatar">👨</div>
+        <div>
+          <div class="contact-name">Manoli</div>
+          <div class="contact-num"><a href="tel:+393297212764">+39 329 721 2764</a></div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-avatar">📟</div>
+        <div>
+          <div class="contact-name">Tel / Fax</div>
+          <div class="contact-num"><a href="tel:+390575555106">+39 0575 555106</a></div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-avatar">✉️</div>
+        <div>
+          <div class="contact-name">Email</div>
+          <div class="contact-num"><a href="mailto:pratomagnoapartment@gmail.com">pratomagnoapartment@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-avatar">🌐</div>
+        <div>
+          <div class="contact-name">Website</div>
+          <div class="contact-num"><a href="https://pratomagnoapartment.github.io" target="_blank" rel="noopener">pratomagnoapartment.github.io</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Pratomagno Apartment · Loc. Castagneto-Cetica 173 · Castel San Niccolò (AR) 52018 · CIN: IT051010C2QLKDO7XC
+</footer>
+
+<script>
+const tabs   = document.querySelectorAll('.tab');
+const panels = document.querySelectorAll('.panel');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const id = tab.dataset.panel;
+    tabs.forEach(t => t.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(id).classList.add('active');
+    history.replaceState(null, null, '#' + id);
+  });
+});
+
+// Restore tab from URL hash on load
+(function(){
+  const hash = location.hash.replace('#','');
+  if (hash) {
+    const t = document.querySelector('[data-panel="' + hash + '"]');
+    if (t) t.click();
+  }
+})();
+</script>
+</body>
+</html>
