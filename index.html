@@ -363,10 +363,10 @@ nav {
 .cal-arrow:hover { background: #e3d5b8; }
 .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; text-align: center; }
 .cal-dh { font-family: var(--sans); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); font-weight: 700; padding: .3rem 0; }
-.cal-day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 5px; font-family: var(--sans); font-size: 14px; }
-.cal-day.avail { background: var(--green-lt); cursor: pointer; }
-.cal-day.avail:hover { background: #cce8b0; }
-.cal-day.booked { background: #f5ddd0; color: #c0a898; text-decoration: line-through; }
+.cal-day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 5px; font-family: var(--sans); font-size: 14px; background: white; }
+.cal-day.avail { cursor: pointer; }
+/* .cal-day.avail:hover { }
+.cal-day.booked { } */
 .cal-day.today { border: 2px solid var(--forest); font-weight: 700; }
 .cal-day.past { color: var(--border); }
 .cal-legend { display: flex; gap: 1rem; margin-top: .75rem; flex-wrap: wrap; }
@@ -534,7 +534,7 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
     <li><a href="#sentieri"><span class="it">Sentieri CAI</span><span class="en">CAI Trails</span></a></li>
     <li><a href="#territorio"><span class="it">Territorio</span><span class="en">Area</span></a></li>
     <li><a href="#foto"><span class="it">Foto</span><span class="en">Photos</span></a></li>
-    <li><a href="#disponibilita"><span class="it">Disponibilità</span><span class="en">Availability</span></a></li>
+    <li><a href="#calendario"><span class="it">Calendario</span><span class="en">Calendar</span></a></li>
     <li><a href="#prezzi"><span class="it">Tariffe</span><span class="en">Rates</span></a></li>
     <li><a href="#attivita"><span class="it">Sport &amp; Link</span><span class="en">Sport &amp; Links</span></a></li>
     <li><a href="#recensioni"><span class="it">Recensioni</span><span class="en">Reviews</span></a></li>
@@ -558,7 +558,7 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
     <a href="#sentieri" class="drawer-link" onclick="closeDrawer()">🥾 <span class="it">Sentieri CAI</span><span class="en">CAI Trails</span></a>
     <a href="#territorio" class="drawer-link" onclick="closeDrawer()">🌲 <span class="it">Territorio</span><span class="en">Area</span></a>
     <a href="#foto" class="drawer-link" onclick="closeDrawer()">📷 <span class="it">Foto</span><span class="en">Photos</span></a>
-    <a href="#disponibilita" class="drawer-link" onclick="closeDrawer()">📅 <span class="it">Disponibilità</span><span class="en">Availability</span></a>
+    <a href="#calendario" class="drawer-link" onclick="closeDrawer()">📅 <span class="it">Calendario</span><span class="en">Calendar</span></a>
     <a href="#prezzi" class="drawer-link" onclick="closeDrawer()">€ <span class="it">Tariffe</span><span class="en">Rates</span></a>
     <a href="#recensioni" class="drawer-link" onclick="closeDrawer()">⭐ <span class="it">Recensioni</span><span class="en">Reviews</span></a>
     <a href="#attivita" class="drawer-link" onclick="closeDrawer()">🏃 <span class="it">Sport &amp; Link</span><span class="en">Sport &amp; Links</span></a>
@@ -574,8 +574,8 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
     <p class="it">Immerso nel borgo medievale di Castagneto-Cetica, sulle pendici del Pratomagno in Alto Casentino . Sentieri CAI diretti, Parco Nazionale delle Foreste Casentinesi, Starlink +250 Mbps incluso.</p>
     <p class="en">Nestled in the medieval hamlet of Castagneto-Cetica, on the slopes of Pratomagno in the Alto Casentino. Direct CAI trails, Casentino National Forest Park, Starlink +250 Mbps included.</p>
     <div class="hero-btns">
-      <a href="#disponibilita" class="btn-primary it">📅 Verifica disponibilità</a>
-      <a href="#disponibilita" class="btn-primary en">📅 Check availability</a>
+      <a href="https://www.airbnb.it/rooms/28183170" class="btn-primary it" target="_blank" rel="noopener">Verifica disponibilità</a>
+      <a href="https://www.airbnb.it/rooms/28183170" class="btn-primary en" target="_blank" rel="noopener">Check availability</a>
       <a href="#prezzi" class="btn-ghost it">Tariffe 2026</a>
       <a href="#prezzi" class="btn-ghost en">2026 Rates</a>
     </div>
@@ -708,8 +708,6 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
         <p class="en">Total silence, clean air, medieval hamlet. Starlink +250 Mbps included in the price — maximum productivity, lunch break on CAI trails.</p>
         <div class="rate-hl"><span class="it">Smart-work −10% per soggiorni ≥7 notti · da <strong>€99/notte</strong></span><span class="en">Smart-work −10% for stays ≥7 nights · from <strong>€99/night</strong></span></div>
         <div style="margin-top:1rem;display:flex;gap:.65rem;flex-wrap:wrap">
-          <a href="#disponibilita" class="btn-primary it">📅 Verifica date</a>
-          <a href="#disponibilita" class="btn-primary en">📅 Check dates</a>
           <a href="#prezzi" class="btn-ghost it" style="color:var(--ink);border-color:var(--border)">Tariffa smart-work</a>
           <a href="#prezzi" class="btn-ghost en" style="color:var(--ink);border-color:var(--border)">Smart-work rate</a>
         </div>
@@ -960,11 +958,11 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
 <div id="lb5" class="lb"><a href="#foto" class="lb-close">✕</a><a href="#lb4" class="lb-prev">‹</a><img src="./img/photo05.jpg" alt=""><a href="#lb6" class="lb-next">›</a></div>
 <div id="lb6" class="lb"><a href="#foto" class="lb-close">✕</a><a href="#lb5" class="lb-prev">‹</a><img src="./img/photo06.jpg" alt=""><a href="#lb1" class="lb-next">›</a></div>
 
-<!-- DISPONIBILITÀ -->
-<section id="disponibilita">
+<!-- CALENDARIO -->
+<section id="calendario">
   <div class="wrap">
-    <p class="eyebrow it">📅 Disponibilità</p>
-    <p class="eyebrow en">📅 Availability</p>
+    <p class="eyebrow it">Calendario</p>
+    <p class="eyebrow en">Calendar</p>
     <h2 class="it">Quando sei <em>libero</em>?</h2>
     <h2 class="en">When are <em>you free</em>?</h2>
     <div class="cal-layout">
@@ -977,14 +975,14 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
           </div>
           <div class="cal-grid" id="calGrid"></div>
           <div class="cal-legend">
-            <span class="leg-i"><span class="leg-dot" style="background:var(--green-lt)"></span><span class="it">Disponibile</span><span class="en">Available</span></span>
-            <span class="leg-i"><span class="leg-dot" style="background:#f5ddd0"></span><span class="it">Occupato</span><span class="en">Booked</span></span>
+            <!-- <span class="leg-i"><span class="leg-dot" style="background:var(--green-lt)"></span><span class="it">Disponibile</span><span class="en">Available</span></span>
+            <span class="leg-i"><span class="leg-dot" style="background:#f5ddd0"></span><span class="it">Occupato</span><span class="en">Booked</span></span> -->
             <span class="leg-i"><span class="leg-dot" style="background:#fff;border:2px solid var(--forest)"></span><span class="it">Oggi</span><span class="en">Today</span></span>
           </div>
           <div class="cal-note it">📅 Per prenotare contattaci direttamente — risposta entro 24h, tariffa più bassa garantita.</div>
           <div class="cal-note en">📅 To book, contact us directly — reply within 24h, lowest rate guaranteed.</div>
         </div>
-        <div class="admin-toggle-wrap">
+        <!-- <div class="admin-toggle-wrap">
           <button class="admin-toggle-btn" onclick="toggleAdmin()">🔐 Admin</button>
         </div>
         <div class="admin-panel" id="adminPanel">
@@ -1009,7 +1007,7 @@ footer { background: #1e3028; text-align: center; padding: 2rem 1.25rem; }
             <div class="admin-section-title">Prenotazioni attive</div>
             <div class="booking-list" id="bookingList"></div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="cal-info">
         <div class="info-card">
@@ -1196,14 +1194,13 @@ document.getElementById('drawer').addEventListener('click', function(e) {
 /* ── CALENDAR ── */
 var ADMIN_PASSWORD = 'pratomagno2026';
 var STORAGE_KEY = 'pratomagno_bookings';
-var DEFAULT_BOOKINGS = [
-  { from: '2026-04-10', to: '2026-04-16', source: 'airbnb' },
+var DEFAULT_BOOKINGS = [];
+  /* { from: '2026-04-10', to: '2026-04-16', source: 'airbnb' },
   { from: '2026-04-18', to: '2026-04-21', source: 'booking' },
   { from: '2026-05-01', to: '2026-05-04', source: 'airbnb' },
   { from: '2026-06-15', to: '2026-06-30', source: 'airbnb' },
   { from: '2026-07-01', to: '2026-07-14', source: 'booking' },
-  { from: '2026-08-01', to: '2026-08-31', source: 'airbnb' }
-];
+  { from: '2026-08-01', to: '2026-08-31', source: 'airbnb' } */
 
 function loadBookings() {
   try { var s = localStorage.getItem(STORAGE_KEY); return s ? JSON.parse(s) : DEFAULT_BOOKINGS.slice(); }
